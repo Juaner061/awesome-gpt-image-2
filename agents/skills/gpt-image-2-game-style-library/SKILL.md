@@ -7,6 +7,12 @@ description: Choose GPT-Image2 / gpt-image-2 game art prompt templates for chara
 
 Use this skill to turn a game-art intent into a production-ready GPT-Image2 prompt using this fork's game-focused prompt template library.
 
+## Example Output
+
+![Game concept board example](assets/game-concept-board.jpg)
+
+Example request: `Use gpt-image-2-game-style-library to create a survival RPG character reference sheet prompt.`
+
 ## Reference
 
 - Read `references/style-library.md` before choosing a template or style.
@@ -52,4 +58,3 @@ To install the skill into local agent skill folders, run:
 ```bash
 npm run install:skill codex
 ```
-

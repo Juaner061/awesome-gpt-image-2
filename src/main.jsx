@@ -35,7 +35,7 @@ import {
 import './styles.css';
 import { isSupabaseConfigured, supabase } from './supabaseClient';
 import wechatCommunityImage from './assets/wechat-community.jpg';
-import skillExampleImage from '../agents/skills/gpt-image-2-game-style-library/assets/city-life-system-map.png';
+import skillExampleImage from '../agents/skills/gpt-image-2-game-style-library/assets/game-concept-board.jpg';
 
 const fallbackRepoUrl = 'https://github.com/Juaner061/awesome-gpt-image-2';
 const sponsorUrl = 'https://github.com/Juaner061/awesome-gpt-image-2';

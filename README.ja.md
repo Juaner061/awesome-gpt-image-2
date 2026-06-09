@@ -230,10 +230,10 @@ GPT-Image2 が広く利用できるようになったことで、AI 画像生成
 パッケージリンク：[npm](https://www.npmjs.com/package/gpt-image-2-game-style-library) / [GitHub Packages](https://github.com/Juaner061/awesome-gpt-image-2/pkgs/npm/gpt-image-2-game-style-library)
 
 <p align="center">
-  <img src="agents/skills/gpt-image-2-game-style-library/assets/city-life-system-map.png" alt="GPT-Image2 Game Style Library Skill で生成した都市生命システムマップ" width="760">
+  <img src="agents/skills/gpt-image-2-game-style-library/assets/game-concept-board.jpg" alt="GPT-Image2 Game Style Library Skill で生成した都市生命システムマップ" width="760">
 </p>
 
-<p align="center"><sub>Style Library Skill を使った city-life-system-map リクエストの出力例。</sub></p>
+<p align="center"><sub>Game Style Library Skill を使ったゲームコンセプトボードの出力例。</sub></p>
 
 ### Agent Skill のクイックインストール
 

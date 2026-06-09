@@ -231,10 +231,10 @@ GPT-Image2 全量开放后，AI 画图从“能不能出图”变成了“能不
 包地址：[npm](https://www.npmjs.com/package/gpt-image-2-game-style-library) / [GitHub Packages](https://github.com/Juaner061/awesome-gpt-image-2/pkgs/npm/gpt-image-2-game-style-library)
 
 <p align="center">
-  <img src="agents/skills/gpt-image-2-game-style-library/assets/city-life-system-map.png" alt="使用 GPT-Image2 游戏风格库 skill 生成的城市生命系统图谱示例" width="760">
+  <img src="agents/skills/gpt-image-2-game-style-library/assets/game-concept-board.jpg" alt="使用 GPT-Image2 游戏风格库 skill 生成的游戏概念设定板示例" width="760">
 </p>
 
-<p align="center"><sub>示例：用 gpt-image-2-game-style-library 生成“城市生命系统图谱”。</sub></p>
+<p align="center"><sub>示例：用 gpt-image-2-game-style-library 生成“游戏概念设定板”。</sub></p>
 
 ### Agent 一键安装
 
@@ -346,7 +346,7 @@ GOOGLE_ANALYTICS_REFRESH_TOKEN=
 
 ### 例 1：信息图可视化设计
 
-[![城市生命系统图谱 / Urban Metabolism Atlas](data/images/case1.jpg)](docs/gallery-part-1.md#case-1)
+[![游戏概念设定板 / Urban Metabolism Atlas](data/images/case1.jpg)](docs/gallery-part-1.md#case-1)
 
 工程白皮书气质的信息图案例，适合看结构化信息图如何组织模块、层级和双语标签。
 [查看完整案例](docs/gallery-part-1.md#case-1)
