@@ -3,10 +3,10 @@
 <h3 align="center">Prompt as Code | GPT-Image2 産業レベルのプロンプトエンジンとテンプレートライブラリ、400+ 件のリバースエンジニアリング事例、20+ 種の実務向けテンプレート</h3>
 
 <p align="center">
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/github/stars/freestylefly/awesome-gpt-image-2?style=flat-square&color=rgb(25%2C%20121%2C%20255)" alt="Stars"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/github/forks/freestylefly/awesome-gpt-image-2?style=flat-square&color=green" alt="Forks"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/badge/Cases-484-blueviolet?style=flat-square" alt="Cases"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/badge/100%25-Original_AI_Rewritten-green?style=flat-square" alt="Original"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/github/stars/Juaner061/awesome-gpt-image-2?style=flat-square&color=rgb(25%2C%20121%2C%20255)" alt="Stars"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/github/forks/Juaner061/awesome-gpt-image-2?style=flat-square&color=green" alt="Forks"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/badge/Cases-484-blueviolet?style=flat-square" alt="Cases"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/badge/100%25-Original_AI_Rewritten-green?style=flat-square" alt="Original"></a>
 </p>
 
 <p align="center">
@@ -63,7 +63,7 @@ GPT-Image2 が広く利用できるようになったことで、AI 画像生成
 - [Gallery Part 1：ケース 1-165](docs/gallery-part-1.md)
 - [Gallery Part 2：ケース 166-484](docs/gallery-part-2.md)
 - [産業向けプロンプトテンプレートと落とし穴ガイド](docs/templates.md#section-templates)
-- [Agent Skill：GPT-Image2 Style Library](agents/skills/gpt-image-2-style-library/SKILL.md)
+- [Agent Skill：GPT-Image2 Game Style Library](agents/skills/gpt-image-2-game-style-library/SKILL.md)
 - [MIT License](LICENSE)
 - [免責事項全文](docs/disclaimer.md#section-disclaimer)
 
@@ -227,10 +227,10 @@ GPT-Image2 が広く利用できるようになったことで、AI 画像生成
 
 このリポジトリには、Web サイトと同じデータを使って GPT-Image2 のスタイル、テンプレート、カテゴリ、シーンタグを選定するための Agent Skill が含まれています。
 
-パッケージリンク：[npm](https://www.npmjs.com/package/gpt-image-2-style-library) / [GitHub Packages](https://github.com/freestylefly/awesome-gpt-image-2/pkgs/npm/gpt-image-2-style-library)
+パッケージリンク：[npm](https://www.npmjs.com/package/gpt-image-2-game-style-library) / [GitHub Packages](https://github.com/Juaner061/awesome-gpt-image-2/pkgs/npm/gpt-image-2-game-style-library)
 
 <p align="center">
-  <img src="agents/skills/gpt-image-2-style-library/assets/city-life-system-map.png" alt="GPT-Image2 Style Library Skill で生成した都市生命システムマップ" width="760">
+  <img src="agents/skills/gpt-image-2-game-style-library/assets/city-life-system-map.png" alt="GPT-Image2 Game Style Library Skill で生成した都市生命システムマップ" width="760">
 </p>
 
 <p align="center"><sub>Style Library Skill を使った city-life-system-map リクエストの出力例。</sub></p>
@@ -240,13 +240,13 @@ GPT-Image2 が広く利用できるようになったことで、AI 画像生成
 Claude Code、Codex、Cursor、および [`skills`](https://www.npmjs.com/package/skills) が対応するその他のツールには、次の方法を推奨します。
 
 ```bash
-npx skills add freestylefly/awesome-gpt-image-2 --skill gpt-image-2-style-library --agent claude-code codex --global --yes --copy
+npx skills add Juaner061/awesome-gpt-image-2 --skill gpt-image-2-game-style-library --agent claude-code codex --global --yes --copy
 ```
 
 対応するすべてのローカル Agent にインストールする場合：
 
 ```bash
-npx skills add freestylefly/awesome-gpt-image-2 --global --all --copy
+npx skills add Juaner061/awesome-gpt-image-2 --global --all --copy
 ```
 
 ### Claude Code Plugin Marketplace
@@ -254,8 +254,8 @@ npx skills add freestylefly/awesome-gpt-image-2 --global --all --copy
 Claude Code 内で次のコマンドを実行します。
 
 ```text
-/plugin marketplace add freestylefly/awesome-gpt-image-2
-/plugin install gpt-image-2-style-library@awesome-gpt-image-2
+/plugin marketplace add Juaner061/awesome-gpt-image-2
+/plugin install gpt-image-2-game-style-library@awesome-gpt-image-2
 ```
 
 ### npm CLI
@@ -263,22 +263,22 @@ Claude Code 内で次のコマンドを実行します。
 npm を使う場合は、CLI をインストールしてからローカル Agent フォルダへ Skill を同期します。
 
 ```bash
-npm install -g gpt-image-2-style-library
-gpt-image-2-style-library install all
+npm install -g gpt-image-2-game-style-library
+gpt-image-2-game-style-library install all
 ```
 
 グローバルインストールせずに実行することもできます。
 
 ```bash
-npx gpt-image-2-style-library install all
+npx gpt-image-2-game-style-library install all
 ```
 
 GitHub Packages からインストールする場合：
 
 ```bash
 npm login --scope=@freestylefly --registry=https://npm.pkg.github.com
-npm install -g @freestylefly/gpt-image-2-style-library --registry=https://npm.pkg.github.com
-gpt-image-2-style-library install all
+npm install -g @freestylefly/gpt-image-2-game-style-library --registry=https://npm.pkg.github.com
+gpt-image-2-game-style-library install all
 ```
 
 `install all` は、Codex と Claude Code で一般的に使われるローカル Skill ディレクトリへ書き込みます。対象には `~/.codex/skills`、`~/.claude/skills`、`~/.agents/skills` が含まれます。インストール後は Agent セッションを再起動してください。
@@ -286,7 +286,7 @@ gpt-image-2-style-library install all
 次のようなリクエストで利用できます。
 
 ```text
-gpt-image-2-style-library Skill を使って、Codex を紹介するインフォグラフィックのプロンプトを作成してください。
+gpt-image-2-game-style-library Skill を使って、Codex を紹介するインフォグラフィックのプロンプトを作成してください。
 ```
 
 ローカルソース開発では次を実行します。
@@ -296,7 +296,7 @@ npm run generate:style-skill
 npm run install:skill
 ```
 
-Skill のソースは [`agents/skills/gpt-image-2-style-library`](agents/skills/gpt-image-2-style-library/SKILL.md) にあります。生成されるリファレンスは [`data/style-library.json`](data/style-library.json) に基づいており、Web サイトと Agent ワークフローは同じスタイルライブラリを共有しています。
+Skill のソースは [`agents/skills/gpt-image-2-game-style-library`](agents/skills/gpt-image-2-game-style-library/SKILL.md) にあります。生成されるリファレンスは [`data/style-library.json`](data/style-library.json) に基づいており、Web サイトと Agent ワークフローは同じスタイルライブラリを共有しています。
 
 ## 🔐 Web サイト認証と生成
 
@@ -545,7 +545,7 @@ GOOGLE_ANALYTICS_REFRESH_TOKEN=
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=freestylefly/awesome-gpt-image-2&type=Date)](https://star-history.com/#freestylefly/awesome-gpt-image-2&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Juaner061/awesome-gpt-image-2&type=Date)](https://star-history.com/#Juaner061/awesome-gpt-image-2&Date)
 
 ## 📜 ライセンス
 

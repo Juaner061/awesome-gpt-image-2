@@ -4,7 +4,7 @@ import { dirname, join } from 'node:path';
 import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 
-const skillName = 'gpt-image-2-style-library';
+const skillName = 'gpt-image-2-game-style-library';
 const args = process.argv.slice(2);
 const commandOrTarget = args[0] || 'install';
 const allowedCommands = new Set(['install', 'sync']);
@@ -17,11 +17,11 @@ if (!allowedCommands.has(commandOrTarget)) {
 }
 
 const usage = [
-  'Usage: gpt-image-2-style-library install [all|codex|claude-code|agents]',
+  'Usage: gpt-image-2-game-style-library install [all|codex|claude-code|agents]',
   'Examples:',
-  '  gpt-image-2-style-library install all',
-  '  gpt-image-2-style-library install claude-code',
-  '  gpt-image-2-style-library install codex'
+  '  gpt-image-2-game-style-library install all',
+  '  gpt-image-2-game-style-library install claude-code',
+  '  gpt-image-2-game-style-library install codex'
 ].join('\n');
 
 if (!allowedCommands.has(command)) {

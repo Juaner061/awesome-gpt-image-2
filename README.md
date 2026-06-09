@@ -1,12 +1,12 @@
 <p align="center"><img src="./data/images/banner.svg" alt="GPT-Image2 Prompt System" width="800" /></p>
 
-<h3 align="center">Prompt as Code | GPT-Image2 Industrial Prompt Engine & Template Library, 400+ Reverse-Engineered Cases, 20+ Industrial Templates</h3>
+<h3 align="center">Prompt as Code | GPT-Image2 Game Art Prompt Library, production templates for characters, environments, UI, props, VFX, icons, maps, cards, and store assets</h3>
 
 <p align="center">
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/github/stars/freestylefly/awesome-gpt-image-2?style=flat-square&color=rgb(25%2C%20121%2C%20255)" alt="Stars"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/github/forks/freestylefly/awesome-gpt-image-2?style=flat-square&color=green" alt="Forks"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/badge/Cases-506-blueviolet?style=flat-square" alt="Cases"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/badge/100%25-Original_AI_Rewritten-green?style=flat-square" alt="Original"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/github/stars/Juaner061/awesome-gpt-image-2?style=flat-square&color=rgb(25%2C%20121%2C%20255)" alt="Stars"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/github/forks/Juaner061/awesome-gpt-image-2?style=flat-square&color=green" alt="Forks"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/badge/Cases-506-blueviolet?style=flat-square" alt="Cases"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/badge/100%25-Original_AI_Rewritten-green?style=flat-square" alt="Original"></a>
   <a href="https://github.com/sponsors/freestylefly"><img src="https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ff69b4?style=flat-square" alt="Sponsor"></a>
 </p>
 
@@ -64,7 +64,7 @@ The core goal is simple: compress prose-style prompts into structured protocols.
 - [Gallery Part 1: cases 1-165](docs/gallery-part-1.md)
 - [Gallery Part 2: cases 166-506](docs/gallery-part-2.md)
 - [Industrial prompt templates and pitfalls guide](docs/templates.md)
-- [Agent skill: GPT-Image2 Style Library](agents/skills/gpt-image-2-style-library/SKILL.md)
+- [Agent skill: GPT-Image2 Game Style Library](agents/skills/gpt-image-2-game-style-library/SKILL.md)
 - [MIT License](LICENSE)
 - [Full disclaimer](docs/disclaimer.md#section-disclaimer)
 
@@ -230,10 +230,10 @@ The prompt body remains in the original template document for now. This homepage
 
 This repository includes an agent skill for choosing GPT-Image2 styles, templates, categories, and scene tags from the same data used by the website.
 
-Package links: [npm](https://www.npmjs.com/package/gpt-image-2-style-library) / [GitHub Packages](https://github.com/freestylefly/awesome-gpt-image-2/pkgs/npm/gpt-image-2-style-library)
+Package links: [npm](https://www.npmjs.com/package/gpt-image-2-game-style-library) / [GitHub Packages](https://github.com/Juaner061/awesome-gpt-image-2/pkgs/npm/gpt-image-2-game-style-library)
 
 <p align="center">
-  <img src="agents/skills/gpt-image-2-style-library/assets/city-life-system-map.png" alt="City life system map generated with the GPT-Image2 style library skill" width="760">
+  <img src="agents/skills/gpt-image-2-game-style-library/assets/city-life-system-map.png" alt="City life system map generated with the GPT-Image2 style library skill" width="760">
 </p>
 
 <p align="center"><sub>Example output from a city-life-system-map request using the style library skill.</sub></p>
@@ -243,13 +243,13 @@ Package links: [npm](https://www.npmjs.com/package/gpt-image-2-style-library) / 
 Recommended for Claude Code, Codex, Cursor, and other tools supported by [`skills`](https://www.npmjs.com/package/skills):
 
 ```bash
-npx skills add freestylefly/awesome-gpt-image-2 --skill gpt-image-2-style-library --agent claude-code codex --global --yes --copy
+npx skills add Juaner061/awesome-gpt-image-2 --skill gpt-image-2-game-style-library --agent claude-code codex --global --yes --copy
 ```
 
 Install to every supported local agent:
 
 ```bash
-npx skills add freestylefly/awesome-gpt-image-2 --global --all --copy
+npx skills add Juaner061/awesome-gpt-image-2 --global --all --copy
 ```
 
 ### Claude Code Plugin Marketplace
@@ -257,8 +257,8 @@ npx skills add freestylefly/awesome-gpt-image-2 --global --all --copy
 Run these commands inside Claude Code:
 
 ```text
-/plugin marketplace add freestylefly/awesome-gpt-image-2
-/plugin install gpt-image-2-style-library@awesome-gpt-image-2
+/plugin marketplace add Juaner061/awesome-gpt-image-2
+/plugin install gpt-image-2-game-style-library@awesome-gpt-image-2
 ```
 
 ### npm CLI
@@ -266,22 +266,22 @@ Run these commands inside Claude Code:
 If you prefer npm, install the CLI and then sync the skill into local agent folders:
 
 ```bash
-npm install -g gpt-image-2-style-library
-gpt-image-2-style-library install all
+npm install -g gpt-image-2-game-style-library
+gpt-image-2-game-style-library install all
 ```
 
 You can also run it without a global install:
 
 ```bash
-npx gpt-image-2-style-library install all
+npx gpt-image-2-game-style-library install all
 ```
 
 Install from GitHub Packages:
 
 ```bash
 npm login --scope=@freestylefly --registry=https://npm.pkg.github.com
-npm install -g @freestylefly/gpt-image-2-style-library --registry=https://npm.pkg.github.com
-gpt-image-2-style-library install all
+npm install -g @freestylefly/gpt-image-2-game-style-library --registry=https://npm.pkg.github.com
+gpt-image-2-game-style-library install all
 ```
 
 `install all` writes the skill to the common local folders used by Codex and Claude Code, including `~/.codex/skills`, `~/.claude/skills`, and `~/.agents/skills`. Restart the agent session after installing.
@@ -289,7 +289,7 @@ gpt-image-2-style-library install all
 Use it with a request like:
 
 ```text
-Use gpt-image-2-style-library to create an infographic prompt about Codex.
+Use gpt-image-2-game-style-library to create an infographic prompt about Codex.
 ```
 
 For local source development:
@@ -299,7 +299,7 @@ npm run generate:style-skill
 npm run install:skill
 ```
 
-The skill source lives at [`agents/skills/gpt-image-2-style-library`](agents/skills/gpt-image-2-style-library/SKILL.md). Its generated reference comes from [`data/style-library.json`](data/style-library.json), so the website and Agent workflow share one style library.
+The skill source lives at [`agents/skills/gpt-image-2-game-style-library`](agents/skills/gpt-image-2-game-style-library/SKILL.md). Its generated reference comes from [`data/style-library.json`](data/style-library.json), so the website and Agent workflow share one style library.
 
 ## 🔐 Website Auth & Generation
 
@@ -483,7 +483,7 @@ All prompt cases and generated images in this repository were initially inspired
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=freestylefly/awesome-gpt-image-2&type=Date)](https://star-history.com/#freestylefly/awesome-gpt-image-2&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Juaner061/awesome-gpt-image-2&type=Date)](https://star-history.com/#Juaner061/awesome-gpt-image-2&Date)
 
 ## 📜 License
 

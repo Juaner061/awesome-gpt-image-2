@@ -4,7 +4,7 @@ import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const skillName = 'gpt-image-2-style-library';
+const skillName = process.env.SKILL_NAME || 'gpt-image-2-game-style-library';
 const source = join(root, 'agents', 'skills', skillName);
 const targetDefinitions = {
   codex: {

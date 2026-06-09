@@ -35,10 +35,10 @@ import {
 import './styles.css';
 import { isSupabaseConfigured, supabase } from './supabaseClient';
 import wechatCommunityImage from './assets/wechat-community.jpg';
-import skillExampleImage from '../agents/skills/gpt-image-2-style-library/assets/city-life-system-map.png';
+import skillExampleImage from '../agents/skills/gpt-image-2-game-style-library/assets/city-life-system-map.png';
 
-const fallbackRepoUrl = 'https://github.com/freestylefly/awesome-gpt-image-2';
-const sponsorUrl = 'https://github.com/sponsors/freestylefly';
+const fallbackRepoUrl = 'https://github.com/Juaner061/awesome-gpt-image-2';
+const sponsorUrl = 'https://github.com/Juaner061/awesome-gpt-image-2';
 const gaMeasurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
 const watchaLogoUrl =
   'https://watcha.tos-cn-beijing.volces.com/products/logo/1752064513_guan-cha-insights.png?x-tos-process=image/resize,w_720/format,webp';
@@ -46,17 +46,17 @@ const watchaLogoUrl =
 const copy = {
   en: {
     loading: 'Loading GPT-Image2 cases...',
-    brand: 'GPT-Image2 Gallery',
+    brand: 'GPT-Image2 Game Prompt Lab',
     navCases: 'Cases',
     navSkill: 'Skill',
     navTemplates: 'Templates',
     navCommunity: 'Community',
     navSponsor: 'Sponsor',
     communityQrAlt: 'WeChat community invite card for GPT-Image2',
-    eyebrow: 'Live GPT-Image2 prompt gallery',
-    title: 'From viral images to reusable prompts.',
+    eyebrow: 'Game-focused GPT-Image2 prompt lab',
+    title: 'From game ideas to reusable art-direction prompts.',
     subtitle:
-      'A visual workspace for GPT-Image2 creation: browse real cases, copy prompts, test image generation, explore industrial templates, and join the creator community.',
+      'A visual workspace for game art creation: browse references, copy prompts, test image generation, and use production-ready templates for characters, worlds, UI, props, VFX, icons, maps, and store assets.',
     explore: 'Explore cases',
     githubProject: 'GitHub project',
     sponsorProject: 'Sponsor project',
@@ -65,27 +65,27 @@ const copy = {
     categories: 'categories',
     templates: 'templates',
     sectionEyebrow: 'Copy, filter, remix',
-    sectionTitle: 'Viral cases with prompts one click away.',
-    templateEyebrow: '20+ industrial prompt templates',
-    templateTitle: 'Start from a proven template, then remix the case library.',
+    sectionTitle: 'Game references and prompts one click away.',
+    templateEyebrow: '12 game production prompt templates',
+    templateTitle: 'Start from a game asset template, then remix the reference library.',
     templateSubtitle:
-      'Each template is distilled from real GPT-Image2 examples and includes structure, constraints, and pitfalls for production use.',
+      'Each template is tuned for game production use: asset purpose, camera, layout, style, usability constraints, and common failure modes.',
     templateKind: 'Prompt Template',
     openTemplate: 'Open Template',
     skillEyebrow: 'Agent skill',
-    skillTitle: 'Bring the GPT-Image2 style library into Claude Code and Codex.',
+    skillTitle: 'Bring the GPT-Image2 game style library into Claude Code and Codex.',
     skillSubtitle:
-      'Install one skill, then let your agent choose templates, visual styles, scene tags, and pitfalls from the same library behind this site.',
+      'Install one skill, then let your agent choose game asset templates, art-direction tags, production contexts, and pitfalls from the same library behind this site.',
     skillCommandLabel: 'Install for local agents',
     skillPromptLabel: 'Try this request',
-    skillPrompt: 'Use gpt-image-2-style-library to create a city life system map.',
+    skillPrompt: 'Use gpt-image-2-game-style-library to create a production prompt for a survival RPG character reference sheet.',
     skillCopyCommand: 'Copy command',
     skillOpenDocs: 'Open skill source',
     skillNpm: 'View npm package',
     skillCopied: 'Command copied',
-    skillExampleAlt: 'City life system map generated with the GPT-Image2 style library skill',
-    skillExampleCaption: 'Example output generated from the style-library skill.',
-    skillStats: ['Claude Code ready', 'Codex ready', '20+ templates'],
+    skillExampleAlt: 'Game art prompt example generated with the GPT-Image2 game style library skill',
+    skillExampleCaption: 'Example output from the game style library skill.',
+    skillStats: ['Claude Code ready', 'Codex ready', '12 templates'],
     search: 'Search cases, sources, prompts...',
     category: 'Category',
     style: 'Style',
@@ -258,17 +258,17 @@ const copy = {
   },
   zh: {
     loading: '正在加载 GPT-Image2 案例...',
-    brand: 'GPT-Image2 画廊',
+    brand: 'GPT-Image2 游戏提示词库',
     navCases: '案例',
     navSkill: '技能',
     navTemplates: '模板',
     navCommunity: '交流群',
     navSponsor: '赞助',
     communityQrAlt: 'GPT-Image2 微信交流群邀请卡',
-    eyebrow: '实时更新的 GPT-Image2 提示词画廊',
-    title: '从爆款图片，到可复用 Prompt。',
+    eyebrow: '面向游戏出图的 GPT-Image2 提示词工作台',
+    title: '从游戏想法，到可复用美术 Prompt。',
     subtitle:
-      '一个面向 GPT-Image2 创作的可视化工作台：浏览真实案例、复制 Prompt、在线测试生图、查看工业级模板，并加入创作者交流群。',
+      '一个面向游戏美术出图的可视化工作台：浏览参考、复制 Prompt、在线测试生图，并使用角色、场景、UI、道具、特效、图标、地图和商店素材模板。',
     explore: '浏览案例',
     githubProject: 'GitHub 项目',
     sponsorProject: '赞助项目',
@@ -277,27 +277,27 @@ const copy = {
     categories: '个分类',
     templates: '套模板',
     sectionEyebrow: '复制、筛选、复用',
-    sectionTitle: '爆款案例和 Prompt，一键可取。',
-    templateEyebrow: '20+ 套工业级提示词模板',
-    templateTitle: '先用成熟模板起稿，再从案例库里继续 remix。',
+    sectionTitle: '游戏参考和 Prompt，一键可取。',
+    templateEyebrow: '12 套游戏生产提示词模板',
+    templateTitle: '先用游戏资产模板起稿，再从参考库里继续 remix。',
     templateSubtitle:
-      '每套模板都从真实 GPT-Image2 案例里提炼，包含结构、约束和防坑经验，适合生产流程直接复用。',
+      '每套模板都面向游戏生产场景，包含资产用途、镜头、版式、风格、可用性约束和常见翻车点。',
     templateKind: '提示词模板',
     openTemplate: '打开模板',
     skillEyebrow: 'Agent Skill',
-    skillTitle: '把 GPT-Image2 风格库装进 Claude Code 和 Codex。',
+    skillTitle: '把 GPT-Image2 游戏风格库装进 Claude Code 和 Codex。',
     skillSubtitle:
-      '安装一个 skill，让 Agent 从本站同源的模板、风格、场景和防坑规则里自动选型，直接输出可复制的 GPT Image 2 prompt。',
+      '安装一个 skill，让 Agent 从本站同源的游戏资产模板、美术风格、生产场景和防坑规则里自动选型，直接输出可复制的 GPT Image 2 prompt。',
     skillCommandLabel: '安装到本地 Agent',
     skillPromptLabel: '试试这个请求',
-    skillPrompt: '用 gpt-image-2-style-library 技能生成城市生命系统图谱',
+    skillPrompt: '用 gpt-image-2-game-style-library 技能生成生存 RPG 角色设定表 Prompt',
     skillCopyCommand: '复制命令',
     skillOpenDocs: '打开 skill 源码',
     skillNpm: '查看 npm 包',
     skillCopied: '命令已复制',
-    skillExampleAlt: '使用 GPT-Image2 风格库 skill 生成的城市生命系统图谱',
-    skillExampleCaption: '示例：用 gpt-image-2-style-library 生成“城市生命系统图谱”。',
-    skillStats: ['Claude Code 可用', 'Codex 可用', '20+ 套模板'],
+    skillExampleAlt: '使用 GPT-Image2 游戏风格库 skill 生成的游戏美术提示词示例',
+    skillExampleCaption: '示例：用 gpt-image-2-game-style-library 生成游戏资产 Prompt。',
+    skillStats: ['Claude Code 可用', 'Codex 可用', '12 套模板'],
     search: '搜索案例、来源、Prompt...',
     category: '分类',
     style: '风格',
@@ -909,13 +909,13 @@ function formatTemplatePrompt(item, language, styleLibrary) {
       `视觉方向：${uniqueTags.join(' / ')}`,
       '',
       '请基于以下结构生成一条可直接用于 GPT Image 2 的图片 Prompt：',
-      '- 主体：[要生成的产品、人物、空间、界面或信息主题]',
-      '- 场景：[使用环境、叙事背景、受众语境]',
-      '- 构图：[画面比例、镜头距离、主体位置、层级关系]',
-      '- 风格：[材质、光线、色彩、时代感、品牌气质]',
-      '- 文本：[必须准确显示的标题、标签、按钮或说明文字]',
-      '- 细节：[关键装饰、辅助元素、信息标注、交互层]',
-      '- 输出：[清晰度、比例、完成度、可读性要求]',
+      '- 游戏资产：[角色 / 场景 / 道具 / UI / 图标 / 特效 / 地图 / 卡牌 / 怪物 / 建筑 / 主视觉 / 精灵图]',
+      '- 用途：[概念探索 / 生产设定 / 商店素材 / 活动运营 / 可切图资产]',
+      '- 主体与玩法：[主体身份、阵营、功能、稀有度、攻击方式或交互用途]',
+      '- 构图与格式：[画面比例、镜头、网格、三视图、透明背景、安全裁切区]',
+      '- 美术方向：[游戏类型、风格、材质、光线、色彩、渲染方式]',
+      '- 文本规则：[不需要文字 / 只保留短标签 / 指定标题必须准确]',
+      '- 可用性约束：[剪影清晰、同角色一致、图标小尺寸可读、帧格整齐等]',
       '',
       '核心约束：',
       ...guidance.map((line) => `- ${line}`),
@@ -931,13 +931,13 @@ function formatTemplatePrompt(item, language, styleLibrary) {
     `Visual direction: ${uniqueTags.join(' / ')}`,
     '',
     'Create a copy-ready GPT Image 2 prompt with this structure:',
-    '- Subject: [product, person, space, interface, or information topic]',
-    '- Scene: [context, audience, narrative setting]',
-    '- Composition: [aspect ratio, camera distance, focal hierarchy, placement]',
-    '- Style: [material, lighting, color, era, brand tone]',
-    '- Text: [exact title, labels, buttons, or annotations that must be readable]',
-    '- Details: [decorative elements, callouts, UI layers, supporting objects]',
-    '- Output: [resolution, aspect ratio, polish level, readability requirements]',
+    '- Game asset: [character / environment / prop / UI / icon / VFX / map / card art / monster / building / key art / sprite sheet]',
+    '- Intended use: [concept exploration / production reference / store asset / live ops / extraction-ready asset]',
+    '- Subject and gameplay: [identity, faction, function, rarity, attack style, interaction purpose]',
+    '- Composition and format: [aspect ratio, camera, grid, turnaround, transparent background, safe crop zone]',
+    '- Art direction: [game genre, style, materials, lighting, palette, rendering method]',
+    '- Text rule: [no text / short labels only / exact title required]',
+    '- Usability constraints: [readable silhouette, character consistency, small-size icon readability, even frame boxes]',
     '',
     'Core constraints:',
     ...guidance.map((line) => `- ${line}`),
@@ -2459,9 +2459,9 @@ function SkillSection({ language, repoUrl }) {
   const t = copy[language];
   const [commandCopied, setCommandCopied] = useState(false);
   const installCommand =
-    'npx skills add freestylefly/awesome-gpt-image-2 --skill gpt-image-2-style-library --agent claude-code codex --global --yes --copy';
-  const skillSourceUrl = `${repoUrl}/tree/main/agents/skills/gpt-image-2-style-library`;
-  const npmUrl = 'https://www.npmjs.com/package/gpt-image-2-style-library';
+    'npx skills add Juaner061/awesome-gpt-image-2 --skill gpt-image-2-game-style-library --agent claude-code codex --global --yes --copy';
+  const skillSourceUrl = `${repoUrl}/tree/main/agents/skills/gpt-image-2-game-style-library`;
+  const npmUrl = 'https://www.npmjs.com/package/gpt-image-2-game-style-library';
 
   async function handleCopyCommand() {
     await copyToClipboard(installCommand);

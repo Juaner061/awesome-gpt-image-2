@@ -16,6 +16,8 @@ const galleryFiles = [
 const categoryLabels = Object.fromEntries(
   styleLibrary.categories.map((category) => [category.anchor, category.value])
 );
+const knownCategories = new Set(styleLibrary.categories.map((category) => category.value));
+const repoUrl = styleLibrary.repository || 'https://github.com/Juaner061/awesome-gpt-image-2';
 
 const featuredIds = new Set([
   1, 2, 6, 17, 166, 310, 330, 334, 338, 341, 344, 346, 350, 353, 354, 359, 360,
@@ -77,29 +79,29 @@ function extractSource(block) {
 }
 
 function inferCategory(caseItem) {
-  if (caseItem.category) return caseItem.category;
+  if (caseItem.category && knownCategories.has(caseItem.category)) return caseItem.category;
   const text = `${caseItem.title} ${caseItem.prompt}`.toLowerCase();
   const rules = [
-    ['UI & Interfaces', ['ui', 'app', 'interface', 'dashboard', 'screenshot', '网页', '界面', '截图']],
-    ['Charts & Infographics', ['infographic', 'diagram', 'chart', 'atlas', '图谱', '信息图', '图解']],
-    ['Posters & Typography', ['poster', 'cover', 'typography', '海报', '封面', '字体']],
-    ['Products & E-commerce', ['product', 'packaging', 'e-commerce', '商品', '电商', '包装']],
-    ['Brand & Logos', ['logo', 'brand', 'identity', '品牌', '标志']],
-    ['Architecture & Spaces', ['architecture', 'interior', 'map', '建筑', '室内', '地图']],
-    ['Photography & Realism', ['photo', 'portrait', 'camera', 'realistic', '写真', '摄影', '写实']],
-    ['Illustration & Art', ['illustration', 'painting', 'watercolor', '插画', '艺术', '水墨']],
-    ['Characters & People', ['character', 'pose', 'avatar', '角色', '人物', '头像']],
-    ['Scenes & Storytelling', ['storyboard', 'scene', 'narrative', '场景', '叙事', '分镜']],
-    ['History & Classical Themes', ['history', 'dynasty', 'classical', '历史', '古风', '唐朝', '宋']],
-    ['Documents & Publishing', ['document', 'manual', 'prescription', '文档', '手册', '处方']]
+    ['Game UI & HUD', ['ui', 'hud', 'interface', 'dashboard', 'screenshot', 'menu', 'inventory', 'skill tree', '界面', '截图', '背包', '技能树', '战斗界面']],
+    ['Game Icons', ['icon', 'badge', 'app icon', 'ability icon', 'item icon', '图标', '徽章', '技能图标', '物品图标']],
+    ['Sprites & Animation Sheets', ['sprite', 'pixel art', 'animation sheet', 'frame', '像素', '精灵', '动作帧', '帧动画']],
+    ['Game Maps & Tiles', ['map', 'tile', 'isometric', 'route', 'minimap', '地图', '地块', '等距', '小地图']],
+    ['Game Props & Equipment', ['weapon', 'armor', 'equipment', 'prop', 'loot', 'relic', '武器', '装备', '道具', '掉落', '遗物']],
+    ['Creature & Monster Design', ['monster', 'creature', 'boss', 'enemy', '怪物', 'boss', '敌人', '生物']],
+    ['Buildings & Settlements', ['building', 'settlement', 'base', 'shop', 'architecture', '建筑', '据点', '基地', '商店']],
+    ['Game Character Design', ['character', 'pose', 'avatar', 'vtuber', '角色', '人物', '头像', '人设', '设定表']],
+    ['Game VFX Concept', ['vfx', 'effect', 'spell', 'impact', '技能特效', '特效', '法术', '打击']],
+    ['Card & Gacha Art', ['card', 'gacha', 'splash art', 'illustration', '卡牌', '抽卡', '立绘', '插画']],
+    ['Game Key Art & Store Assets', ['poster', 'cover', 'campaign', 'banner', 'capsule', 'key art', '海报', '封面', '主视觉', '商店图', '活动']],
+    ['Game Environment Concept', ['scene', 'environment', 'worldbuilding', 'dungeon', 'level', '场景', '环境', '关卡', '地下城', '世界观']]
   ];
-  return rules.find(([, keys]) => keys.some((key) => text.includes(key)))?.[0] || 'Other Use Cases';
+  return rules.find(([, keys]) => keys.some((key) => text.includes(key)))?.[0] || 'Game Environment Concept';
 }
 
 function inferTags(caseItem) {
   const text = `${caseItem.title} ${caseItem.prompt}`.toLowerCase();
-  const styleOrder = ['UI', 'Infographic', 'Poster', 'Realistic', 'Illustration', 'Product', 'Brand', 'Character', 'Classical', '3D'];
-  const sceneOrder = ['Tech', 'Commerce', 'Education', 'Social', 'Fashion', 'Food', 'Travel', 'Story', 'History', 'Creative'];
+  const styleOrder = ['UI', 'Icon', 'Pixel Art', 'Isometric', 'Anime', 'Stylized', 'Realistic', 'Sci-Fi', 'Dark Fantasy', 'Low Poly'];
+  const sceneOrder = ['Production', 'Mobile Game', 'RPG', 'Strategy', 'Survival', 'Marketing', 'Live Ops', 'Casual', 'Concept Art'];
   const styleByValue = new Map(styleLibrary.styles.map((style) => [style.value, style]));
   const sceneByValue = new Map(styleLibrary.scenes.map((scene) => [scene.value, scene]));
   const styleRules = styleOrder.map((value) => [
@@ -119,8 +121,8 @@ function inferTags(caseItem) {
   };
 
   return {
-    styles: pick(styleRules, caseItem.category.split(' & ')[0].replace('Posters', 'Poster')),
-    scenes: pick(sceneRules, 'Creative')
+    styles: pick(styleRules, caseItem.category === 'Game UI & HUD' ? 'UI' : 'Stylized'),
+    scenes: pick(sceneRules, caseItem.category === 'Game Key Art & Store Assets' ? 'Marketing' : 'Concept Art')
   };
 }
 
@@ -162,7 +164,7 @@ function parseCases() {
         styles: tags.styles,
         scenes: tags.scenes,
         featured: featuredIds.has(id),
-        githubUrl: `https://github.com/freestylefly/awesome-gpt-image-2/blob/main/docs/gallery-part-${part}.md#case-${id}`
+        githubUrl: `${repoUrl}/blob/main/docs/gallery-part-${part}.md#case-${id}`
       });
     }
   }
@@ -176,7 +178,7 @@ const styles = [...new Set(cases.flatMap((item) => item.styles))].sort();
 const scenes = [...new Set(cases.flatMap((item) => item.scenes))].sort();
 
 const payload = {
-  repository: 'https://github.com/freestylefly/awesome-gpt-image-2',
+  repository: repoUrl,
   totalCases: cases.length,
   categories,
   styles,

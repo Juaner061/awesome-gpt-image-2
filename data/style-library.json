@@ -1,819 +1,1327 @@
 {
-  "version": 1,
-  "repository": "https://github.com/freestylefly/awesome-gpt-image-2",
+  "version": 2,
+  "repository": "https://github.com/Juaner061/awesome-gpt-image-2",
   "templateDocument": "docs/templates.md",
   "tagLabels": {
-    "Art": { "en": "Art", "zh": "艺术" },
-    "Campaign": { "en": "Campaign", "zh": "商业 Campaign" },
-    "Chart": { "en": "Chart", "zh": "图表" },
-    "Classical": { "en": "Classical", "zh": "古典" },
-    "Creative": { "en": "Creative", "zh": "创意" },
-    "Dashboard": { "en": "Dashboard", "zh": "仪表盘" },
-    "Document": { "en": "Document", "zh": "文档" },
-    "Education": { "en": "Education", "zh": "教育" },
-    "Identity": { "en": "Identity", "zh": "身份系统" },
-    "Interior": { "en": "Interior", "zh": "室内" },
-    "Layout": { "en": "Layout", "zh": "版式" },
-    "Lens": { "en": "Lens", "zh": "镜头" },
-    "Logo": { "en": "Logo", "zh": "Logo" },
-    "Map": { "en": "Map", "zh": "地图" },
-    "Packaging": { "en": "Packaging", "zh": "包装" },
-    "Pose": { "en": "Pose", "zh": "动作" },
-    "Publishing": { "en": "Publishing", "zh": "出版" },
-    "R&D": { "en": "R&D", "zh": "研发" },
-    "Scene": { "en": "Scene", "zh": "场景" },
-    "Screenshot": { "en": "Screenshot", "zh": "截图" },
-    "Scroll": { "en": "Scroll", "zh": "长卷" },
-    "Special": { "en": "Special", "zh": "特殊输出" },
-    "Storyboard": { "en": "Storyboard", "zh": "分镜" },
-    "Style": { "en": "Style", "zh": "风格" },
-    "Typography": { "en": "Typography", "zh": "字体" }
+    "Anime": {
+      "en": "Anime",
+      "zh": "二次元"
+    },
+    "Card": {
+      "en": "Card",
+      "zh": "卡牌"
+    },
+    "Cel Shading": {
+      "en": "Cel Shading",
+      "zh": "赛璐璐"
+    },
+    "Concept Art": {
+      "en": "Concept Art",
+      "zh": "概念设计"
+    },
+    "Dark Fantasy": {
+      "en": "Dark Fantasy",
+      "zh": "暗黑奇幻"
+    },
+    "Environment": {
+      "en": "Environment",
+      "zh": "场景"
+    },
+    "Fantasy": {
+      "en": "Fantasy",
+      "zh": "奇幻"
+    },
+    "HUD": {
+      "en": "HUD",
+      "zh": "HUD"
+    },
+    "Icon": {
+      "en": "Icon",
+      "zh": "图标"
+    },
+    "Isometric": {
+      "en": "Isometric",
+      "zh": "等距视角"
+    },
+    "Key Art": {
+      "en": "Key Art",
+      "zh": "主视觉"
+    },
+    "Low Poly": {
+      "en": "Low Poly",
+      "zh": "低多边形"
+    },
+    "Map": {
+      "en": "Map",
+      "zh": "地图"
+    },
+    "Marketing": {
+      "en": "Marketing",
+      "zh": "宣发"
+    },
+    "Mobile Game": {
+      "en": "Mobile Game",
+      "zh": "手游"
+    },
+    "Monster": {
+      "en": "Monster",
+      "zh": "怪物"
+    },
+    "Pixel Art": {
+      "en": "Pixel Art",
+      "zh": "像素风"
+    },
+    "Production": {
+      "en": "Production",
+      "zh": "生产资料"
+    },
+    "Prop": {
+      "en": "Prop",
+      "zh": "道具"
+    },
+    "Realistic": {
+      "en": "Realistic",
+      "zh": "写实"
+    },
+    "RPG": {
+      "en": "RPG",
+      "zh": "角色扮演"
+    },
+    "Sci-Fi": {
+      "en": "Sci-Fi",
+      "zh": "科幻"
+    },
+    "Sprite": {
+      "en": "Sprite",
+      "zh": "精灵图"
+    },
+    "Strategy": {
+      "en": "Strategy",
+      "zh": "策略"
+    },
+    "Stylized": {
+      "en": "Stylized",
+      "zh": "风格化"
+    },
+    "Survival": {
+      "en": "Survival",
+      "zh": "生存"
+    },
+    "UI": {
+      "en": "UI",
+      "zh": "界面"
+    },
+    "VFX": {
+      "en": "VFX",
+      "zh": "特效"
+    },
+    "Weapon": {
+      "en": "Weapon",
+      "zh": "武器"
+    }
   },
   "categories": [
     {
-      "id": "cat-ui",
-      "value": "UI & Interfaces",
-      "anchor": "cat-ui",
-      "templateAnchor": "tpl-ui",
-      "cover": "/images/category-covers/ui.jpg",
-      "title": { "en": "UI & Interfaces", "zh": "UI 与界面" },
-      "description": {
-        "en": "Apps, websites, dashboards, social screenshots, and product interfaces.",
-        "zh": "App、网页、仪表盘、社媒截图与产品界面。"
-      }
-    },
-    {
-      "id": "cat-infographic",
-      "value": "Charts & Infographics",
-      "anchor": "cat-infographic",
-      "templateAnchor": "tpl-infographic",
-      "cover": "/images/category-covers/infographic.jpg",
-      "title": { "en": "Charts & Infographics", "zh": "图表与信息可视化" },
-      "description": {
-        "en": "Infographics, knowledge maps, technical explainers, and structured diagrams.",
-        "zh": "信息图、知识图谱、技术解释与结构化图解。"
-      }
-    },
-    {
-      "id": "cat-poster",
-      "value": "Posters & Typography",
-      "anchor": "cat-poster",
-      "templateAnchor": "tpl-poster",
-      "cover": "/images/category-covers/poster.jpg",
-      "title": { "en": "Posters & Typography", "zh": "海报与排版" },
-      "description": {
-        "en": "Event posters, covers, type-driven visuals, and strong layout compositions.",
-        "zh": "活动海报、封面、字体视觉和强排版画面。"
-      }
-    },
-    {
-      "id": "cat-product",
-      "value": "Products & E-commerce",
-      "anchor": "cat-product",
-      "templateAnchor": "tpl-product",
-      "cover": "/images/category-covers/product.jpg",
-      "title": { "en": "Products & E-commerce", "zh": "商品与电商" },
-      "description": {
-        "en": "Product shots, detail pages, packaging, selling points, and ads.",
-        "zh": "商品图、详情页、包装卖点和商业广告。"
-      }
-    },
-    {
-      "id": "cat-brand",
-      "value": "Brand & Logos",
-      "anchor": "cat-brand",
-      "templateAnchor": "tpl-brand",
-      "cover": "/images/category-covers/brand.jpg",
-      "title": { "en": "Brand & Logos", "zh": "品牌与标志" },
-      "description": {
-        "en": "Logos, identity systems, brand touchpoints, and campaign visuals.",
-        "zh": "Logo、VI、品牌触点和 Campaign 视觉系统。"
-      }
-    },
-    {
-      "id": "cat-architecture",
-      "value": "Architecture & Spaces",
-      "anchor": "cat-architecture",
-      "templateAnchor": "tpl-architecture",
-      "cover": "/images/category-covers/architecture.jpg",
-      "title": { "en": "Architecture & Spaces", "zh": "建筑与空间" },
-      "description": {
-        "en": "Architecture renders, interiors, city maps, and spatial concepts.",
-        "zh": "建筑表现、室内空间、城市地图和空间概念。"
-      }
-    },
-    {
-      "id": "cat-photo",
-      "value": "Photography & Realism",
-      "anchor": "cat-photo",
-      "templateAnchor": "tpl-photo",
-      "cover": "/images/category-covers/photo.jpg",
-      "title": { "en": "Photography & Realism", "zh": "摄影与写实" },
-      "description": {
-        "en": "Portraits, phone photography, film texture, and commercial photography.",
-        "zh": "人像、手机纪实、胶片质感和商业摄影。"
-      }
-    },
-    {
-      "id": "cat-illustration",
-      "value": "Illustration & Art",
-      "anchor": "cat-illustration",
-      "templateAnchor": "tpl-illustration",
-      "cover": "/images/category-covers/illustration.jpg",
-      "title": { "en": "Illustration & Art", "zh": "插画与艺术" },
-      "description": {
-        "en": "Illustration, art styles, material experiments, and decorative images.",
-        "zh": "插画、艺术风格、材质实验和装饰画面。"
-      }
-    },
-    {
       "id": "cat-character",
-      "value": "Characters & People",
+      "value": "Game Character Design",
       "anchor": "cat-character",
-      "templateAnchor": "tpl-character",
+      "templateAnchor": "tpl-game-character",
       "cover": "/images/category-covers/character.jpg",
-      "title": { "en": "Characters & People", "zh": "人物与角色" },
+      "title": {
+        "en": "Game Character Design",
+        "zh": "游戏角色设计"
+      },
       "description": {
-        "en": "Character design, pose references, cards, and 3D toys.",
-        "zh": "角色设定、动作参考、卡牌和 3D 玩具。"
+        "en": "Playable heroes, NPCs, skins, expression sheets, turnarounds, and production-ready character references.",
+        "zh": "主角、NPC、皮肤、表情表、三视图与可交付角色设定。"
       }
     },
     {
-      "id": "cat-scene",
-      "value": "Scenes & Storytelling",
-      "anchor": "cat-scene",
-      "templateAnchor": "tpl-scene",
+      "id": "cat-environment",
+      "value": "Game Environment Concept",
+      "anchor": "cat-environment",
+      "templateAnchor": "tpl-game-environment",
       "cover": "/images/category-covers/scene.jpg",
-      "title": { "en": "Scenes & Storytelling", "zh": "场景与叙事" },
+      "title": {
+        "en": "Game Environment Concept",
+        "zh": "游戏场景概念"
+      },
       "description": {
-        "en": "Storyboards, narrative scenes, livestream frames, and worldbuilding.",
-        "zh": "分镜、故事场景、直播画面和世界观叙事。"
+        "en": "Biome concepts, level mood paintings, hub areas, dungeons, cities, and combat arenas.",
+        "zh": "生态区、关卡氛围图、主城、地下城、城市与战斗场。"
       }
     },
     {
-      "id": "cat-history",
-      "value": "History & Classical Themes",
-      "anchor": "cat-history",
-      "templateAnchor": "tpl-history",
-      "cover": "/images/category-covers/history.jpg",
-      "title": { "en": "History & Classical Themes", "zh": "历史与古风题材" },
+      "id": "cat-prop",
+      "value": "Game Props & Equipment",
+      "anchor": "cat-prop",
+      "templateAnchor": "tpl-game-prop",
+      "cover": "/images/category-covers/product.jpg",
+      "title": {
+        "en": "Game Props & Equipment",
+        "zh": "游戏道具装备"
+      },
       "description": {
-        "en": "Classical scrolls, historical figures, traditional themes, and poetry visuals.",
-        "zh": "古风长卷、历史人物、传统题材和诗词画面。"
+        "en": "Weapons, armor, consumables, loot, relics, crafting items, and inventory-ready prop designs.",
+        "zh": "武器、防具、消耗品、掉落物、遗物、制造材料与背包道具。"
       }
     },
     {
-      "id": "cat-document",
-      "value": "Documents & Publishing",
-      "anchor": "cat-document",
-      "templateAnchor": "tpl-document",
-      "cover": "/images/category-covers/document.jpg",
-      "title": { "en": "Documents & Publishing", "zh": "文档与出版物" },
+      "id": "cat-ui",
+      "value": "Game UI & HUD",
+      "anchor": "cat-ui",
+      "templateAnchor": "tpl-game-ui",
+      "cover": "/images/category-covers/ui.jpg",
+      "title": {
+        "en": "Game UI & HUD",
+        "zh": "游戏 UI 与 HUD"
+      },
       "description": {
-        "en": "White papers, manuals, encyclopedic plates, and publishing layouts.",
-        "zh": "白皮书、手册、百科图鉴和出版页设计。"
+        "en": "HUDs, menus, inventory screens, character panels, skill trees, battle overlays, and mobile game interfaces.",
+        "zh": "HUD、菜单、背包、角色面板、技能树、战斗界面与手游 UI。"
       }
     },
     {
-      "id": "cat-other",
-      "value": "Other Use Cases",
-      "anchor": "cat-other",
-      "templateAnchor": "tpl-other",
-      "cover": "/images/category-covers/other.jpg",
-      "title": { "en": "Other Use Cases", "zh": "其他应用场景" },
+      "id": "cat-icon",
+      "value": "Game Icons",
+      "anchor": "cat-icon",
+      "templateAnchor": "tpl-game-icon",
+      "cover": "/images/case444.jpg",
+      "title": {
+        "en": "Game Icons",
+        "zh": "游戏图标"
+      },
       "description": {
-        "en": "Creative experiments, special tasks, mixed workflows, and practical cases.",
-        "zh": "创意实验、特殊任务、混合玩法和实用场景。"
+        "en": "Skill icons, item icons, app icons, achievement badges, status effects, and resource currencies.",
+        "zh": "技能图标、物品图标、App 图标、成就徽章、状态效果与资源货币。"
+      }
+    },
+    {
+      "id": "cat-vfx",
+      "value": "Game VFX Concept",
+      "anchor": "cat-vfx",
+      "templateAnchor": "tpl-game-vfx",
+      "cover": "/images/case350.jpg",
+      "title": {
+        "en": "Game VFX Concept",
+        "zh": "游戏技能特效"
+      },
+      "description": {
+        "en": "Magic spells, elemental attacks, impact frames, hit effects, aura loops, and VFX concept sheets.",
+        "zh": "法术、元素攻击、打击帧、受击反馈、光环循环与特效设定表。"
+      }
+    },
+    {
+      "id": "cat-map",
+      "value": "Game Maps & Tiles",
+      "anchor": "cat-map",
+      "templateAnchor": "tpl-game-map",
+      "cover": "/images/case489.jpg",
+      "title": {
+        "en": "Game Maps & Tiles",
+        "zh": "游戏地图与地块"
+      },
+      "description": {
+        "en": "World maps, tactical maps, isometric tiles, resource nodes, route boards, and readable minimap concepts.",
+        "zh": "世界地图、战术地图、等距地块、资源点、路线板与小地图概念。"
+      }
+    },
+    {
+      "id": "cat-card",
+      "value": "Card & Gacha Art",
+      "anchor": "cat-card",
+      "templateAnchor": "tpl-game-card-art",
+      "cover": "/images/case6.jpg",
+      "title": {
+        "en": "Card & Gacha Art",
+        "zh": "卡牌与抽卡立绘"
+      },
+      "description": {
+        "en": "Hero cards, gacha splash art, collectible illustrations, frame variants, and rarity-driven visuals.",
+        "zh": "英雄卡、抽卡立绘、收藏插画、卡框变体与稀有度视觉。"
+      }
+    },
+    {
+      "id": "cat-monster",
+      "value": "Creature & Monster Design",
+      "anchor": "cat-monster",
+      "templateAnchor": "tpl-game-monster",
+      "cover": "/images/case439.jpg",
+      "title": {
+        "en": "Creature & Monster Design",
+        "zh": "怪物与 Boss 设计"
+      },
+      "description": {
+        "en": "Enemies, bosses, creatures, mutation variants, readable silhouettes, weak points, and attack cues.",
+        "zh": "敌人、Boss、生物、变体、清晰剪影、弱点与攻击预兆。"
+      }
+    },
+    {
+      "id": "cat-building",
+      "value": "Buildings & Settlements",
+      "anchor": "cat-building",
+      "templateAnchor": "tpl-game-building",
+      "cover": "/images/category-covers/architecture.jpg",
+      "title": {
+        "en": "Buildings & Settlements",
+        "zh": "建筑与据点"
+      },
+      "description": {
+        "en": "Base buildings, town sets, shops, resource facilities, destructible props, and modular settlement kits.",
+        "zh": "基地建筑、城镇套件、商店、资源设施、可破坏物与模块化据点。"
+      }
+    },
+    {
+      "id": "cat-key-art",
+      "value": "Game Key Art & Store Assets",
+      "anchor": "cat-key-art",
+      "templateAnchor": "tpl-game-key-art",
+      "cover": "/images/case310.jpg",
+      "title": {
+        "en": "Game Key Art & Store Assets",
+        "zh": "游戏主视觉与商店素材"
+      },
+      "description": {
+        "en": "Steam capsules, app store screenshots, launch posters, event banners, seasonal campaigns, and social ads.",
+        "zh": "Steam 胶囊图、商店截图、上线海报、活动 Banner、赛季 Campaign 与社媒广告。"
+      }
+    },
+    {
+      "id": "cat-sprite",
+      "value": "Sprites & Animation Sheets",
+      "anchor": "cat-sprite",
+      "templateAnchor": "tpl-game-sprite",
+      "cover": "/images/case27.jpg",
+      "title": {
+        "en": "Sprites & Animation Sheets",
+        "zh": "精灵图与动作帧"
+      },
+      "description": {
+        "en": "2D sprites, pixel characters, idle/run/attack sheets, hit reactions, and clean frame grids.",
+        "zh": "2D 精灵、像素角色、待机/奔跑/攻击帧、受击动作与整齐帧表。"
       }
     }
   ],
   "styles": [
-    { "id": "3d", "value": "3D", "title": { "en": "3D", "zh": "3D" }, "keywords": ["3d", "toy", "render", "玩具"] },
-    { "id": "architecture", "value": "Architecture", "title": { "en": "Architecture", "zh": "建筑" }, "keywords": [] },
-    { "id": "brand", "value": "Brand", "title": { "en": "Brand", "zh": "品牌" }, "keywords": ["brand", "logo", "identity", "品牌", "标志"] },
-    { "id": "character", "value": "Character", "title": { "en": "Character", "zh": "角色" }, "keywords": ["character", "avatar", "pose", "角色", "人物"] },
-    { "id": "characters", "value": "Characters", "title": { "en": "Characters", "zh": "人物" }, "keywords": [] },
-    { "id": "charts", "value": "Charts", "title": { "en": "Charts", "zh": "图表" }, "keywords": [] },
-    { "id": "classical", "value": "Classical", "title": { "en": "Classical", "zh": "古典" }, "keywords": ["classical", "dynasty", "history", "古风", "历史"] },
-    { "id": "documents", "value": "Documents", "title": { "en": "Documents", "zh": "文档" }, "keywords": [] },
-    { "id": "history", "value": "History", "title": { "en": "History", "zh": "历史" }, "keywords": [] },
-    { "id": "illustration", "value": "Illustration", "title": { "en": "Illustration", "zh": "插画" }, "keywords": ["illustration", "painting", "watercolor", "插画", "绘画"] },
-    { "id": "infographic", "value": "Infographic", "title": { "en": "Infographic", "zh": "信息图" }, "keywords": ["infographic", "diagram", "信息图", "图解"] },
-    { "id": "other", "value": "Other Use Cases", "title": { "en": "Other Use Cases", "zh": "其他应用场景" }, "keywords": [] },
-    { "id": "photography", "value": "Photography", "title": { "en": "Photography", "zh": "摄影" }, "keywords": [] },
-    { "id": "poster", "value": "Poster", "title": { "en": "Poster", "zh": "海报" }, "keywords": ["poster", "cover", "typography", "海报", "封面"] },
-    { "id": "product", "value": "Product", "title": { "en": "Product", "zh": "商品" }, "keywords": ["product", "packaging", "商品", "包装"] },
-    { "id": "products", "value": "Products", "title": { "en": "Products", "zh": "商品" }, "keywords": [] },
-    { "id": "realistic", "value": "Realistic", "title": { "en": "Realistic", "zh": "写实" }, "keywords": ["photo", "realistic", "camera", "写真", "写实"] },
-    { "id": "scenes", "value": "Scenes", "title": { "en": "Scenes", "zh": "场景" }, "keywords": [] },
-    { "id": "ui", "value": "UI", "title": { "en": "UI", "zh": "界面" }, "keywords": ["ui", "interface", "dashboard", "界面", "截图"] }
+    {
+      "value": "Stylized",
+      "title": {
+        "en": "Stylized",
+        "zh": "风格化"
+      },
+      "keywords": [
+        "stylized",
+        "hand-painted",
+        "exaggerated",
+        "chunky",
+        "clean silhouette",
+        "风格化",
+        "手绘",
+        "夸张",
+        "清晰剪影"
+      ]
+    },
+    {
+      "value": "Anime",
+      "title": {
+        "en": "Anime",
+        "zh": "二次元"
+      },
+      "keywords": [
+        "anime",
+        "manga",
+        "gacha",
+        "cel shading",
+        "二次元",
+        "日系",
+        "赛璐璐",
+        "抽卡"
+      ]
+    },
+    {
+      "value": "Realistic",
+      "title": {
+        "en": "Realistic",
+        "zh": "写实"
+      },
+      "keywords": [
+        "realistic",
+        "AAA",
+        "PBR",
+        "Unreal Engine",
+        "photoreal",
+        "写实",
+        "真实材质",
+        "电影感"
+      ]
+    },
+    {
+      "value": "Pixel Art",
+      "title": {
+        "en": "Pixel Art",
+        "zh": "像素风"
+      },
+      "keywords": [
+        "pixel art",
+        "sprite",
+        "8-bit",
+        "16-bit",
+        "tile",
+        "像素",
+        "精灵",
+        "帧动画"
+      ]
+    },
+    {
+      "value": "Low Poly",
+      "title": {
+        "en": "Low Poly",
+        "zh": "低多边形"
+      },
+      "keywords": [
+        "low poly",
+        "flat shaded",
+        "mobile optimized",
+        "低多边形",
+        "低模",
+        "轻量化"
+      ]
+    },
+    {
+      "value": "Isometric",
+      "title": {
+        "en": "Isometric",
+        "zh": "等距视角"
+      },
+      "keywords": [
+        "isometric",
+        "orthographic",
+        "3/4 view",
+        "tilemap",
+        "等距",
+        "正交",
+        "三分之四视角"
+      ]
+    },
+    {
+      "value": "UI",
+      "title": {
+        "en": "UI",
+        "zh": "界面"
+      },
+      "keywords": [
+        "UI",
+        "HUD",
+        "menu",
+        "inventory",
+        "skill tree",
+        "battle overlay",
+        "界面",
+        "背包",
+        "技能树",
+        "战斗 UI"
+      ]
+    },
+    {
+      "value": "Icon",
+      "title": {
+        "en": "Icon",
+        "zh": "图标"
+      },
+      "keywords": [
+        "icon",
+        "badge",
+        "ability icon",
+        "item icon",
+        "图标",
+        "徽章",
+        "技能图标",
+        "物品图标"
+      ]
+    },
+    {
+      "value": "Dark Fantasy",
+      "title": {
+        "en": "Dark Fantasy",
+        "zh": "暗黑奇幻"
+      },
+      "keywords": [
+        "dark fantasy",
+        "gothic",
+        "grim",
+        "dungeon",
+        "暗黑",
+        "哥特",
+        "地下城",
+        "诡秘"
+      ]
+    },
+    {
+      "value": "Sci-Fi",
+      "title": {
+        "en": "Sci-Fi",
+        "zh": "科幻"
+      },
+      "keywords": [
+        "sci-fi",
+        "cyberpunk",
+        "mecha",
+        "hologram",
+        "科幻",
+        "赛博",
+        "机甲",
+        "全息"
+      ]
+    }
   ],
   "scenes": [
-    { "id": "creative", "value": "Creative", "title": { "en": "Creative", "zh": "创意" }, "keywords": [] },
-    { "id": "tech", "value": "Tech", "title": { "en": "Tech", "zh": "科技" }, "keywords": ["ai", "rag", "tech", "data", "技术", "数据"] },
-    { "id": "commerce", "value": "Commerce", "title": { "en": "Commerce", "zh": "商业" }, "keywords": ["product", "brand", "ad", "campaign", "商品", "商业", "广告"] },
-    { "id": "education", "value": "Education", "title": { "en": "Education", "zh": "教育" }, "keywords": ["guide", "atlas", "science", "learning", "学习", "科普"] },
-    { "id": "social", "value": "Social", "title": { "en": "Social", "zh": "社媒" }, "keywords": ["social", "x ", "wechat", "朋友圈", "社媒"] },
-    { "id": "fashion", "value": "Fashion", "title": { "en": "Fashion", "zh": "时尚" }, "keywords": ["fashion", "clothing", "portrait", "服饰", "写真"] },
-    { "id": "food", "value": "Food", "title": { "en": "Food", "zh": "食品饮品" }, "keywords": ["food", "drink", "coffee", "tea", "餐厅", "咖啡", "茶"] },
-    { "id": "travel", "value": "Travel", "title": { "en": "Travel", "zh": "旅行" }, "keywords": ["city", "map", "street", "城市", "地图", "街头"] },
-    { "id": "story", "value": "Story", "title": { "en": "Story", "zh": "叙事" }, "keywords": ["story", "scene", "world", "故事", "场景"] },
-    { "id": "history", "value": "History", "title": { "en": "History", "zh": "历史" }, "keywords": ["history", "dynasty", "ancient", "历史", "古希腊", "唐"] }
+    {
+      "value": "Concept Art",
+      "title": {
+        "en": "Concept Art",
+        "zh": "概念设计"
+      },
+      "keywords": [
+        "concept art",
+        "mood painting",
+        "ideation",
+        "visual development",
+        "概念设计",
+        "氛围图",
+        "视觉开发"
+      ]
+    },
+    {
+      "value": "Production",
+      "title": {
+        "en": "Production Sheet",
+        "zh": "生产设定表"
+      },
+      "keywords": [
+        "reference sheet",
+        "turnaround",
+        "production sheet",
+        "orthographic",
+        "设定表",
+        "三视图",
+        "生产资料"
+      ]
+    },
+    {
+      "value": "Mobile Game",
+      "title": {
+        "en": "Mobile Game",
+        "zh": "手游"
+      },
+      "keywords": [
+        "mobile game",
+        "portrait",
+        "9:16",
+        "touch UI",
+        "手游",
+        "竖屏",
+        "触控"
+      ]
+    },
+    {
+      "value": "RPG",
+      "title": {
+        "en": "RPG",
+        "zh": "角色扮演"
+      },
+      "keywords": [
+        "RPG",
+        "hero",
+        "party",
+        "quest",
+        "loot",
+        "角色扮演",
+        "英雄",
+        "任务",
+        "装备"
+      ]
+    },
+    {
+      "value": "Strategy",
+      "title": {
+        "en": "Strategy",
+        "zh": "策略"
+      },
+      "keywords": [
+        "strategy",
+        "base",
+        "world map",
+        "resource",
+        "策略",
+        "基地",
+        "世界地图",
+        "资源"
+      ]
+    },
+    {
+      "value": "Survival",
+      "title": {
+        "en": "Survival",
+        "zh": "生存"
+      },
+      "keywords": [
+        "survival",
+        "crafting",
+        "shelter",
+        "post-apocalyptic",
+        "生存",
+        "制造",
+        "避难所",
+        "末日"
+      ]
+    },
+    {
+      "value": "Marketing",
+      "title": {
+        "en": "Marketing",
+        "zh": "宣发"
+      },
+      "keywords": [
+        "key art",
+        "store asset",
+        "capsule",
+        "poster",
+        "banner",
+        "主视觉",
+        "商店图",
+        "海报",
+        "活动"
+      ]
+    },
+    {
+      "value": "Live Ops",
+      "title": {
+        "en": "Live Ops",
+        "zh": "活动运营"
+      },
+      "keywords": [
+        "event",
+        "season",
+        "battle pass",
+        "limited skin",
+        "活动",
+        "赛季",
+        "通行证",
+        "限定皮肤"
+      ]
+    },
+    {
+      "value": "Casual",
+      "title": {
+        "en": "Casual",
+        "zh": "休闲"
+      },
+      "keywords": [
+        "casual",
+        "cozy",
+        "cute",
+        "puzzle",
+        "merge",
+        "休闲",
+        "治愈",
+        "可爱",
+        "合成"
+      ]
+    }
   ],
   "templates": [
     {
-      "id": "ui-screenshot-system",
-      "anchor": "tpl-ui",
-      "cover": "/images/case17.jpg",
-      "title": { "en": "UI Screenshot System", "zh": "UI 截图系统" },
-      "description": {
-        "en": "High-fidelity app, web, dashboard, and social interface prompts.",
-        "zh": "生成 App、网页、仪表盘、社媒截图等高保真界面。"
+      "id": "game-character-reference",
+      "anchor": "tpl-game-character",
+      "cover": "/images/case416.jpg",
+      "title": {
+        "en": "Game Character Reference Sheet",
+        "zh": "游戏角色设定表"
       },
-      "category": "UI & Interfaces",
-      "styles": ["UI"],
-      "scenes": ["Tech", "Social"],
-      "tags": ["UI", "Dashboard", "Screenshot"],
+      "description": {
+        "en": "Production-ready hero, NPC, and skin reference sheets with identity anchors, palette, poses, and details.",
+        "zh": "面向主角、NPC 和皮肤的可生产角色设定表，包含身份锚点、配色、姿态和细节。"
+      },
+      "category": "Game Character Design",
+      "styles": [
+        "Anime",
+        "Stylized",
+        "Realistic"
+      ],
+      "scenes": [
+        "Production",
+        "RPG",
+        "Mobile Game"
+      ],
+      "tags": [
+        "Concept Art",
+        "Production",
+        "Anime"
+      ],
       "useWhen": {
-        "en": "Use for app screens, dashboards, social screenshots, and live interface mockups.",
-        "zh": "用于 App 截图、仪表盘、社媒截图和直播界面。"
+        "en": "Use for playable characters, NPCs, skins, avatar variants, and any prompt that needs consistent character design.",
+        "zh": "用于可玩角色、NPC、皮肤、头像变体，以及任何需要角色一致性的设定任务。"
       },
       "guidance": {
-        "en": ["Lock platform, aspect ratio, layout hierarchy, and exact visible text.", "Specify UI chrome such as status bars, tabs, action rows, or comment layers."],
-        "zh": ["锁定平台、比例、层级和画面文字。", "明确状态栏、Tab、操作区、评论层等 UI 元素。"]
+        "en": [
+          "Lock role, faction, silhouette, costume materials, face anchors, palette, and game genre before style words.",
+          "Ask for front view plus 2-4 detail callouts; use turnaround only when the user needs production reference."
+        ],
+        "zh": [
+          "先锁定职业、阵营、剪影、服装材质、脸部识别点、配色和游戏类型，再写风格词。",
+          "默认生成主视图加 2-4 个细节放大；只有需要生产参考时才要求三视图。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid vague platform names and generic app mockups.", "Constrain text readability and platform-specific details."],
-        "zh": ["避免平台描述过泛。", "约束文字可读性和平台特征。"]
+        "en": [
+          "Avoid changing age, face, costume, or faction across panels.",
+          "Avoid busy backgrounds unless the request is splash art rather than a reference sheet."
+        ],
+        "zh": [
+          "避免不同面板换年龄、换脸、换衣服或换阵营。",
+          "设定表不要复杂背景；如果用户要的是立绘或宣传图，再加入场景。"
+        ]
       },
-      "exampleCases": [17, 2, 4]
+      "exampleCases": [
+        439,
+        27,
+        54
+      ]
     },
     {
-      "id": "infographic-engine",
-      "anchor": "tpl-infographic",
-      "cover": "/images/case334.png",
-      "title": { "en": "Infographic Engine", "zh": "信息图引擎" },
-      "description": {
-        "en": "Structured diagrams, timelines, knowledge maps, and explainers.",
-        "zh": "生成结构化图解、时间线、知识图谱和技术解释图。"
+      "id": "game-environment-concept",
+      "anchor": "tpl-game-environment",
+      "cover": "/images/case473.jpg",
+      "title": {
+        "en": "Game Environment Concept",
+        "zh": "游戏场景概念图"
       },
-      "category": "Charts & Infographics",
-      "styles": ["Infographic", "Charts"],
-      "scenes": ["Education", "Tech"],
-      "tags": ["Infographic", "Chart", "Education"],
+      "description": {
+        "en": "Level, biome, hub, dungeon, and arena mood concepts with gameplay-readable paths and focal points.",
+        "zh": "面向关卡、生态区、主城、地下城和战斗场的氛围概念图，强调可读路线和视觉焦点。"
+      },
+      "category": "Game Environment Concept",
+      "styles": [
+        "Stylized",
+        "Realistic",
+        "Dark Fantasy",
+        "Sci-Fi"
+      ],
+      "scenes": [
+        "Concept Art",
+        "RPG",
+        "Survival"
+      ],
+      "tags": [
+        "Environment",
+        "Concept Art",
+        "Key Art"
+      ],
       "useWhen": {
-        "en": "Use for explainer graphics, technical diagrams, timelines, and knowledge cards.",
-        "zh": "用于解释图、技术图解、时间线和知识卡片。"
+        "en": "Use for locations, level mood paintings, playable spaces, dungeons, towns, arenas, and environmental storytelling.",
+        "zh": "用于地点、关卡氛围图、可游玩空间、地下城、城镇、竞技场和环境叙事。"
       },
       "guidance": {
-        "en": ["Define 3-5 modules, information flow, visual hierarchy, and short labels.", "Use color groups, arrows, icons, and clean spacing to reduce clutter."],
-        "zh": ["定义 3-5 个模块、信息流、层级和短标签。", "用色块、箭头、图标和留白控制复杂度。"]
+        "en": [
+          "Define camera height, player path, landmark, interactable zones, mood, time of day, and scale cues.",
+          "Separate visual mood from gameplay readability: clear entrances, cover points, routes, and reward focal points."
+        ],
+        "zh": [
+          "明确镜头高度、玩家路线、地标、可交互区域、情绪、时间和尺度参照。",
+          "把氛围和玩法可读性同时写清：入口、掩体、路线和奖励焦点要能看出来。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid long paragraphs inside the image.", "Limit module count before adding visual detail."],
-        "zh": ["避免把长段正文塞进画面。", "先限制模块数量，再补视觉细节。"]
+        "en": [
+          "Avoid pure wallpaper scenery with no gameplay function.",
+          "Avoid overusing fog, bloom, and darkness until important gameplay shapes disappear."
+        ],
+        "zh": [
+          "避免只像风景壁纸，看不出游戏功能。",
+          "避免雾、泛光和暗部过重，导致关键玩法形状消失。"
+        ]
       },
-      "exampleCases": [334, 1, 8]
+      "exampleCases": [
+        473,
+        489,
+        6
+      ]
     },
     {
-      "id": "scientific-scale-diagram",
-      "anchor": "tpl-infographic",
-      "cover": "/images/case341.jpg",
-      "title": { "en": "Scientific Scale Diagram", "zh": "科学尺度缩放图" },
-      "description": {
-        "en": "Multi-scale science visuals with readable labels and hierarchy.",
-        "zh": "生成多尺度科学信息图，强调层级、标签和可读性。"
-      },
-      "category": "Charts & Infographics",
-      "styles": ["Infographic", "Charts", "Realistic"],
-      "scenes": ["Education", "Tech"],
-      "tags": ["Infographic", "Chart", "Education"],
-      "useWhen": {
-        "en": "Use when the topic needs micro-to-macro scale comparison and labeled detail windows.",
-        "zh": "用于需要从微观到宏观展示尺度变化的科普主题。"
-      },
-      "guidance": {
-        "en": ["Use 6-8 scale frames and keep each label short.", "Show units, magnification, and distinct scale detail."],
-        "zh": ["使用 6-8 个尺度框，每个标签保持短句。", "展示单位、倍率和不同尺度的细节。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid making every scale frame visually identical.", "Avoid generic magnifying glass icon layouts."],
-        "zh": ["避免所有尺度框长得一样。", "避免通用放大镜式布局。"]
-      },
-      "exampleCases": [341]
-    },
-    {
-      "id": "poster-layout-system",
-      "anchor": "tpl-poster",
-      "cover": "/images/case345.jpg",
-      "title": { "en": "Poster Layout System", "zh": "海报排版系统" },
-      "description": {
-        "en": "Event, product, movie, and social poster compositions.",
-        "zh": "生成活动、产品、电影和社媒传播海报。"
-      },
-      "category": "Posters & Typography",
-      "styles": ["Poster"],
-      "scenes": ["Commerce", "Social"],
-      "tags": ["Poster", "Typography", "Campaign"],
-      "useWhen": {
-        "en": "Use for event posters, movie posters, covers, and social campaign visuals.",
-        "zh": "用于活动海报、电影海报、封面和社媒传播视觉。"
-      },
-      "guidance": {
-        "en": ["Lock subject, headline, layout, palette, and aspect ratio.", "Make the title hierarchy and primary visual clear."],
-        "zh": ["锁定主体、标题、版式、配色和比例。", "突出标题层级和主视觉。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid mixed moodboards or process sheets when asking for one finished poster.", "Constrain extra text and decorative symbols."],
-        "zh": ["需要成品海报时，避免生成拼贴展示板。", "约束多余文字和装饰符号。"]
-      },
-      "exampleCases": [345, 5, 10]
-    },
-    {
-      "id": "sports-campaign-poster",
-      "anchor": "tpl-poster",
+      "id": "game-prop-equipment-sheet",
+      "anchor": "tpl-game-prop",
       "cover": "/images/case350.jpg",
-      "title": { "en": "Sports Campaign Poster", "zh": "运动商业 Campaign" },
-      "description": {
-        "en": "Commercial sports visuals with athletes, props, and brand color.",
-        "zh": "生成运动员、道具、品牌色统一的商业运动海报。"
+      "title": {
+        "en": "Game Prop & Equipment Sheet",
+        "zh": "游戏道具装备设定表"
       },
-      "category": "Posters & Typography",
-      "styles": ["Poster", "Realistic"],
-      "scenes": ["Commerce", "Fashion"],
-      "tags": ["Poster", "Campaign", "Typography"],
+      "description": {
+        "en": "Weapons, armor, relics, loot, consumables, and crafting items with readable silhouette and material logic.",
+        "zh": "武器、防具、遗物、掉落物、消耗品和制造材料，强调剪影可读性和材质逻辑。"
+      },
+      "category": "Game Props & Equipment",
+      "styles": [
+        "Stylized",
+        "Realistic",
+        "Sci-Fi",
+        "Dark Fantasy"
+      ],
+      "scenes": [
+        "Production",
+        "RPG",
+        "Survival"
+      ],
+      "tags": [
+        "Prop",
+        "Weapon",
+        "Production"
+      ],
       "useWhen": {
-        "en": "Use for sports brand campaigns, athlete posters, and product-led sport visuals.",
-        "zh": "用于运动品牌 Campaign、运动员海报和运动产品视觉。"
+        "en": "Use for inventory items, weapon concepts, equipment sets, crafting resources, and prop callout sheets.",
+        "zh": "用于背包物品、武器概念、装备套装、制造资源和道具细节拆解。"
       },
       "guidance": {
-        "en": ["Define sport, athlete pose, hero prop, title, and brand palette.", "Use dramatic light, clean composition, and readable data overlays."],
-        "zh": ["定义运动项目、姿态、核心道具、标题和品牌色。", "使用强光影、干净构图和可读数据层。"]
+        "en": [
+          "Lock item class, rarity, gameplay function, scale, materials, damage/wear state, and silhouette language.",
+          "Ask for one hero item plus 3-6 orthographic callouts or a clean grid of variants."
+        ],
+        "zh": [
+          "锁定道具类别、稀有度、玩法功能、尺度、材质、损耗状态和剪影语言。",
+          "默认一件主道具加 3-6 个正交细节；变体需求则使用整齐网格。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid wrong equipment and noisy collage.", "Keep the athlete and hero prop visually dominant."],
-        "zh": ["避免错误运动器材和杂乱拼贴。", "让运动员和核心道具占据主导。"]
+        "en": [
+          "Avoid unclear scale and impossible handles, blades, straps, or attachment points.",
+          "Avoid unreadable tiny text on props; use labels outside the object when needed."
+        ],
+        "zh": [
+          "避免比例不清、手柄/刀刃/绑带/接口不可用。",
+          "避免在道具上塞小字；需要说明时用外部标注。"
+        ]
       },
-      "exampleCases": [350, 3]
+      "exampleCases": [
+        473,
+        444
+      ]
     },
     {
-      "id": "conceptual-typography-poster",
-      "anchor": "tpl-poster",
-      "cover": "/images/case355.jpg",
-      "title": { "en": "Conceptual Typography Poster", "zh": "概念字体海报" },
-      "description": {
-        "en": "Premium title-led posters with strong typographic systems.",
-        "zh": "生成以标题文字为主视觉的高级字体海报。"
+      "id": "game-ui-hud-screen",
+      "anchor": "tpl-game-ui",
+      "cover": "/images/case17.jpg",
+      "title": {
+        "en": "Game UI & HUD Screen",
+        "zh": "游戏 UI 与 HUD 画面"
       },
-      "category": "Posters & Typography",
-      "styles": ["Poster"],
-      "scenes": ["Creative", "Social"],
-      "tags": ["Typography", "Poster", "Style"],
+      "description": {
+        "en": "HUD, inventory, character panel, battle overlay, skill tree, gacha, shop, and live ops event screens.",
+        "zh": "HUD、背包、角色面板、战斗覆盖层、技能树、抽卡、商店和活动运营界面。"
+      },
+      "category": "Game UI & HUD",
+      "styles": [
+        "UI",
+        "Anime",
+        "Sci-Fi",
+        "Stylized"
+      ],
+      "scenes": [
+        "Mobile Game",
+        "Live Ops",
+        "RPG"
+      ],
+      "tags": [
+        "UI",
+        "HUD",
+        "Mobile Game"
+      ],
       "useWhen": {
-        "en": "Use when the exact title must become the main visual structure.",
-        "zh": "用于标题文字需要成为主视觉结构的海报。"
+        "en": "Use for any game interface, especially when layout, readable labels, icon slots, and mobile screen constraints matter.",
+        "zh": "用于任何游戏界面，尤其是布局、可读标签、图标槽位和移动端比例很重要时。"
       },
       "guidance": {
-        "en": ["Make typography the hero and spell the title exactly.", "Tie human figures, objects, or landscapes to the title meaning."],
-        "zh": ["让字体成为画面主角，并保证标题拼写准确。", "人物、物体或风景需要服务标题含义。"]
+        "en": [
+          "Specify platform, orientation, screen state, core panels, icon counts, text language, and touch-safe spacing.",
+          "Use exact UI labels only for short headers; avoid asking the image model to typeset long paragraphs."
+        ],
+        "zh": [
+          "指定平台、横竖屏、界面状态、核心面板、图标数量、文字语言和触控安全间距。",
+          "只锁定短标题和按钮文案；不要让图片模型排长段正文。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid default word art, unrelated icons, and misspelled title text.", "Limit the color system to a restrained palette."],
-        "zh": ["避免默认字效、无关图标和标题错字。", "控制配色数量，保持克制。"]
+        "en": [
+          "Avoid mixing console, PC, and mobile interface conventions in one screen.",
+          "Avoid letting UI cover the character face, enemy silhouette, or combat feedback."
+        ],
+        "zh": [
+          "避免同一张图混用主机、PC 和手游界面习惯。",
+          "避免 UI 遮住角色脸、敌人剪影或战斗反馈。"
+        ]
       },
-      "exampleCases": [355]
+      "exampleCases": [
+        17
+      ]
     },
     {
-      "id": "ink-double-exposure-poster",
-      "anchor": "tpl-poster",
-      "cover": "/images/case359.jpg",
-      "title": { "en": "Ink Double Exposure Poster", "zh": "水墨双重曝光海报" },
-      "description": {
-        "en": "Chinese ink, portrait, and layered atmosphere composition.",
-        "zh": "生成水墨、人像与层叠氛围结合的视觉海报。"
+      "id": "game-icon-pack",
+      "anchor": "tpl-game-icon",
+      "cover": "/images/case444.jpg",
+      "title": {
+        "en": "Game Icon Pack",
+        "zh": "游戏图标套件"
       },
-      "category": "Posters & Typography",
-      "styles": ["Poster", "Illustration", "Classical"],
-      "scenes": ["Story", "History"],
-      "tags": ["Poster", "Classical", "Style"],
+      "description": {
+        "en": "Skill, item, currency, status, achievement, and app icons with consistent shape language and backgrounds.",
+        "zh": "技能、物品、货币、状态、成就和 App 图标，统一形状语言和底板。"
+      },
+      "category": "Game Icons",
+      "styles": [
+        "Icon",
+        "Stylized",
+        "Anime",
+        "Sci-Fi"
+      ],
+      "scenes": [
+        "Production",
+        "Mobile Game",
+        "Live Ops"
+      ],
+      "tags": [
+        "Icon",
+        "UI",
+        "Production"
+      ],
       "useWhen": {
-        "en": "Use for poetic portrait posters, ink atmospheres, and layered cultural visuals.",
-        "zh": "用于诗意人像海报、水墨氛围和文化主题视觉。"
+        "en": "Use when the output needs small-size readability, consistent icon families, transparent backgrounds, or square tiles.",
+        "zh": "用于需要小尺寸可读、图标族统一、透明背景或方形底板的任务。"
       },
       "guidance": {
-        "en": ["Blend portrait silhouette, ink texture, atmosphere, and negative space.", "Keep composition quiet, premium, and readable."],
-        "zh": ["融合人像剪影、水墨质感、氛围和留白。", "保持构图克制、高级、可读。"]
+        "en": [
+          "Define icon count, canvas shape, background rule, rarity border, lighting direction, and dominant silhouette for each icon.",
+          "For production icons, request centered objects, clean edges, strong contrast, and no embedded text."
+        ],
+        "zh": [
+          "定义图标数量、画布形状、背景规则、稀有度边框、光源方向和每个图标的主剪影。",
+          "生产用图标要求主体居中、边缘干净、强对比、不要内嵌文字。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid cheap fantasy collage and overloaded scenery.", "Use subtle text or no text unless required."],
-        "zh": ["避免廉价奇幻拼贴和景物堆叠。", "非必要时减少文字。"]
+        "en": [
+          "Avoid decorative detail that disappears at 64 px.",
+          "Avoid different camera angles and light directions within one icon pack."
+        ],
+        "zh": [
+          "避免 64 像素下看不清的装饰细节。",
+          "同一套图标不要混用不同机位和光源方向。"
+        ]
       },
-      "exampleCases": [359]
+      "exampleCases": [
+        444
+      ]
     },
     {
-      "id": "nature-science-poster",
-      "anchor": "tpl-poster",
-      "cover": "/images/case339.jpg",
-      "title": { "en": "Nature Science Poster", "zh": "自然科普海报" },
-      "description": {
-        "en": "Minimal product-style science posters for natural subjects.",
-        "zh": "生成极简产品感自然科普海报。"
+      "id": "game-vfx-concept-sheet",
+      "anchor": "tpl-game-vfx",
+      "cover": "/images/case310.jpg",
+      "title": {
+        "en": "Game VFX Concept Sheet",
+        "zh": "游戏技能特效设定表"
       },
-      "category": "Posters & Typography",
-      "styles": ["Poster", "Infographic"],
-      "scenes": ["Education"],
-      "tags": ["Poster", "Education", "Style"],
+      "description": {
+        "en": "Spell, hit, aura, projectile, explosion, and elemental VFX concepts with phase breakdowns.",
+        "zh": "法术、打击、光环、飞行物、爆炸和元素特效的阶段拆解。"
+      },
+      "category": "Game VFX Concept",
+      "styles": [
+        "Stylized",
+        "Anime",
+        "Sci-Fi",
+        "Dark Fantasy"
+      ],
+      "scenes": [
+        "Production",
+        "RPG",
+        "Mobile Game"
+      ],
+      "tags": [
+        "VFX",
+        "Concept Art",
+        "Production"
+      ],
       "useWhen": {
-        "en": "Use for natural subjects that need a premium, clean science poster feel.",
-        "zh": "用于自然主题的高级、干净科普海报。"
+        "en": "Use for skill effects, combat feedback, elemental spell visuals, ultimate abilities, and VFX phase boards.",
+        "zh": "用于技能特效、战斗反馈、元素法术、大招和特效阶段板。"
       },
       "guidance": {
-        "en": ["Use a clear subject, minimal copy, soft shadows, and disciplined whitespace.", "Keep the scientific label short and visible."],
-        "zh": ["使用清晰主体、少量文案、柔和阴影和充足留白。", "让科普标签短而清楚。"]
+        "en": [
+          "Define gameplay purpose, element, shape language, timing phases, impact point, color temperature, and readability over backgrounds.",
+          "Use 4-6 phase frames: anticipation, cast, travel, impact, aftermath, loop if needed."
+        ],
+        "zh": [
+          "定义玩法目的、元素、形状语言、时间阶段、打击点、色温和在背景上的可读性。",
+          "使用 4-6 个阶段帧：预备、施放、飞行、命中、残留，需要循环时补 loop。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid heavy advertising language.", "Avoid dense encyclopedia blocks."],
-        "zh": ["避免广告感太重。", "避免密集百科正文。"]
+        "en": [
+          "Avoid pure bright bloom with no readable shape.",
+          "Avoid VFX that hides the attacker, target, or hit direction."
+        ],
+        "zh": [
+          "避免只有强泛光、没有可读形状。",
+          "避免特效遮住施法者、目标或打击方向。"
+        ]
       },
-      "exampleCases": [339]
+      "exampleCases": [
+        473
+      ]
     },
     {
-      "id": "product-commerce-visual",
-      "anchor": "tpl-product",
-      "cover": "/images/case373.jpg",
-      "title": { "en": "Product Commerce Visual", "zh": "商品商业视觉" },
-      "description": {
-        "en": "Product shots, packaging, detail pages, and selling-point layouts.",
-        "zh": "生成商品图、包装、详情页和卖点排版。"
+      "id": "game-map-tile-system",
+      "anchor": "tpl-game-map",
+      "cover": "/images/case489.jpg",
+      "title": {
+        "en": "Game Map & Tile System",
+        "zh": "游戏地图与地块系统"
       },
-      "category": "Products & E-commerce",
-      "styles": ["Product", "Realistic"],
-      "scenes": ["Commerce", "Food"],
-      "tags": ["Product", "Commerce", "Packaging"],
+      "description": {
+        "en": "Readable world maps, minimaps, isometric tiles, route maps, node maps, and modular terrain kits.",
+        "zh": "可读世界地图、小地图、等距地块、路线图、节点图和模块化地形套件。"
+      },
+      "category": "Game Maps & Tiles",
+      "styles": [
+        "Isometric",
+        "Stylized",
+        "Pixel Art",
+        "Low Poly"
+      ],
+      "scenes": [
+        "Strategy",
+        "Survival",
+        "Production"
+      ],
+      "tags": [
+        "Map",
+        "Isometric",
+        "Production"
+      ],
       "useWhen": {
-        "en": "Use for product hero shots, packaging visuals, detail pages, and sales layouts.",
-        "zh": "用于商品主图、包装视觉、详情页和销售卖点排版。"
+        "en": "Use for world maps, town maps, tactical boards, tilemap concepts, resource nodes, and route planning visuals.",
+        "zh": "用于世界地图、城镇地图、战术棋盘、Tilemap 概念、资源点和路线规划视觉。"
       },
       "guidance": {
-        "en": ["Define product, selling points, material, scene, lighting, and layout blocks.", "Separate hero product, benefit labels, and supporting props."],
-        "zh": ["定义商品、卖点、材质、场景、光线和版块。", "区分主商品、卖点标签和辅助道具。"]
+        "en": [
+          "Define projection, grid size, biome rules, landmarks, route hierarchy, interactable markers, and legend style.",
+          "For tile assets, request separated tiles with consistent perspective, edge compatibility, and no cast shadows crossing tile borders."
+        ],
+        "zh": [
+          "定义投影方式、网格尺寸、生态规则、地标、路线层级、交互标记和图例风格。",
+          "地块资产要分离展示、透视一致、边缘可拼接，不要让投影跨越地块边界。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid random props that weaken product recognition.", "Constrain packaging text and claim wording."],
-        "zh": ["避免无关道具削弱商品识别。", "约束包装文字和卖点表达。"]
+        "en": [
+          "Avoid decorative maps with unreadable routes or inconsistent scale.",
+          "Avoid mixing top-down, isometric, and perspective camera angles in one tile set."
+        ],
+        "zh": [
+          "避免只有装饰性、路线不可读或比例混乱的地图。",
+          "同一套地块不要混用俯视、等距和透视视角。"
+        ]
       },
-      "exampleCases": [373, 358]
+      "exampleCases": [
+        489
+      ]
     },
     {
-      "id": "personalized-beauty-report",
-      "anchor": "tpl-product",
-      "cover": "/images/case353.jpg",
-      "title": { "en": "Personalized Beauty Report", "zh": "个性化美妆报告" },
-      "description": {
-        "en": "Recommendation-report layouts for beauty and lifestyle products.",
-        "zh": "生成美妆与生活方式产品的推荐报告版式。"
+      "id": "game-card-gacha-art",
+      "anchor": "tpl-game-card-art",
+      "cover": "/images/case6.jpg",
+      "title": {
+        "en": "Card & Gacha Splash Art",
+        "zh": "卡牌与抽卡立绘"
       },
-      "category": "Products & E-commerce",
-      "styles": ["Product", "UI"],
-      "scenes": ["Commerce", "Fashion"],
-      "tags": ["Product", "Layout", "Style"],
+      "description": {
+        "en": "Hero cards, collectible illustration, rarity frames, gacha splash art, and event character banners.",
+        "zh": "英雄卡、收藏插画、稀有度卡框、抽卡立绘和活动角色 Banner。"
+      },
+      "category": "Card & Gacha Art",
+      "styles": [
+        "Anime",
+        "Stylized",
+        "Dark Fantasy",
+        "Sci-Fi"
+      ],
+      "scenes": [
+        "Marketing",
+        "Live Ops",
+        "RPG"
+      ],
+      "tags": [
+        "Card",
+        "Key Art",
+        "Anime"
+      ],
       "useWhen": {
-        "en": "Use for beauty recommendations, skin reports, shopping assistants, and lifestyle product cards.",
-        "zh": "用于美妆推荐、肤质报告、导购助手和生活方式商品卡片。"
+        "en": "Use for character splash art, collectible card frames, gacha banners, hero portraits, and rarity variants.",
+        "zh": "用于角色立绘、收藏卡框、抽卡 Banner、英雄头像和稀有度变体。"
       },
       "guidance": {
-        "en": ["Use a report-like hierarchy with diagnosis, recommendation, and product cards.", "Keep product images, labels, and ratings aligned."],
-        "zh": ["使用诊断、推荐和商品卡片的报告层级。", "对齐商品图、标签和评分。"]
+        "en": [
+          "Define rarity, pose, power fantasy, frame shape, title area, background energy, and crop safety.",
+          "Keep card text short; use frame and icon slots rather than long paragraphs."
+        ],
+        "zh": [
+          "定义稀有度、姿态、爽感、卡框形状、标题区、背景能量和裁切安全区。",
+          "卡面文字要短；用卡框和图标槽表达信息，不要塞长段文字。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid medical claims and unreadable dense notes.", "Keep recommendation logic simple."],
-        "zh": ["避免医疗化结论和难读小字。", "保持推荐逻辑清楚。"]
+        "en": [
+          "Avoid frame decorations that hide the character silhouette.",
+          "Avoid copying known card game layouts, logos, or exact UI frames."
+        ],
+        "zh": [
+          "避免卡框装饰遮住角色剪影。",
+          "避免照搬知名卡牌游戏版式、Logo 或精确 UI 框。"
+        ]
       },
-      "exampleCases": [353]
+      "exampleCases": [
+        6,
+        480
+      ]
     },
     {
-      "id": "brand-identity-package",
-      "anchor": "tpl-brand",
-      "cover": "/images/case354.jpg",
-      "title": { "en": "Brand Identity Package", "zh": "品牌身份包" },
-      "description": {
-        "en": "Logo, palette, typography, applications, and brand touchpoints.",
-        "zh": "生成 Logo、配色、字体、应用触点与品牌系统。"
+      "id": "game-creature-monster-sheet",
+      "anchor": "tpl-game-monster",
+      "cover": "/images/case439.jpg",
+      "title": {
+        "en": "Creature & Monster Sheet",
+        "zh": "怪物与 Boss 设定表"
       },
-      "category": "Brand & Logos",
-      "styles": ["Brand"],
-      "scenes": ["Commerce"],
-      "tags": ["Brand", "Logo", "Identity"],
+      "description": {
+        "en": "Enemy, creature, elite, and boss designs with combat readability, weak points, and attack cues.",
+        "zh": "敌人、生物、精英怪和 Boss 设计，强调战斗可读性、弱点与攻击预兆。"
+      },
+      "category": "Creature & Monster Design",
+      "styles": [
+        "Dark Fantasy",
+        "Sci-Fi",
+        "Stylized",
+        "Realistic"
+      ],
+      "scenes": [
+        "Production",
+        "RPG",
+        "Survival"
+      ],
+      "tags": [
+        "Monster",
+        "Concept Art",
+        "Production"
+      ],
       "useWhen": {
-        "en": "Use for logo systems, brand boards, visual identity kits, and application mockups.",
-        "zh": "用于 Logo 系统、品牌板、VI 套件和应用样机。"
+        "en": "Use for enemies, bosses, mutation variants, creature families, attack silhouettes, and combat design sheets.",
+        "zh": "用于敌人、Boss、变异体、生物族群、攻击剪影和战斗设计表。"
       },
       "guidance": {
-        "en": ["Define brand name, positioning, palette, typography, logo usage, and touchpoints.", "Ask for a coherent board with aligned applications."],
-        "zh": ["定义品牌名、定位、配色、字体、Logo 用法和触点。", "要求视觉板中的应用统一对齐。"]
+        "en": [
+          "Define size class, threat role, silhouette, locomotion, weak points, attack tells, materials, and biome origin.",
+          "Use 3-5 variants only when they share a clear family shape language."
+        ],
+        "zh": [
+          "定义体型等级、威胁职责、剪影、移动方式、弱点、攻击前摇、材质和生态来源。",
+          "只有共享明确族群形状语言时，才生成 3-5 个变体。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid unrelated logo variants and inconsistent palettes.", "Keep brand text accurate."],
-        "zh": ["避免无关 Logo 变体和混乱配色。", "保持品牌文字准确。"]
+        "en": [
+          "Avoid adding too many horns, limbs, and eyes without a combat reason.",
+          "Avoid silhouettes that look impressive but cannot be recognized at gameplay camera distance."
+        ],
+        "zh": [
+          "避免没有战斗理由地堆角、肢体和眼睛。",
+          "避免设定图很酷，但在游戏镜头距离下认不出的剪影。"
+        ]
       },
-      "exampleCases": [354]
+      "exampleCases": [
+        439,
+        473
+      ]
     },
     {
-      "id": "brand-touchpoint-board",
-      "anchor": "tpl-brand",
-      "cover": "/images/case362.jpg",
-      "title": { "en": "Brand Touchpoint Board", "zh": "品牌触点视觉板" },
-      "description": {
-        "en": "Campaign boards across packaging, social, web, and display contexts.",
-        "zh": "生成包装、社媒、网页和展示场景里的品牌触点板。"
+      "id": "game-building-set",
+      "anchor": "tpl-game-building",
+      "cover": "/images/case338.png",
+      "title": {
+        "en": "Game Building & Settlement Set",
+        "zh": "游戏建筑与据点套件"
       },
-      "category": "Brand & Logos",
-      "styles": ["Brand", "Product"],
-      "scenes": ["Commerce", "Social"],
-      "tags": ["Brand", "Identity", "Campaign"],
+      "description": {
+        "en": "Base buildings, shops, upgrade tiers, settlement kits, destructible props, and readable structure families.",
+        "zh": "基地建筑、商店、升级阶段、据点套件、可破坏物和可读建筑族群。"
+      },
+      "category": "Buildings & Settlements",
+      "styles": [
+        "Isometric",
+        "Stylized",
+        "Low Poly",
+        "Realistic"
+      ],
+      "scenes": [
+        "Strategy",
+        "Survival",
+        "Production"
+      ],
+      "tags": [
+        "Environment",
+        "Isometric",
+        "Production"
+      ],
       "useWhen": {
-        "en": "Use for multi-touchpoint campaign boards and brand rollout previews.",
-        "zh": "用于多触点 Campaign 展示和品牌落地预览。"
+        "en": "Use for modular buildings, city sets, base upgrades, resource structures, shop facades, and destructible environment props.",
+        "zh": "用于模块化建筑、城镇套件、基地升级、资源建筑、商店外观和可破坏环境物。"
       },
       "guidance": {
-        "en": ["Specify touchpoint list, shared visual rules, and mockup arrangement.", "Use one palette and one typography logic across all panels."],
-        "zh": ["指定触点清单、统一视觉规则和样机排列。", "让所有面板共享配色和字体逻辑。"]
+        "en": [
+          "Define function, faction, upgrade tier, footprint, roof language, material palette, and gameplay readability.",
+          "For strategy games, show front/side or isometric views with consistent footprint and clear entrance markers."
+        ],
+        "zh": [
+          "定义功能、阵营、升级等级、占地、屋顶语言、材质配色和玩法可读性。",
+          "策略游戏建筑使用前侧视或等距视角，保持占地一致并标出入口。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid mixing many unrelated campaign styles.", "Limit touchpoints if readability drops."],
-        "zh": ["避免混入多个无关 Campaign 风格。", "可读性下降时减少触点数量。"]
+        "en": [
+          "Avoid buildings that look beautiful but do not communicate function.",
+          "Avoid inconsistent scale between doors, windows, props, and characters."
+        ],
+        "zh": [
+          "避免建筑好看但看不出功能。",
+          "避免门窗、道具和角色之间比例不一致。"
+        ]
       },
-      "exampleCases": [362]
+      "exampleCases": [
+        489,
+        473
+      ]
     },
     {
-      "id": "architecture-space",
-      "anchor": "tpl-architecture",
-      "cover": "/images/case331.png",
-      "title": { "en": "Architecture & Space", "zh": "建筑与空间" },
-      "description": {
-        "en": "Interior, exterior, city, map, and spatial concept visuals.",
-        "zh": "生成室内、建筑、城市地图和空间概念视觉。"
-      },
-      "category": "Architecture & Spaces",
-      "styles": ["Architecture"],
-      "scenes": ["Travel", "Commerce"],
-      "tags": ["Architecture", "Interior", "Map"],
-      "useWhen": {
-        "en": "Use for interiors, architecture renders, city maps, spatial plans, and environment concepts.",
-        "zh": "用于室内、建筑表现、城市地图、空间规划和环境概念图。"
-      },
-      "guidance": {
-        "en": ["Define viewpoint, scale, material, lighting, and spatial function.", "For maps, specify landmarks, labels, border decoration, and visual accuracy level."],
-        "zh": ["定义视角、尺度、材质、光线和空间功能。", "地图需要指定地标、标签、边框装饰和准确度。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid impossible perspectives unless the output is conceptual.", "Lock map label language and relative placement."],
-        "zh": ["概念图之外要避免不合理透视。", "锁定地图标签语言和相对位置。"]
-      },
-      "exampleCases": [331, 11]
-    },
-    {
-      "id": "realistic-photography",
-      "anchor": "tpl-photo",
-      "cover": "/images/case377.jpg",
-      "title": { "en": "Realistic Photography", "zh": "写实摄影" },
-      "description": {
-        "en": "Lens, lighting, film texture, and documentary-style photo prompts.",
-        "zh": "控制镜头、光线、胶片质感和纪实摄影效果。"
-      },
-      "category": "Photography & Realism",
-      "styles": ["Photography", "Realistic"],
-      "scenes": ["Fashion", "Commerce"],
-      "tags": ["Photography", "Realistic", "Lens"],
-      "useWhen": {
-        "en": "Use for portraits, street photos, product photography, and cinematic realism.",
-        "zh": "用于人像、街拍、商品摄影和电影感写实。"
-      },
-      "guidance": {
-        "en": ["Specify camera distance, lens, light source, texture, background, and motion.", "Use believable imperfections for documentary realism."],
-        "zh": ["指定机位、镜头、光源、质感、背景和动作。", "加入可信的小瑕疵增强纪实感。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid over-polished plastic skin unless commercial beauty is required.", "Add negative constraints for hands, text, and anatomy when needed."],
-        "zh": ["商业美妆之外，避免过度磨皮。", "需要时加入手部、文字、结构类负面约束。"]
-      },
-      "exampleCases": [377]
-    },
-    {
-      "id": "street-accident-moment",
-      "anchor": "tpl-photo",
-      "cover": "/images/case376.jpg",
-      "title": { "en": "Street Accident Moment", "zh": "街头意外瞬间摄影" },
-      "description": {
-        "en": "Realistic phone-photo scenes with negative constraints.",
-        "zh": "生成手机纪实风街头瞬间，并加入负面约束。"
-      },
-      "category": "Photography & Realism",
-      "styles": ["Photography", "Realistic"],
-      "scenes": ["Travel", "Social"],
-      "tags": ["Photography", "Realistic", "Scene"],
-      "useWhen": {
-        "en": "Use for candid street moments, accidental spills, documentary phone shots, and fast action.",
-        "zh": "用于街头抓拍、意外泼洒、手机纪实和快速动作。"
-      },
-      "guidance": {
-        "en": ["Describe the exact moment, camera height, motion blur, and street context.", "Add negative constraints for staged poses and fake ad lighting."],
-        "zh": ["描述具体瞬间、机位高度、运动模糊和街景。", "加入避免摆拍和广告棚拍感的限制。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid too-clean compositions.", "Keep the event plausible and grounded."],
-        "zh": ["避免画面过于干净。", "让事件看起来可信。"]
-      },
-      "exampleCases": [376]
-    },
-    {
-      "id": "illustration-art-style",
-      "anchor": "tpl-illustration",
-      "cover": "/images/case346.jpg",
-      "title": { "en": "Illustration & Art Style", "zh": "插画与艺术风格" },
-      "description": {
-        "en": "Anime, watercolor, ink, material experiments, and art direction.",
-        "zh": "生成动漫、水彩、水墨、材质实验和艺术风格图。"
-      },
-      "category": "Illustration & Art",
-      "styles": ["Illustration"],
-      "scenes": ["Story", "Creative"],
-      "tags": ["Illustration", "Art", "Style"],
-      "useWhen": {
-        "en": "Use for anime, watercolor, ink, decorative art, and style experiments.",
-        "zh": "用于动漫、水彩、水墨、装饰画和风格实验。"
-      },
-      "guidance": {
-        "en": ["Define composition, subject, palette, brush material, mood, and rendering depth.", "For reference images, state what must be preserved."],
-        "zh": ["定义构图、主体、配色、笔触材质、情绪和完成度。", "参考图任务需要说明保留哪些特征。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid style-only prompts without composition.", "Lock character identity when using references."],
-        "zh": ["避免只写风格，不写构图。", "使用参考图时锁定角色识别。"]
-      },
-      "exampleCases": [346, 6]
-    },
-    {
-      "id": "character-design-sheet",
-      "anchor": "tpl-character",
-      "cover": "/images/case347.jpg",
-      "title": { "en": "Character Design Sheet", "zh": "角色设定表" },
-      "description": {
-        "en": "Characters, pose sheets, action grids, and identity consistency.",
-        "zh": "生成角色设定、动作分解和一致性参考。"
-      },
-      "category": "Characters & People",
-      "styles": ["Character", "Illustration"],
-      "scenes": ["Story"],
-      "tags": ["Character", "Pose", "Style"],
-      "useWhen": {
-        "en": "Use for character sheets, pose grids, action breakdowns, and identity references.",
-        "zh": "用于角色设定表、动作网格、动作拆解和一致性参考。"
-      },
-      "guidance": {
-        "en": ["Define identity anchors, outfit, proportions, pose count, and sheet layout.", "Keep face, hairstyle, and costume details consistent."],
-        "zh": ["定义身份锚点、服装、比例、动作数量和版式。", "保持脸、发型和服装细节一致。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid changing costume details between poses.", "Limit pose count if the sheet becomes crowded."],
-        "zh": ["避免不同动作里服装细节变化。", "画面拥挤时减少动作数量。"]
-      },
-      "exampleCases": [347]
-    },
-    {
-      "id": "3d-collectible-toy",
-      "anchor": "tpl-character",
-      "cover": "/images/case378.jpg",
-      "title": { "en": "3D Collectible Toy", "zh": "3D 收藏玩具" },
-      "description": {
-        "en": "Reference photo to premium 3D collectible figure prompts.",
-        "zh": "把参考图转换成高级 3D 收藏玩具效果。"
-      },
-      "category": "Characters & People",
-      "styles": ["3D", "Character"],
-      "scenes": ["Commerce", "Creative"],
-      "tags": ["Character", "3D", "Style"],
-      "useWhen": {
-        "en": "Use for premium collectible figures, avatar toys, blind-box characters, and 3D display renders.",
-        "zh": "用于高级收藏玩具、头像公仔、潮玩角色和 3D 展示图。"
-      },
-      "guidance": {
-        "en": ["Preserve face and outfit anchors from the reference.", "Specify material, packaging, base, lighting, and collectible scale."],
-        "zh": ["保留参考图中的脸和服装锚点。", "指定材质、包装、底座、光线和收藏比例。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid generic toy bodies without identity details.", "Keep packaging text minimal and accurate."],
-        "zh": ["避免没有身份细节的通用玩具。", "包装文字保持少量且准确。"]
-      },
-      "exampleCases": [378]
-    },
-    {
-      "id": "scene-storytelling",
-      "anchor": "tpl-scene",
-      "cover": "/images/case330.png",
-      "title": { "en": "Scene Storytelling", "zh": "场景叙事" },
-      "description": {
-        "en": "Storyboards, worldbuilding, narrative scenes, and emotional pacing.",
-        "zh": "生成分镜、世界观、故事场景和情绪节奏。"
-      },
-      "category": "Scenes & Storytelling",
-      "styles": ["Scenes", "Illustration"],
-      "scenes": ["Story", "Social"],
-      "tags": ["Scene", "Story", "Storyboard"],
-      "useWhen": {
-        "en": "Use for storyboards, worldbuilding, live scenes, and emotional narrative frames.",
-        "zh": "用于分镜、世界观、直播场景和情绪叙事画面。"
-      },
-      "guidance": {
-        "en": ["Define who, where, when, conflict, emotion, and camera framing.", "Use scene details to support narrative rather than decoration."],
-        "zh": ["定义人物、地点、时间、冲突、情绪和机位。", "让场景细节服务故事。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid generic fantasy backgrounds.", "Keep narrative cues visible in the frame."],
-        "zh": ["避免通用幻想背景。", "让故事线索在画面里可见。"]
-      },
-      "exampleCases": [330]
-    },
-    {
-      "id": "history-classical-themes",
-      "anchor": "tpl-history",
-      "cover": "/images/case375.jpg",
-      "title": { "en": "History & Classical Themes", "zh": "历史与古风题材" },
-      "description": {
-        "en": "Dynasty clothing, scroll narrative, poetry, and traditional motifs.",
-        "zh": "生成朝代服饰、长卷叙事、诗词和传统题材。"
-      },
-      "category": "History & Classical Themes",
-      "styles": ["History", "Classical", "Illustration"],
-      "scenes": ["History", "Story"],
-      "tags": ["History", "Classical", "Scroll"],
-      "useWhen": {
-        "en": "Use for ancient Chinese themes, scrolls, dynasty clothing, poetry visuals, and historical scenes.",
-        "zh": "用于古风题材、长卷、朝代服饰、诗词视觉和历史场景。"
-      },
-      "guidance": {
-        "en": ["Specify dynasty, clothing system, object references, layout format, and cultural mood.", "Use scroll, album page, or poster format deliberately."],
-        "zh": ["指定朝代、服饰制度、器物参考、版式和文化气质。", "明确长卷、册页或海报形式。"]
-      },
-      "pitfalls": {
-        "en": ["Avoid mixing dynasties when historical accuracy matters.", "Constrain random modern props."],
-        "zh": ["需要历史准确时，避免朝代混搭。", "约束随机现代物件。"]
-      },
-      "exampleCases": [375, 338]
-    },
-    {
-      "id": "document-publishing",
-      "anchor": "tpl-document",
+      "id": "game-key-art-store-assets",
+      "anchor": "tpl-game-key-art",
       "cover": "/images/case360.jpg",
-      "title": { "en": "Document & Publishing", "zh": "文档与出版物" },
-      "description": {
-        "en": "White papers, manuals, encyclopedic plates, and page systems.",
-        "zh": "生成白皮书、手册、百科图鉴和页面系统。"
+      "title": {
+        "en": "Game Key Art & Store Assets",
+        "zh": "游戏主视觉与商店素材"
       },
-      "category": "Documents & Publishing",
-      "styles": ["Documents", "Infographic"],
-      "scenes": ["Education", "Tech"],
-      "tags": ["Document", "Publishing", "Layout"],
+      "description": {
+        "en": "Steam capsules, app store screenshots, launch posters, seasonal banners, and social ads with safe crop zones.",
+        "zh": "Steam 胶囊图、App 商店截图、上线海报、赛季 Banner 和社媒广告，含安全裁切区。"
+      },
+      "category": "Game Key Art & Store Assets",
+      "styles": [
+        "Key Art",
+        "Realistic",
+        "Anime",
+        "Stylized"
+      ],
+      "scenes": [
+        "Marketing",
+        "Live Ops",
+        "Mobile Game"
+      ],
+      "tags": [
+        "Key Art",
+        "Marketing",
+        "Campaign"
+      ],
       "useWhen": {
-        "en": "Use for white papers, manuals, encyclopedic plates, report pages, and publication systems.",
-        "zh": "用于白皮书、手册、百科图鉴、报告页面和出版系统。"
+        "en": "Use when the output is for player acquisition, store pages, launch campaigns, live events, or game announcements.",
+        "zh": "用于拉新、商店页、上线 Campaign、活动运营或游戏宣发。"
       },
       "guidance": {
-        "en": ["Define page size, columns, table of contents, figure system, and typography hierarchy.", "Use readable headings, tables, labels, and page rhythm."],
-        "zh": ["定义页面尺寸、分栏、目录、图表系统和字体层级。", "使用可读标题、表格、标签和页面节奏。"]
+        "en": [
+          "Define asset format, title-safe area, hero characters, gameplay promise, background world, logo placement, and crop variants.",
+          "Ask for no final logo text unless exact title rendering is required; leave clean negative space for later design."
+        ],
+        "zh": [
+          "定义素材格式、标题安全区、主角、玩法承诺、世界背景、Logo 位置和裁切变体。",
+          "除非明确要生成标题文字，否则保留干净留白给后期设计。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid tiny dense text.", "Keep charts and captions aligned to the page grid."],
-        "zh": ["避免密集小字。", "让图表和说明对齐页面网格。"]
+        "en": [
+          "Avoid poster compositions that cannot crop into capsule, banner, and square formats.",
+          "Avoid misleading gameplay promises in marketing art."
+        ],
+        "zh": [
+          "避免无法裁成胶囊图、Banner 和方图的海报构图。",
+          "避免宣发图表达与真实玩法不一致。"
+        ]
       },
-      "exampleCases": [360]
+      "exampleCases": [
+        473,
+        6
+      ]
     },
     {
-      "id": "concept-product-breakdown",
-      "anchor": "tpl-other",
-      "cover": "/images/case370.jpg",
-      "title": { "en": "Concept Product Breakdown", "zh": "概念产品研发拆解" },
-      "description": {
-        "en": "R&D boards, exploded views, mixed tasks, and special outputs.",
-        "zh": "生成研发板、拆解图、混合任务和特殊输出。"
+      "id": "game-sprite-animation-sheet",
+      "anchor": "tpl-game-sprite",
+      "cover": "/images/case27.jpg",
+      "title": {
+        "en": "Sprite & Animation Sheet",
+        "zh": "精灵图与动作帧表"
       },
-      "category": "Other Use Cases",
-      "styles": ["Other Use Cases", "Product"],
-      "scenes": ["Creative", "Tech"],
-      "tags": ["Creative", "R&D", "Special"],
+      "description": {
+        "en": "2D sprites, pixel sheets, idle/run/attack frames, hit reactions, and clean grids for animation reference.",
+        "zh": "2D 精灵、像素帧表、待机/奔跑/攻击、受击动作和动画参考网格。"
+      },
+      "category": "Sprites & Animation Sheets",
+      "styles": [
+        "Pixel Art",
+        "Stylized",
+        "Anime",
+        "Sprite"
+      ],
+      "scenes": [
+        "Production",
+        "Mobile Game",
+        "RPG"
+      ],
+      "tags": [
+        "Sprite",
+        "Pixel Art",
+        "Production"
+      ],
       "useWhen": {
-        "en": "Use for experimental prompt tasks, R&D boards, exploded diagrams, and unusual visual systems.",
-        "zh": "用于实验型任务、研发视觉板、拆解图和特殊视觉系统。"
+        "en": "Use for sprite sheets, animation references, side-view characters, top-down units, idle/run/attack loops, and pixel art assets.",
+        "zh": "用于精灵图、动作参考、横版角色、俯视单位、待机/奔跑/攻击循环和像素资产。"
       },
       "guidance": {
-        "en": ["Define the artifact type, components, labels, material logic, and final presentation format.", "Use clear callouts and a controlled technical style."],
-        "zh": ["定义产物类型、组件、标签、材质逻辑和展示格式。", "使用清晰标注和受控技术风格。"]
+        "en": [
+          "Define camera angle, frame count, grid dimensions, animation sequence, silhouette consistency, and transparent background.",
+          "For pixel art, specify tile size, pixel density, outline rule, palette limit, and no anti-aliased painterly edges."
+        ],
+        "zh": [
+          "定义镜头角度、帧数、网格尺寸、动作顺序、剪影一致性和透明背景。",
+          "像素风要指定 tile 尺寸、像素密度、描边规则、色板限制，并避免绘画式抗锯齿边缘。"
+        ]
       },
       "pitfalls": {
-        "en": ["Avoid unspecified mixed tasks.", "Keep labels short and component relationships visible."],
-        "zh": ["避免任务边界过泛。", "标签要短，组件关系要清楚。"]
+        "en": [
+          "Avoid changing the character costume or proportions between frames.",
+          "Avoid uneven frame boxes that make animation extraction painful."
+        ],
+        "zh": [
+          "避免不同帧换服装或比例。",
+          "避免帧框大小不一，导致后续切图痛苦。"
+        ]
       },
-      "exampleCases": [370, 361]
+      "exampleCases": [
+        27,
+        54
+      ]
     }
   ]
 }

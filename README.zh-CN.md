@@ -1,12 +1,12 @@
 <p align="center"><img src="./data/images/banner.svg" alt="GPT-Image2 Prompt System" width="800" /></p>
 
-<h3 align="center">Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，400+ 个案例逆向工程，20+ 套工业级模板</h3>
+<h3 align="center">Prompt as Code | GPT-Image2 游戏美术提示词库，面向角色、场景、UI、道具、特效、图标、地图、卡牌和商店素材的生产模板</h3>
 
 <p align="center">
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/github/stars/freestylefly/awesome-gpt-image-2?style=flat-square&color=rgb(25%2C%20121%2C%20255)" alt="Stars"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/github/forks/freestylefly/awesome-gpt-image-2?style=flat-square&color=green" alt="Forks"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/badge/Cases-506-blueviolet?style=flat-square" alt="Cases"></a>
-  <a href="https://github.com/freestylefly/awesome-gpt-image-2"><img src="https://img.shields.io/badge/100%25-Original_AI_Rewritten-green?style=flat-square" alt="Original"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/github/stars/Juaner061/awesome-gpt-image-2?style=flat-square&color=rgb(25%2C%20121%2C%20255)" alt="Stars"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/github/forks/Juaner061/awesome-gpt-image-2?style=flat-square&color=green" alt="Forks"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/badge/Cases-506-blueviolet?style=flat-square" alt="Cases"></a>
+  <a href="https://github.com/Juaner061/awesome-gpt-image-2"><img src="https://img.shields.io/badge/100%25-Original_AI_Rewritten-green?style=flat-square" alt="Original"></a>
   <a href="https://github.com/sponsors/freestylefly"><img src="https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ff69b4?style=flat-square" alt="Sponsor"></a>
 </p>
 
@@ -64,7 +64,7 @@ GPT-Image2 全量开放后，AI 画图从“能不能出图”变成了“能不
 - [案例画廊 Part 1：例 1-165](docs/gallery-part-1.md)
 - [案例画廊 Part 2：例 166-506](docs/gallery-part-2.md)
 - [工业级提示词模板与防坑指南](docs/templates.md#section-templates)
-- [Agent Skill：GPT-Image2 风格库](agents/skills/gpt-image-2-style-library/SKILL.md)
+- [Agent Skill：GPT-Image2 游戏风格库](agents/skills/gpt-image-2-game-style-library/SKILL.md)
 - [MIT License](LICENSE)
 - [完整声明页](docs/disclaimer.md#section-disclaimer)
 
@@ -228,26 +228,26 @@ GPT-Image2 全量开放后，AI 画图从“能不能出图”变成了“能不
 
 仓库内提供了 agent skill，用同一份风格库数据为 Claude Code、Codex 等 Agent 选择 GPT-Image2 模板、分类、风格和场景标签。
 
-包地址：[npm](https://www.npmjs.com/package/gpt-image-2-style-library) / [GitHub Packages](https://github.com/freestylefly/awesome-gpt-image-2/pkgs/npm/gpt-image-2-style-library)
+包地址：[npm](https://www.npmjs.com/package/gpt-image-2-game-style-library) / [GitHub Packages](https://github.com/Juaner061/awesome-gpt-image-2/pkgs/npm/gpt-image-2-game-style-library)
 
 <p align="center">
-  <img src="agents/skills/gpt-image-2-style-library/assets/city-life-system-map.png" alt="使用 GPT-Image2 风格库 skill 生成的城市生命系统图谱示例" width="760">
+  <img src="agents/skills/gpt-image-2-game-style-library/assets/city-life-system-map.png" alt="使用 GPT-Image2 游戏风格库 skill 生成的城市生命系统图谱示例" width="760">
 </p>
 
-<p align="center"><sub>示例：用 gpt-image-2-style-library 生成“城市生命系统图谱”。</sub></p>
+<p align="center"><sub>示例：用 gpt-image-2-game-style-library 生成“城市生命系统图谱”。</sub></p>
 
 ### Agent 一键安装
 
 推荐给 Claude Code、Codex、Cursor，以及其他 [`skills`](https://www.npmjs.com/package/skills) 支持的本地 Agent：
 
 ```bash
-npx skills add freestylefly/awesome-gpt-image-2 --skill gpt-image-2-style-library --agent claude-code codex --global --yes --copy
+npx skills add Juaner061/awesome-gpt-image-2 --skill gpt-image-2-game-style-library --agent claude-code codex --global --yes --copy
 ```
 
 安装到所有支持的本地 Agent：
 
 ```bash
-npx skills add freestylefly/awesome-gpt-image-2 --global --all --copy
+npx skills add Juaner061/awesome-gpt-image-2 --global --all --copy
 ```
 
 ### Claude Code 插件市场
@@ -255,8 +255,8 @@ npx skills add freestylefly/awesome-gpt-image-2 --global --all --copy
 在 Claude Code 中运行：
 
 ```text
-/plugin marketplace add freestylefly/awesome-gpt-image-2
-/plugin install gpt-image-2-style-library@awesome-gpt-image-2
+/plugin marketplace add Juaner061/awesome-gpt-image-2
+/plugin install gpt-image-2-game-style-library@awesome-gpt-image-2
 ```
 
 ### npm CLI
@@ -264,22 +264,22 @@ npx skills add freestylefly/awesome-gpt-image-2 --global --all --copy
 如果你习惯 npm，可以先安装 CLI，再同步到本地 Agent 技能目录：
 
 ```bash
-npm install -g gpt-image-2-style-library
-gpt-image-2-style-library install all
+npm install -g gpt-image-2-game-style-library
+gpt-image-2-game-style-library install all
 ```
 
 也可以不全局安装，直接运行：
 
 ```bash
-npx gpt-image-2-style-library install all
+npx gpt-image-2-game-style-library install all
 ```
 
 从 GitHub Packages 安装：
 
 ```bash
 npm login --scope=@freestylefly --registry=https://npm.pkg.github.com
-npm install -g @freestylefly/gpt-image-2-style-library --registry=https://npm.pkg.github.com
-gpt-image-2-style-library install all
+npm install -g @freestylefly/gpt-image-2-game-style-library --registry=https://npm.pkg.github.com
+gpt-image-2-game-style-library install all
 ```
 
 `install all` 会写入 Codex 和 Claude Code 常用的本地技能目录，包括 `~/.codex/skills`、`~/.claude/skills`、`~/.agents/skills`。安装后重启 Agent 会话。
@@ -287,7 +287,7 @@ gpt-image-2-style-library install all
 这样调用：
 
 ```text
-使用 gpt-image-2-style-library 技能，帮我生成介绍 Codex 的信息图
+使用 gpt-image-2-game-style-library 技能，帮我生成介绍 Codex 的信息图
 ```
 
 本地源码开发时使用：
@@ -297,7 +297,7 @@ npm run generate:style-skill
 npm run install:skill
 ```
 
-skill 源码位于 [`agents/skills/gpt-image-2-style-library`](agents/skills/gpt-image-2-style-library/SKILL.md)。生成索引来自 [`data/style-library.json`](data/style-library.json)，网站和 Agent 工作流共用这一份风格库。
+skill 源码位于 [`agents/skills/gpt-image-2-game-style-library`](agents/skills/gpt-image-2-game-style-library/SKILL.md)。生成索引来自 [`data/style-library.json`](data/style-library.json)，网站和 Agent 工作流共用这一份风格库。
 
 ## 🔐 网站登录与生成测试
 
@@ -500,7 +500,7 @@ GOOGLE_ANALYTICS_REFRESH_TOKEN=
 
 ## Star 趋势图
 
-[![Star History Chart](https://api.star-history.com/svg?repos=freestylefly/awesome-gpt-image-2&type=Date)](https://star-history.com/#freestylefly/awesome-gpt-image-2&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Juaner061/awesome-gpt-image-2&type=Date)](https://star-history.com/#Juaner061/awesome-gpt-image-2&Date)
 
 ## 📜 开源协议
 

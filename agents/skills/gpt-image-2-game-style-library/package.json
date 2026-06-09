@@ -1,0 +1,41 @@
+{
+  "name": "gpt-image-2-game-style-library",
+  "version": "0.1.0",
+  "description": "Agent skill for choosing GPT-Image2 game art prompt templates, asset categories, production contexts, and art-direction tags.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juaner061/awesome-gpt-image-2.git",
+    "directory": "agents/skills/gpt-image-2-game-style-library"
+  },
+  "homepage": "https://github.com/Juaner061/awesome-gpt-image-2#agent-skill",
+  "bugs": {
+    "url": "https://github.com/Juaner061/awesome-gpt-image-2/issues"
+  },
+  "keywords": [
+    "agent-skill",
+    "claude-code",
+    "codex",
+    "codex-skill",
+    "gpt-image-2",
+    "prompt",
+    "image-generation",
+    "game-art",
+    "game-assets",
+    "concept-art"
+  ],
+  "bin": {
+    "gpt-image-2-game-style-library": "bin/install.mjs"
+  },
+  "files": [
+    "SKILL.md",
+    "agents",
+    "assets",
+    "bin",
+    "references"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

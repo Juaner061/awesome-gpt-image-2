@@ -1,5 +1,5 @@
 {
-  "name": "awesome-gpt-image-2-site",
+  "name": "awesome-gpt-image-2-game-site",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -8,8 +8,8 @@
     "generate:style-skill": "node scripts/generate-style-skill.mjs",
     "ga4:oauth": "node scripts/google-analytics-oauth.mjs",
     "install:skill": "node scripts/install-style-skill.mjs",
-    "pack:skill": "npm pack ./agents/skills/gpt-image-2-style-library --dry-run",
-    "publish:skill:npm": "npm publish ./agents/skills/gpt-image-2-style-library --access public",
+    "pack:skill": "npm pack ./agents/skills/gpt-image-2-game-style-library --dry-run",
+    "publish:skill:npm": "npm publish ./agents/skills/gpt-image-2-game-style-library --access public",
     "predev": "npm run generate:site-data && npm run generate:style-skill",
     "dev": "vite",
     "prebuild": "npm run generate:site-data && npm run generate:style-skill",
