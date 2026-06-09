@@ -82,26 +82,26 @@ function inferCategory(caseItem) {
   if (caseItem.category && knownCategories.has(caseItem.category)) return caseItem.category;
   const text = `${caseItem.title} ${caseItem.prompt}`.toLowerCase();
   const rules = [
-    ['Game UI & HUD', ['ui', 'hud', 'interface', 'dashboard', 'screenshot', 'menu', 'inventory', 'skill tree', '界面', '截图', '背包', '技能树', '战斗界面']],
-    ['Game Icons', ['icon', 'badge', 'app icon', 'ability icon', 'item icon', '图标', '徽章', '技能图标', '物品图标']],
-    ['Sprites & Animation Sheets', ['sprite', 'pixel art', 'animation sheet', 'frame', '像素', '精灵', '动作帧', '帧动画']],
-    ['Game Maps & Tiles', ['map', 'tile', 'isometric', 'route', 'minimap', '地图', '地块', '等距', '小地图']],
-    ['Game Props & Equipment', ['weapon', 'armor', 'equipment', 'prop', 'loot', 'relic', '武器', '装备', '道具', '掉落', '遗物']],
-    ['Creature & Monster Design', ['monster', 'creature', 'boss', 'enemy', '怪物', 'boss', '敌人', '生物']],
-    ['Buildings & Settlements', ['building', 'settlement', 'base', 'shop', 'architecture', '建筑', '据点', '基地', '商店']],
-    ['Game Character Design', ['character', 'pose', 'avatar', 'vtuber', '角色', '人物', '头像', '人设', '设定表']],
-    ['Game VFX Concept', ['vfx', 'effect', 'spell', 'impact', '技能特效', '特效', '法术', '打击']],
-    ['Card & Gacha Art', ['card', 'gacha', 'splash art', 'illustration', '卡牌', '抽卡', '立绘', '插画']],
-    ['Game Key Art & Store Assets', ['poster', 'cover', 'campaign', 'banner', 'capsule', 'key art', '海报', '封面', '主视觉', '商店图', '活动']],
-    ['Game Environment Concept', ['scene', 'environment', 'worldbuilding', 'dungeon', 'level', '场景', '环境', '关卡', '地下城', '世界观']]
+    ['UI Panel Slicing Sheet', ['ui', 'hud', 'interface', 'dashboard', 'screenshot', 'menu', 'inventory', 'shop', 'quest', 'upgrade', 'panel', 'button', 'slot', 'slicing', 'localization', '界面', '面板', '背包', '商店', '按钮', '切图', '本地化']],
+    ['Game Icon Atlas', ['icon', 'badge', 'app icon', 'ability icon', 'item icon', 'currency', 'resource icon', 'atlas icon', '图标', '徽章', '技能图标', '物品图标', '货币']],
+    ['Sprite Animation Sheet', ['sprite', 'spritesheet', 'pixel art', 'animation sheet', 'frame', 'idle', 'walk cycle', 'attack frame', '2d animation', '精灵', '像素', '动作帧', '帧表']],
+    ['Tilemap Atlas', ['tile', 'tilemap', 'tileset', 'isometric tile', 'terrain', 'grid', 'seamless', 'map tile', '瓦片', '地块', '拼接', '地形']],
+    ['Prop & Equipment Turnaround', ['weapon', 'armor', 'equipment', 'prop', 'loot', 'relic', 'vehicle', 'consumable', 'turnaround', 'front side back', '武器', '装备', '道具', '掉落', '三视图']],
+    ['VFX Sequence Sheet', ['vfx', 'effect', 'spell', 'impact', 'projectile', 'buff', 'aura', 'hit effect', 'sequence', '特效', '技能特效', '命中', '弹体', '序列']],
+    ['Monster Combat Readability Sheet', ['monster', 'creature', 'boss', 'enemy', 'telegraph', 'weak point', 'combat readability', '怪物', 'boss', '敌人', '弱点', '预兆']],
+    ['Building Upgrade Set', ['building', 'settlement', 'base', 'shop', 'factory', 'tower', 'upgrade tier', 'footprint', '建筑', '据点', '基地', '商店', '防御塔', '升级']],
+    ['Character Production Sheet', ['character', 'pose', 'avatar', 'vtuber', 'hero', 'npc', 'skin', 'class', 'model sheet', '角色', '人物', '头像', '人设', '设定表']],
+    ['Store Asset Pack', ['poster', 'cover', 'campaign', 'banner', 'capsule', 'key art', 'store', 'marketing', 'ad creative', '海报', '封面', '主视觉', '商店图', '活动', '投放']],
+    ['Art Style Guide', ['style guide', 'art direction', 'palette', 'mood board', 'visual rules', 'do and do not', '风格规范', '美术规范', '色板', '正反例']],
+    ['Environment Layout Sheet', ['scene', 'environment', 'worldbuilding', 'dungeon', 'level', 'route', 'spawn', 'landmark', 'layout', '场景', '环境', '关卡', '路线', '出生点', '布局']]
   ];
-  return rules.find(([, keys]) => keys.some((key) => text.includes(key)))?.[0] || 'Game Environment Concept';
+  return rules.find(([, keys]) => keys.some((key) => text.includes(key)))?.[0] || 'Environment Layout Sheet';
 }
 
 function inferTags(caseItem) {
   const text = `${caseItem.title} ${caseItem.prompt}`.toLowerCase();
-  const styleOrder = ['UI', 'Icon', 'Pixel Art', 'Isometric', 'Anime', 'Stylized', 'Realistic', 'Sci-Fi', 'Dark Fantasy', 'Low Poly'];
-  const sceneOrder = ['Production', 'Mobile Game', 'RPG', 'Strategy', 'Survival', 'Marketing', 'Live Ops', 'Casual', 'Concept Art'];
+  const styleOrder = ['UI', 'Icon', 'Sprite', 'Tilemap', 'Isometric', 'Orthographic', 'Pixel Art', 'Transparent Asset', 'Atlas', 'Reference Sheet', '2D', '3D', 'Stylized', 'Realistic'];
+  const sceneOrder = ['Engine Ready', 'Concept to Production', 'Unity', 'Cocos', 'Mobile', 'PC', 'Combat', 'Level Design', 'Live Ops', 'Marketing', 'Localization', 'RPG', 'Strategy', 'Survival'];
   const styleByValue = new Map(styleLibrary.styles.map((style) => [style.value, style]));
   const sceneByValue = new Map(styleLibrary.scenes.map((scene) => [scene.value, scene]));
   const styleRules = styleOrder.map((value) => [
@@ -120,12 +120,40 @@ function inferTags(caseItem) {
     return tags.length ? tags.slice(0, 3) : [fallback];
   };
 
+  const categoryFallbackStyle = {
+    'UI Panel Slicing Sheet': 'UI',
+    'Game Icon Atlas': 'Icon',
+    'Sprite Animation Sheet': 'Sprite',
+    'Tilemap Atlas': 'Tilemap',
+    'Prop & Equipment Turnaround': 'Reference Sheet',
+    'VFX Sequence Sheet': 'Transparent Asset',
+    'Monster Combat Readability Sheet': 'Reference Sheet',
+    'Building Upgrade Set': 'Isometric',
+    'Character Production Sheet': 'Reference Sheet',
+    'Store Asset Pack': 'Reference Sheet',
+    'Art Style Guide': 'Reference Sheet',
+    'Environment Layout Sheet': 'Reference Sheet'
+  };
+  const categoryFallbackScene = {
+    'UI Panel Slicing Sheet': 'Engine Ready',
+    'Game Icon Atlas': 'Engine Ready',
+    'Sprite Animation Sheet': 'Engine Ready',
+    'Tilemap Atlas': 'Level Design',
+    'Prop & Equipment Turnaround': 'Concept to Production',
+    'VFX Sequence Sheet': 'Combat',
+    'Monster Combat Readability Sheet': 'Combat',
+    'Building Upgrade Set': 'Strategy',
+    'Character Production Sheet': 'Concept to Production',
+    'Store Asset Pack': 'Marketing',
+    'Art Style Guide': 'Concept to Production',
+    'Environment Layout Sheet': 'Level Design'
+  };
+
   return {
-    styles: pick(styleRules, caseItem.category === 'Game UI & HUD' ? 'UI' : 'Stylized'),
-    scenes: pick(sceneRules, caseItem.category === 'Game Key Art & Store Assets' ? 'Marketing' : 'Concept Art')
+    styles: pick(styleRules, categoryFallbackStyle[caseItem.category] || 'Reference Sheet'),
+    scenes: pick(sceneRules, categoryFallbackScene[caseItem.category] || 'Concept to Production')
   };
 }
-
 function parseCases() {
   const categoryMap = parseCategoryMap();
   const cases = [];
@@ -173,9 +201,15 @@ function parseCases() {
 }
 
 const cases = parseCases();
-const categories = [...new Set(cases.map((item) => item.category))].sort();
-const styles = [...new Set(cases.flatMap((item) => item.styles))].sort();
-const scenes = [...new Set(cases.flatMap((item) => item.scenes))].sort();
+const categories = [
+  ...new Set([...styleLibrary.categories.map((category) => category.value), ...cases.map((item) => item.category)])
+].sort();
+const styles = [
+  ...new Set([...styleLibrary.styles.map((style) => style.value), ...cases.flatMap((item) => item.styles)])
+].sort();
+const scenes = [
+  ...new Set([...styleLibrary.scenes.map((scene) => scene.value), ...cases.flatMap((item) => item.scenes)])
+].sort();
 
 const payload = {
   repository: repoUrl,

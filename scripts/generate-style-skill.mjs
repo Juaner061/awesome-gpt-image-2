@@ -94,17 +94,17 @@ function bulletList(values, language) {
 
 function renderReference(library) {
   const lines = [
-    '# GPT-Image2 Game Style Library Reference',
+    '# GPT-Image2 Game Production Library Reference',
     '',
-    'Generated from `data/style-library.json`. Use this file as the detailed index for choosing GPT-Image2 game prompt templates, asset categories, art-direction tags, and production contexts.',
+    'Generated from `data/style-library.json`. Use this file as the detailed index for choosing GPT-Image2 game production prompt templates, deliverable categories, production tags, and downstream handoff contexts.',
     '',
     '## Selection Rules',
     '',
-    '- Match explicit game asset types to template categories first, such as character, environment, prop, UI, icon, VFX, map, key art, or card art.',
-    '- Match art-direction words to style tags next, such as anime, stylized, realistic, pixel art, low poly, isometric, dark fantasy, sci-fi, or UI.',
-    '- Match production context words to scene tags next, such as concept art, production sheet, marketing, live ops, mobile game, RPG, strategy, survival, or casual.',
-    '- If a request is vague, offer 2-3 strong template directions and ask the user to choose before writing the final prompt.',
-    '- Final output should include the selected template name, a copyable GPT-Image2 prompt, and concise constraints for asset usability, aspect ratio, background, consistency, text, and negative details.',
+    '- Match the requested downstream deliverable first: character production sheet, sprite animation sheet, UI slicing sheet, icon atlas, tilemap atlas, environment layout, prop/equipment turnaround, VFX sequence, monster readability sheet, building upgrade set, store asset pack, or art style guide.',
+    '- Match the downstream owner next, such as concept artist, UI artist, animator, technical artist, level designer, combat designer, marketing artist, or engine integrator.',
+    '- Match production constraints to style and scene tags: engine-ready, atlas, transparent asset, reference sheet, Unity, Cocos, mobile, combat, level design, localization, marketing, RPG, strategy, or survival.',
+    '- If a request is vague, offer 2-3 deliverable templates with concrete tradeoffs before writing the final prompt.',
+    '- Final output should include the selected template name, a copyable GPT-Image2 prompt, and concise acceptance checks for format, slicing/import use, readability, consistency, text handling, and negative constraints.',
     '',
     '## Template Index',
     ''

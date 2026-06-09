@@ -1,3 +1,3 @@
-display_name: GPT-Image2 Game Style Library
-short_description: Choose GPT-Image2 game art templates, asset types, and production constraints.
-default_prompt: Use the GPT-Image2 game style library to create a production-ready game asset prompt.
+display_name: GPT-Image2 Game Production Library
+short_description: Choose GPT-Image2 game production templates, deliverable types, and handoff constraints.
+default_prompt: Use the GPT-Image2 game production library to create a handoff-ready game asset prompt.

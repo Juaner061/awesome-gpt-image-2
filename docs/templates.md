@@ -1,361 +1,524 @@
-> [Back to README](../README.md) | [Gallery](./gallery.md) | [Disclaimer](./disclaimer.md)
+# GPT-Image2 Game Production Prompt Templates
 
 <a name="section-templates"></a>
 
-## Game Prompt Templates for GPT-Image2
+These templates turn GPT-Image2 requests into game-development deliverables. Each template is written for production handoff: the prompt names the downstream user, the asset purpose, output format, constraints, and acceptance checks.
 
-This fork focuses the original GPT-Image2 prompt gallery on game art production. The templates below are written for concept art, production references, UI mockups, store assets, and reusable visual direction.
+Use them as starting points. Replace bracketed fields with your project details, then keep the output-specific constraints intact.
 
-Use the placeholders in square brackets, then keep only the constraints that matter for the asset you are producing.
+---
 
-<a name="tpl-game-character"></a>
+<a name="tpl-character-production"></a>
+## Character Production Sheet
 
-### Game Character Reference Sheet
+Use this when a character image must brief concept art, modeling, animation, combat, and UI teams.
 
-```text
-Create a production-ready game character reference sheet for [character role].
+~~~text
+Create a game character production sheet for [game genre/platform] using GPT-Image2.
 
-Game context:
-- Genre: [RPG / survival / strategy / action / card battler / casual]
-- Faction/world: [faction, culture, technology level, era]
-- Gameplay role: [tank / healer / scout / boss / NPC vendor / companion]
+Production owner and downstream use:
+- Asset type: playable character / NPC / companion / skin / enemy elite.
+- Downstream users: concept artist, modeler, animator, combat designer, UI icon artist.
+- Gameplay role: [tank / ranged DPS / healer / merchant / quest NPC / boss minion].
+- Camera distance in game: [close dialogue / 3rd-person action / isometric combat / mobile portrait].
 
-Character identity:
-- Age range and body type: [specific description]
-- Face anchors: [eyes, brows, nose, hairstyle, expression, distinctive feature]
-- Costume: [materials, silhouette, armor/cloth layers, accessories]
-- Signature prop: [weapon / tool / familiar / relic]
-- Palette: [3-5 colors with dominant and accent colors]
+Character brief:
+- Name or archetype: [character name].
+- Faction and world: [faction, culture, tech/magic level, biome].
+- Personality and combat identity: [3-5 words].
+- Key readable silhouette: [large shield, long coat, horn shape, backpack, staff, weapon arc].
+- Palette ownership: [main color, accent color, forbidden colors already used by other factions].
 
-Sheet layout:
-- Full-body front view as the hero image
-- 2-4 detail callouts for face, weapon, material, emblem, or backpack
-- Optional: side/back view only if a turnaround is needed
-- Clean neutral background, readable labels, no busy scene
+Output layout:
+- One clean production sheet, not a cinematic poster.
+- Include front view, side view, back view, head close-up, weapon/prop callouts, material swatches, and a small gameplay-distance silhouette strip.
+- Keep views aligned to the same ground line and scale.
+- Add small numbered callouts instead of long decorative text.
 
-Quality constraints:
-Keep the same face, costume, proportions, and palette across all panels. Strong readable silhouette, game concept art quality, production sheet layout.
+Rig and animation notes:
+- Show weapon hand, idle posture, attack direction, cape/hair cloth behavior, facial expression range, and any VFX socket points.
 
-Avoid:
-Changing identity between panels, random extra characters, unreadable tiny text, fashion collage, copied franchise logos, and complex backgrounds.
-```
+Art direction:
+- [2D / 3D concept / stylized / realistic / pixel / anime], [line weight], [material finish], [lighting rule].
 
-<a name="tpl-game-environment"></a>
+Acceptance checks:
+- Readable at gameplay camera distance.
+- Faction and class are identifiable from silhouette and palette.
+- Accessories do not block animation joints or weapon grip.
+- Sheet gives enough construction information for modeling or sprite production.
 
-### Game Environment Concept
+Negative constraints:
+- No single-pose splash art only.
+- No unreadable tiny text.
+- No inconsistent costume details between views.
+- No background scene that hides the character construction.
+~~~
 
-```text
-Create a game environment concept painting for [location name].
+---
 
-Game context:
-- Genre: [RPG / survival / stealth / strategy / cozy / horror]
-- Biome and world logic: [forest ruin / desert outpost / flooded city / orbital station]
-- Gameplay purpose: [hub / combat arena / puzzle level / resource zone / dungeon entrance]
+<a name="tpl-sprite-animation"></a>
+## Sprite Animation Sheet
 
-Composition:
-- Camera: [wide establishing shot / low angle / top-down / isometric / third-person exploration]
-- Player path: [main route, side route, blocked route]
-- Landmark: [large readable focal point]
-- Interactable zones: [loot, door, cover, resource node, NPC point]
-- Scale cues: [character silhouette, vehicles, trees, buildings]
+Use this when the output needs frame-by-frame animation, not a single illustration.
 
-Mood and art direction:
-[time of day], [weather], [lighting], [palette], [stylized / realistic / dark fantasy / sci-fi].
+~~~text
+Create an import-friendly 2D sprite animation sheet for [character/monster/prop/projectile] in [game genre].
 
-Output:
-One finished environment concept with clear gameplay readability, not just a wallpaper. Show entrances, navigation cues, reward focal points, and environmental storytelling.
+Production owner and downstream use:
+- Downstream users: animator, technical artist, Unity/Cocos integrator.
+- Engine target: [Unity Sprite Renderer / Unity 2D Animation / Cocos SpriteFrame / custom atlas].
+- Final use: [combat unit / NPC idle / projectile / pickup item / UI mascot].
 
-Avoid:
-Over-fogging, unreadable darkness, empty scenery, random decorative clutter, and inconsistent scale.
-```
+Sprite specification:
+- Camera: [side view / three-quarter top-down / top-down / isometric].
+- Final frame size target: [64x64 / 128x128 / 256x256 / custom].
+- Sheet grid: [columns x rows].
+- Action rows: idle [N frames], walk [N], attack [N], hit [N], death [N], special [N].
+- Frame order: left to right, row by row.
+- Pivot: feet center / body center / weapon socket, marked consistently.
+- Ground line: visible guide line or aligned feet baseline.
 
-<a name="tpl-game-prop"></a>
+Visual consistency:
+- Same scale, same outline weight, same light direction, same camera angle in every frame.
+- [Pixel art / hand-painted / anime / stylized] style with [palette and material notes].
+- Transparent or flat-color background with padding between frames.
 
-### Game Prop & Equipment Sheet
+Import notes:
+- Clean frame boundaries, no overlapping frames, no motion blur unless it is separated as its own VFX layer.
+- Optional small labels outside the frame area for action names and frame numbers.
 
-```text
-Design a game prop / equipment sheet for [item name].
+Acceptance checks:
+- Looping actions can tile without scale popping.
+- Feet or pivot stay stable across idle and walk frames.
+- Weapon and accessory length stays consistent.
+- Silhouette remains readable at final in-game size.
 
-Item definition:
-- Class: [weapon / armor / relic / consumable / crafting material / quest item]
-- Rarity: [common / rare / epic / legendary]
-- Gameplay function: [damage type, buff, crafting use, puzzle use]
-- Owner/faction: [who made or uses it]
+Negative constraints:
+- No cinematic smear hiding the body construction.
+- No perspective changes between frames.
+- No merged contact sheet with uneven cell sizes.
+~~~
 
-Visual design:
-- Silhouette: [simple readable shape]
-- Materials: [metal, cloth, bone, crystal, leather, polymer]
-- Wear state: [new / battle-worn / corrupted / ancient]
-- Scale reference: [handheld / backpack-size / building-size]
-- Color coding: [rarity border or elemental accent]
+---
 
-Sheet layout:
-- One hero render of the item
-- Front/side view or 3-6 detail callouts
-- Optional variant grid: [3-5 variants sharing one shape language]
-- Clean background, external labels only
+<a name="tpl-ui-panel-slicing"></a>
+## UI Panel Slicing Sheet
 
-Avoid:
-Impossible handles or attachment points, unclear scale, text printed on tiny surfaces, random spikes with no function, and inconsistent materials.
-```
+Use this for HUDs, inventory, shop, quest, upgrade, gacha, settings, and result screens that need reusable UI pieces.
 
-<a name="tpl-game-ui"></a>
+~~~text
+Create a game UI panel slicing sheet for [screen name] in [game genre/platform].
 
-### Game UI & HUD Screen
+Production owner and downstream use:
+- Downstream users: UI artist, UX designer, Unity/Cocos UI implementer, localization owner.
+- Target resolution and orientation: [1920x1080 landscape / 1080x1920 portrait / tablet adaptive].
+- Main player task: [claim reward / equip item / upgrade building / start battle / buy item].
 
-```text
-Create a high-fidelity game UI screen for [screen state].
+Screen structure:
+- Background layer: [dim overlay / scene blur / flat panel backplate].
+- Main panel frame: nine-slice friendly corners and edges.
+- Content regions: title area, tabs, scroll list, grid slots, detail preview, primary CTA, secondary buttons, currency bar, close button.
+- States: normal, selected, disabled, pressed, alert, empty, locked, maxed.
 
-Platform:
-[mobile portrait 9:16 / mobile landscape 16:9 / PC 16:9 / console safe-area UI]
+Slicing output:
+- Show the full screen mockup plus a separate asset breakdown sheet.
+- Break out panel frame, buttons, slot frames, tabs, badges, icons, dividers, progress bars, and notification markers.
+- Use numbered placeholder labels instead of final localized text.
+- Keep touch targets clear and leave safe areas for phone notches and platform overlays.
 
-Game context:
-- Genre: [RPG / strategy / gacha / survival / action]
-- Art direction: [fantasy parchment / sci-fi hologram / cozy pastel / dark metal]
-- Current state: [combat HUD / inventory / character panel / shop / gacha / skill tree / event page]
+Art direction:
+- UI mood: [survival utilitarian / cozy fantasy / sci-fi tactical / premium gacha / casual puzzle].
+- Shape language, border weight, texture density, color hierarchy, rarity color rules.
 
-Layout:
-- Top area: [currency, player info, title, tabs]
-- Main panel: [cards, equipment slots, grid, character preview, map, battle field]
-- Action area: [buttons, skill bar, confirm/cancel, claim reward]
-- Icon count: [exact slots or approximate count]
-- Required visible text: [short labels only]
+Acceptance checks:
+- Every repeated widget can become a reusable prefab/component.
+- Primary action is visually dominant.
+- UI remains readable with translated text length changes.
+- Icon and button states are distinguishable at mobile size.
 
-Constraints:
-Readable short text, consistent icon style, touch-safe spacing, clear hierarchy, no placeholder gibberish. Keep UI from covering faces, enemies, or combat feedback.
+Negative constraints:
+- No baked-in unreadable copy.
+- No decorative clutter over tap targets.
+- No one-off ornament that cannot be sliced or reused.
+~~~
 
-Avoid:
-Mixing PC/console/mobile conventions, long paragraphs, random unreadable labels, and decorative frames that destroy usability.
-```
+---
 
-<a name="tpl-game-icon"></a>
+<a name="tpl-icon-atlas"></a>
+## Game Icon Atlas
 
-### Game Icon Pack
+Use this for consistent ability, item, currency, badge, resource, and menu icon sets.
 
-```text
-Create a consistent game icon pack for [icon family].
+~~~text
+Create a game icon atlas for [icon family] in [game genre].
+
+Production owner and downstream use:
+- Downstream users: UI artist, item designer, economy designer, engine integrator.
+- Final icon sizes: [32, 64, 128, 256 px] with source drawn larger.
+- Atlas grid: [4x4 / 6x6 / 8x8], one centered icon per cell.
 
 Icon set:
-- Count: [1 / 4 / 8 / 12]
-- Type: [skill icons / item icons / currency / status effects / achievements / app icon]
-- Canvas: [square tile / rounded square / transparent background / circular badge]
-- Size intent: readable at [64px / 128px / 512px]
+- Families by row or column: [weapons, armor, potions, resources, currencies, skills, badges].
+- Count: [number] icons.
+- Visual grammar: [camera angle], [outline style], [background frame], [rarity frame], [material rendering].
+- Rarity or state colors: common, rare, epic, legendary / locked, active, disabled.
 
-Style:
-- Game genre: [fantasy / sci-fi / survival / casual / card battler]
-- Rendering: [hand-painted / 3D / cel shaded / flat vector / pixel art]
-- Light direction: [top-left / front studio / dramatic rim light]
-- Border/ranking: [none / rarity frame / elemental color border]
+Output format:
+- Contact sheet with clean grid and equal padding.
+- Transparent-background version preferred, plus preview with neutral checker or dark background if useful.
+- Each icon should have strong silhouette, centered subject, and no dependency on tiny text.
 
-Per-icon subjects:
-[List icon names and short visual ideas.]
+Acceptance checks:
+- Meaning is readable at 32 or 64 px.
+- Same camera angle and lighting across the full set.
+- Frame, rarity color, and item silhouette are visually separated.
+- Icons can be sliced into equal cells.
 
-Constraints:
-Centered subject, strong silhouette, high contrast, clean edge, consistent camera angle and lighting, no embedded text.
+Negative constraints:
+- No mixed perspective in the same atlas.
+- No tiny labels or numbers as the main identifier.
+- No excessive details that collapse at small size.
+~~~
 
-Avoid:
-Tiny decorative detail, inconsistent backgrounds, different perspective per icon, watermark, logos, and unreadable symbols.
-```
+---
 
-<a name="tpl-game-vfx"></a>
+<a name="tpl-tilemap-atlas"></a>
+## Tilemap Atlas
 
-### Game VFX Concept Sheet
+Use this for terrain tiles, modular floors, roads, walls, overlays, decals, and biome variants.
 
-```text
-Create a game VFX concept sheet for [ability name].
+~~~text
+Create an engine-ready tilemap atlas for [biome / dungeon / city / battlefield] in [game genre].
 
-Gameplay definition:
-- Ability type: [projectile / slash / area spell / heal / shield / ultimate / hit impact]
-- Element: [fire / ice / lightning / poison / holy / void / tech]
-- Gameplay purpose: [damage, crowd control, buff, warning, reward feedback]
-- Caster and target scale: [small hero / boss / squad / building]
+Production owner and downstream use:
+- Downstream users: environment artist, level designer, technical artist, Unity/Cocos tilemap integrator.
+- Target projection: [top-down / isometric / side-view platformer].
+- Tile size: [32x32 / 64x64 / 128x128 / custom].
+- Grid layout: equal cells, row and column alignment visible.
 
-Visual language:
-- Primary shape: [ring / cone / spiral / beam / shards / particles]
-- Color temperature: [palette and accent]
-- Motion feeling: [fast snap / heavy impact / floating aura / pulsing loop]
-- Readability: visible over [dark dungeon / bright grass / UI overlay]
+Tile families:
+- Base terrain: [grass, dirt, stone, road, water, lava, floor].
+- Edge transitions: straight edges, inner corners, outer corners, T-junctions, cross junctions.
+- Gameplay markers: walkable, blocked, hazard, resource, spawn, interactable.
+- Variants: clean, cracked, mossy, damaged, wet, decorated.
+- Decals and overlays: shadows, footprints, cracks, plants, rubble.
 
-Phase layout:
-1. Anticipation
-2. Cast
-3. Travel or expansion
-4. Impact
-5. Aftermath
-6. Optional loop frame
+Output layout:
+- Atlas sheet with modular tiles.
+- Small sample assembled map in one corner to prove edge compatibility.
+- Optional collision/readability overlay using simple colored markers outside the final tile area.
 
-Constraints:
-Each phase should be clearly separated, with consistent element language and visible hit direction.
+Art direction:
+- [Stylized / realistic / pixel art / hand-painted], consistent lighting direction, scale, texture density, and color hierarchy.
 
-Avoid:
-Pure bloom with no shape, effects that hide attacker or target, random particles, and unreadable combat feedback.
-```
+Acceptance checks:
+- Tiles connect seamlessly on all required edges.
+- Walkable and blocked spaces are visually distinct.
+- Repetition looks acceptable after several tiles.
+- Projection does not mix top-down and isometric rules.
 
-<a name="tpl-game-map"></a>
+Negative constraints:
+- No single painted environment that cannot tile.
+- No shadows that unintentionally expose cell boundaries.
+- No inconsistent scale between props and terrain.
+~~~
 
-### Game Map & Tile System
+---
 
-```text
-Create a game map / tile system concept for [map type].
+<a name="tpl-environment-layout"></a>
+## Environment Layout Sheet
 
-Projection:
-[top-down / isometric / orthographic 3/4 / side-view tile]
+Use this for a playable space: level, hub, dungeon room, combat arena, base, overworld region, or resource node area.
 
-Game context:
-- Genre: [strategy / survival / RPG / cozy sim / roguelike]
-- Map purpose: [world map / tactical board / minimap / route map / resource field / tile kit]
-- Biomes: [list 3-6 terrain types]
-- Key markers: [town, dungeon, resource, boss, shop, gate, safe zone]
+~~~text
+Create a game environment layout sheet for [level/area name] in [game genre/platform].
 
-Layout requirements:
-- Clear route hierarchy
-- Landmark-readable regions
-- Legend or icon language
-- Optional grid: [square / hex / isometric diamond]
-- Optional tile count: [number and terrain variants]
+Production owner and downstream use:
+- Downstream users: concept artist, level designer, environment artist, narrative designer, engine integrator.
+- Camera: [top-down / isometric / side-scrolling / third-person / fixed tactical].
+- Player scale reference: [character height, grid size, building footprint, vehicle size].
 
-For tile assets:
-Show separated tiles with consistent perspective, edge compatibility, and no shadows crossing tile borders.
+Playable layout:
+- Entry points, exit points, main route, optional route, loopback, landmark, objective location.
+- Spawn zones, combat encounter zones, resource nodes, interactables, blockers, cover, hazards, treasure or reward points.
+- Foreground blockers, navigable space, background set dressing, UI-safe camera frame.
 
-Avoid:
-Decorative maps with unreadable routes, inconsistent scale, mixed camera angles, and labels too small to read.
-```
+Output layout:
+- Version A: annotated blockout/layout view with readable labels and simple symbols.
+- Version B: mood/color pass showing final atmosphere and art direction.
+- Include scale guide and camera crop guide.
 
-<a name="tpl-game-card-art"></a>
+Art direction:
+- World/faction/biome: [details].
+- Mood: [tense, cozy, ruined, sacred, tactical, playful].
+- Asset reuse plan: modular props, landmark assets, background pieces, repeated decals.
 
-### Card & Gacha Splash Art
+Acceptance checks:
+- Route and interaction hierarchy are readable at a glance.
+- Landmarks support player navigation.
+- Combat or traversal spaces have usable scale.
+- Scene can be decomposed into reusable assets.
 
-```text
-Create game card / gacha splash art for [character or unit name].
+Negative constraints:
+- No purely atmospheric landscape with no gameplay information.
+- No hidden objective or ambiguous route.
+- No impossible scale relationships.
+~~~
 
-Game context:
-- Genre: [card RPG / gacha RPG / strategy card / collectible battler]
-- Rarity: [R / SR / SSR / legendary]
-- Element/faction: [fire, forest, machine, shadow, kingdom]
-- Power fantasy: [elegant assassin / holy defender / chaotic mage / cute healer]
+---
 
-Composition:
-- Character pose: [dynamic action / elegant idle / attack wind-up]
-- Frame area: [ornate card frame / clean banner / no frame, art only]
-- Title-safe zone: [top / bottom / left blank area]
-- Background energy: [elemental effect, symbolic environment, faction motif]
-- Crop: [portrait card / square avatar / wide banner]
+<a name="tpl-prop-equipment-turnaround"></a>
+## Prop & Equipment Turnaround
 
-Constraints:
-The character silhouette must stay dominant. Keep text minimal and exact if used. Leave safe negative space for later UI or logo placement.
+Use this for weapons, armor, loot, consumables, vehicles, interactables, crafting materials, and world props.
 
-Avoid:
-Known franchise card frames, copied logos, overdecorated borders, unreadable title text, and effects that hide the character.
-```
+~~~text
+Create a production turnaround sheet for [prop/equipment name] in [game genre].
 
-<a name="tpl-game-monster"></a>
+Production owner and downstream use:
+- Downstream users: concept artist, modeler, animator, item designer, UI icon artist.
+- Asset type: [weapon / armor / consumable / crafting material / interactable prop / vehicle].
+- Gameplay function: [damage type, stat bonus, interaction, rarity, crafting recipe, quest use].
 
-### Creature & Monster Sheet
+Construction views:
+- Front, side, back, top or detail views as needed.
+- Scale next to a hand, character silhouette, grid tile, or inventory slot.
+- Material swatches and wear/damage variants.
+- Grip points, attach points, moving parts, VFX sockets, danger/sharp areas.
 
-```text
-Create a creature / monster design sheet for [enemy name].
+Output layout:
+- Clean isolated object render.
+- Construction callouts with numbered labels.
+- Optional in-context thumbnail showing how it appears in hand, on the ground, in inventory, or in the world.
+- Optional icon crop suggestion.
 
-Combat definition:
-- Threat role: [swarm minion / ranged elite / tank / ambusher / boss]
-- Size class: [small / human-scale / large / giant]
-- Biome/origin: [swamp mutation / alien lab / cursed forest / volcanic cave]
-- Attack tells: [glowing weak point, raised claw, breath charge, exposed core]
+Art direction:
+- [Faction], [rarity tier], [material language], [shape language], [palette], [rendering style].
 
-Visual design:
-- Silhouette: [recognizable shape at gameplay camera distance]
-- Locomotion: [crawl / fly / burrow / biped / quadruped / hover]
-- Materials: [skin, shell, armor, crystal, machine parts]
-- Weak points: [color, exposed anatomy, mechanical core]
+Acceptance checks:
+- Modeler can understand volume, material, and silhouette.
+- Animator can identify grip or attach points.
+- Item designer can identify gameplay function and rarity.
+- Icon artist can crop a readable inventory icon.
 
-Sheet layout:
-- Main full-body view
-- 2-4 attack or idle pose thumbnails
-- Detail callouts for weak point, mouth, claws, armor, or core
-- Optional family variants sharing the same shape language
+Negative constraints:
+- No single dramatic angle that hides construction.
+- No decoration blocking the grip or socket.
+- No rarity color conflict with the inventory system.
+~~~
 
-Avoid:
-Too many limbs or horns without combat reason, silhouettes that collapse at small size, and random horror detail unrelated to gameplay.
-```
+---
 
-<a name="tpl-game-building"></a>
+<a name="tpl-vfx-sequence"></a>
+## VFX Sequence Sheet
 
-### Game Building & Settlement Set
+Use this when an effect needs readable gameplay timing: cast, projectile, impact, buff, aura, trail, or cleanup.
 
-```text
-Create a game building / settlement asset set for [building family].
+~~~text
+Create a gameplay VFX sequence sheet for [skill/effect name] in [game genre].
 
-Game context:
-- Genre: [strategy / survival / city builder / RPG town / cozy sim]
-- Faction or culture: [visual identity and materials]
-- Function: [shop / barracks / forge / shelter / resource extractor / town hall]
-- Upgrade tiers: [tier 1-3 or one finished tier]
+Production owner and downstream use:
+- Downstream users: VFX artist, combat designer, animator, technical artist.
+- Skill role: [telegraph / cast / projectile / impact / area hazard / buff / heal / pickup / ambient].
+- Damage or element type: [fire, ice, poison, holy, kinetic, electric, faction color].
+- Camera distance and background conditions: [mobile combat / dark dungeon / bright overworld / UI overlay].
 
-Design rules:
-- Footprint: [small / medium / large / exact grid size]
-- Camera: [isometric / orthographic front / 3/4 view]
-- Materials: [wood, stone, metal, cloth, neon, scrap]
-- Function read: [signage, chimney, crates, banners, machine parts]
-- Scale reference: [door size, person silhouette, props]
+Timing phases:
+- Anticipation or warning.
+- Charge or cast.
+- Travel or expansion.
+- Impact or active hit moment.
+- Linger or damage-over-time area.
+- Dissipate or cleanup.
 
-Layout:
-Show 3-5 buildings or upgrade tiers in one clean sheet, with consistent perspective and spacing.
+Output layout:
+- Left-to-right phase sheet with equal cells and readable phase labels.
+- Alpha-friendly effect on neutral background.
+- Optional preview on dark and light map backgrounds.
+- Show centerline, hit direction, area radius, and priority focal point when useful.
 
-Avoid:
-Beautiful but functionless buildings, inconsistent door/window scale, mixed camera angles, and unreadable tiny signage.
-```
+Art direction:
+- Shape language, color ownership, particle density, edge softness, glow amount, and contrast level.
 
-<a name="tpl-game-key-art"></a>
+Acceptance checks:
+- Players can read danger, timing, and direction quickly.
+- Effect does not cover enemies, UI, or hit feedback for too long.
+- Active frames are visually stronger than buildup and cleanup.
+- Color does not conflict with another damage type or faction.
 
-### Game Key Art & Store Assets
+Negative constraints:
+- No random particle cloud without phase structure.
+- No dense smoke hiding gameplay targets.
+- No excessive bloom that destroys silhouette readability.
+~~~
 
-```text
-Create game key art / store asset artwork for [game title or event].
+---
 
-Marketing purpose:
-[Steam capsule / App Store screenshot / launch poster / seasonal event banner / social ad / store hero image]
+<a name="tpl-monster-combat-readability"></a>
+## Monster Combat Readability Sheet
 
-Game promise:
-- Genre: [what players do]
-- Core fantasy: [survive 33 days, build a base, command heroes, explore ruins]
-- Main subject: [hero, squad, monster, vehicle, city, world]
-- Secondary subjects: [2-4 supporting elements]
+Use this for enemies and bosses whose visuals must support encounter design.
 
-Composition:
-- Format: [16:9 / 4:5 / 1:1 / 9:16 / wide capsule]
-- Safe area: [where title/logo will go]
-- Focal hierarchy: [largest subject, secondary subject, background]
-- Mood: [epic, cozy, tense, comedic, premium, mysterious]
+~~~text
+Create a monster combat readability sheet for [enemy/boss name] in [game genre].
 
-Constraints:
-Leave clean negative space for logo or UI overlays unless exact title text is required. Make the gameplay promise honest and visually clear.
+Production owner and downstream use:
+- Downstream users: concept artist, animator, combat designer, VFX artist, modeler.
+- Enemy tier: [grunt / elite / mini-boss / boss / raid boss].
+- Size class and camera distance: [small / medium / huge], [mobile isometric / third-person / side-view].
+- Combat role: [charger / sniper / summoner / tank / ambusher / area-control boss].
 
-Avoid:
-Poster layouts that cannot crop, misleading gameplay scenes, copied franchise aesthetics, and unreadable title typography.
-```
+Design requirements:
+- Idle silhouette and readable body mass.
+- Attack wind-up poses for each major attack.
+- Weak point callouts and protected armor zones.
+- Hit reaction, stagger, enraged phase, damaged phase, death or dissolve cue.
+- Optional danger zone or attack arc overlay for design handoff.
 
-<a name="tpl-game-sprite"></a>
+Output layout:
+- Main monster view plus side/back views if model handoff matters.
+- Silhouette strip at gameplay camera size.
+- Attack telegraph mini-poses and phase variant thumbnails.
+- Callouts for weak points, weapons, limbs, VFX sockets, and hit zones.
 
-### Sprite & Animation Sheet
+Art direction:
+- Faction/biome origin, material language, color ownership, horror/fantasy/sci-fi level, readability priority.
 
-```text
-Create a sprite / animation sheet for [character or object].
+Acceptance checks:
+- Player can identify attack direction before impact.
+- Weak point is readable without relying on tiny detail.
+- Boss phases feel related but clearly escalated.
+- Size and threat level are clear from silhouette.
 
-Game context:
-- Camera: [side-view / top-down / isometric / 3/4]
-- Style: [pixel art / hand-painted 2D / cel-shaded sprite]
-- Tile or frame size: [32x32 / 64x64 / 128x128 / custom]
-- Palette rule: [limited palette / outline color / shadow style]
+Negative constraints:
+- No impressive shape that hides gameplay direction.
+- No weak point buried in noisy textures.
+- No unrelated phase forms unless the design explicitly requires transformation.
+~~~
 
-Animation:
-- Sequence: [idle / run / attack / jump / hit / death]
-- Frame count: [4 / 6 / 8 / 12]
-- Grid: [columns x rows]
-- Background: transparent or flat key color
+---
 
-Consistency:
-Keep the same costume, face, proportions, weapon, and silhouette across all frames. Equal frame boxes, centered pivot, consistent ground line.
+<a name="tpl-building-upgrade-set"></a>
+## Building Upgrade Set
 
-Avoid:
-Uneven frame sizes, changing outfit between frames, painterly blur for pixel art, complex backgrounds, and motion trails that cannot be separated.
-```
+Use this for base, settlement, shop, factory, tower, defense, and resource buildings across multiple tiers.
 
+~~~text
+Create a building upgrade set for [building name/function] in [game genre].
+
+Production owner and downstream use:
+- Downstream users: environment artist, level designer, economy designer, UI icon artist, engine integrator.
+- Building function: [resource production / defense / shop / healing / crafting / housing / command center].
+- Footprint: [1x1 / 2x2 / 3x3 / custom grid].
+- Camera projection: [isometric / top-down / side-view / orthographic 3D].
+
+Upgrade tiers:
+- Tier count: [3 / 5 / custom].
+- Tier progression: silhouette complexity, height, materials, lights, banners, machinery, faction marks.
+- Required states: normal, construction, damaged, disabled, max level.
+- Optional thumbnail/icon crop for building menu.
+
+Output layout:
+- Row of upgrade tiers with consistent footprint, camera angle, lighting, and scale.
+- Small footprint guide and entrance/interactable zone marker.
+- Material and faction callouts.
+- Optional in-map preview showing nearby road/path/grid relationship.
+
+Art direction:
+- Biome, faction, tech level, color hierarchy, readability at strategy-camera distance.
+
+Acceptance checks:
+- Function is readable before reading text.
+- Tier upgrades feel incremental and satisfying.
+- Footprint and entrance direction stay consistent unless noted.
+- Building can sit on the intended grid without perspective mismatch.
+
+Negative constraints:
+- No random footprint changes between tiers.
+- No decorative additions that hide the building function.
+- No scale drift across the upgrade row.
+~~~
+
+---
+
+<a name="tpl-store-asset-pack"></a>
+## Store Asset Pack
+
+Use this for app-store screenshots, Steam capsules, social ads, event banners, and key-art variants.
+
+~~~text
+Create a game store and marketing asset pack for [game name / event / feature].
+
+Production owner and downstream use:
+- Downstream users: marketing artist, UA designer, store listing owner, community manager.
+- Product promise to show honestly: [core mechanic / battle fantasy / base building / story moment / collection loop].
+- Target audience and platform: [mobile casual / Steam survival / premium RPG / strategy live ops].
+
+Required formats:
+- 16:9 key art.
+- 9:16 vertical ad composition.
+- 1:1 social square.
+- Steam capsule or store banner format if relevant.
+- Store screenshot composition with UI-safe framing if relevant.
+
+Composition rules:
+- Reserve safe zones for logo, CTA, rating badge, platform overlays, and localized headline.
+- Show actual game elements: character, enemy, reward, UI moment, core mechanic, environment, progression.
+- Provide clean art-only version and guide version with crop-safe overlays.
+- Keep faces, reward objects, and main action inside all crop-safe zones.
+
+Art direction:
+- Mood, palette, lighting, character focus, action beat, value proposition, seasonal/event visual rules.
+
+Acceptance checks:
+- Image communicates the real gameplay promise in under 2 seconds.
+- Composition works across listed aspect ratios.
+- Text areas remain editable and localizable.
+- Key object is not cropped out in mobile or capsule variants.
+
+Negative constraints:
+- No fake gameplay or misleading mechanics.
+- No baked-in tiny text.
+- No key face or reward outside safe crop.
+~~~
+
+---
+
+<a name="tpl-art-style-guide"></a>
+## Art Style Guide
+
+Use this before generating many assets, or when a team needs a reusable visual standard.
+
+~~~text
+Create a game art style guide sheet for [project name / genre / platform].
+
+Production owner and downstream use:
+- Downstream users: art director, concept artists, UI artists, outsource vendors, prompt authors, reviewers.
+- Asset families covered: characters, environments, props, UI, icons, VFX, marketing.
+- Platform and camera constraints: [mobile/PC/console], [isometric/top-down/side-view/third-person].
+
+Core style rules:
+- Genre and audience: [cozy survival / tactical sci-fi / dark fantasy RPG / casual merge].
+- Shape language: [rounded, angular, chunky, elegant, mechanical, organic].
+- Line and edge treatment: [clean outline / painterly edge / no outline / pixel border].
+- Palette: primary, secondary, accent, warning, rarity, enemy/friendly colors.
+- Lighting and materials: light direction, contrast, texture density, roughness, glow/bloom limits.
+- Camera and scale: asset viewing angle, character-to-prop scale, UI/icon readability size.
+
+Output layout:
+- Palette strip and material swatches.
+- Character sample, prop sample, environment sample, UI panel sample, icon sample, VFX sample, marketing crop sample.
+- Do examples and do-not examples with short numbered callouts.
+- Final approval checklist.
+
+Acceptance checks:
+- Rules are specific enough for multiple artists or agents to reproduce.
+- Visual language supports gameplay readability and UI clarity.
+- Style can scale from single hero image to hundreds of assets.
+- Localization and platform constraints are documented.
+
+Negative constraints:
+- No vague mood board without enforceable rules.
+- No palette that fails UI or combat readability.
+- No style rule that only works for a single poster image.
+~~~

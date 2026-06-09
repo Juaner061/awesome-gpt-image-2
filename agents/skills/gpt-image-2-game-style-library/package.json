@@ -1,7 +1,7 @@
 {
   "name": "gpt-image-2-game-style-library",
   "version": "0.1.0",
-  "description": "Agent skill for choosing GPT-Image2 game art prompt templates, asset categories, production contexts, and art-direction tags.",
+  "description": "Agent skill for choosing GPT-Image2 game production prompt templates, deliverable categories, handoff contexts, and production tags.",
   "type": "module",
   "license": "MIT",
   "repository": {
@@ -21,9 +21,11 @@
     "gpt-image-2",
     "prompt",
     "image-generation",
-    "game-art",
+    "game-development",
     "game-assets",
-    "concept-art"
+    "production-art",
+    "ui-slicing",
+    "sprite-sheet"
   ],
   "bin": {
     "gpt-image-2-game-style-library": "bin/install.mjs"

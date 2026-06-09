@@ -1,378 +1,459 @@
-# GPT-Image2 Game Style Library Reference
+# GPT-Image2 Game Production Library Reference
 
-Generated from `data/style-library.json`. Use this file as the detailed index for choosing GPT-Image2 game prompt templates, asset categories, art-direction tags, and production contexts.
+Generated from `data/style-library.json`. Use this file as the detailed index for choosing GPT-Image2 game production prompt templates, deliverable categories, production tags, and downstream handoff contexts.
 
 ## Selection Rules
 
-- Match explicit game asset types to template categories first, such as character, environment, prop, UI, icon, VFX, map, key art, or card art.
-- Match art-direction words to style tags next, such as anime, stylized, realistic, pixel art, low poly, isometric, dark fantasy, sci-fi, or UI.
-- Match production context words to scene tags next, such as concept art, production sheet, marketing, live ops, mobile game, RPG, strategy, survival, or casual.
-- If a request is vague, offer 2-3 strong template directions and ask the user to choose before writing the final prompt.
-- Final output should include the selected template name, a copyable GPT-Image2 prompt, and concise constraints for asset usability, aspect ratio, background, consistency, text, and negative details.
+- Match the requested downstream deliverable first: character production sheet, sprite animation sheet, UI slicing sheet, icon atlas, tilemap atlas, environment layout, prop/equipment turnaround, VFX sequence, monster readability sheet, building upgrade set, store asset pack, or art style guide.
+- Match the downstream owner next, such as concept artist, UI artist, animator, technical artist, level designer, combat designer, marketing artist, or engine integrator.
+- Match production constraints to style and scene tags: engine-ready, atlas, transparent asset, reference sheet, Unity, Cocos, mobile, combat, level design, localization, marketing, RPG, strategy, or survival.
+- If a request is vague, offer 2-3 deliverable templates with concrete tradeoffs before writing the final prompt.
+- Final output should include the selected template name, a copyable GPT-Image2 prompt, and concise acceptance checks for format, slicing/import use, readability, consistency, text handling, and negative constraints.
 
 ## Template Index
 
-### Game Character Reference Sheet / 游戏角色设定表
+### Character Production Sheet / 角色生产设定表
 
-- ID: `game-character-reference`
-- Category: Game Character Design
-- Styles: Anime, Stylized, Realistic
-- Scenes: Production, RPG, Mobile Game
-- Tags: Concept Art, Production, Anime
-- Cover: `/images/case416.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-character
-- Example cases: case 439, case 27, case 54
-
-Use when:
-- EN: Use for playable characters, NPCs, skins, avatar variants, and any prompt that needs consistent character design.
-- ZH: 用于可玩角色、NPC、皮肤、头像变体，以及任何需要角色一致性的设定任务。
-
-Guidance:
-  - Lock role, faction, silhouette, costume materials, face anchors, palette, and game genre before style words.
-  - Ask for front view plus 2-4 detail callouts; use turnaround only when the user needs production reference.
-  - 先锁定职业、阵营、剪影、服装材质、脸部识别点、配色和游戏类型，再写风格词。
-  - 默认生成主视图加 2-4 个细节放大；只有需要生产参考时才要求三视图。
-
-Pitfalls:
-  - Avoid changing age, face, costume, or faction across panels.
-  - Avoid busy backgrounds unless the request is splash art rather than a reference sheet.
-  - 避免不同面板换年龄、换脸、换衣服或换阵营。
-  - 设定表不要复杂背景；如果用户要的是立绘或宣传图，再加入场景。
-
-### Game Environment Concept / 游戏场景概念图
-
-- ID: `game-environment-concept`
-- Category: Game Environment Concept
-- Styles: Stylized, Realistic, Dark Fantasy, Sci-Fi
-- Scenes: Concept Art, RPG, Survival
-- Tags: Environment, Concept Art, Key Art
-- Cover: `/images/case473.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-environment
-- Example cases: case 473, case 489, case 6
-
-Use when:
-- EN: Use for locations, level mood paintings, playable spaces, dungeons, towns, arenas, and environmental storytelling.
-- ZH: 用于地点、关卡氛围图、可游玩空间、地下城、城镇、竞技场和环境叙事。
-
-Guidance:
-  - Define camera height, player path, landmark, interactable zones, mood, time of day, and scale cues.
-  - Separate visual mood from gameplay readability: clear entrances, cover points, routes, and reward focal points.
-  - 明确镜头高度、玩家路线、地标、可交互区域、情绪、时间和尺度参照。
-  - 把氛围和玩法可读性同时写清：入口、掩体、路线和奖励焦点要能看出来。
-
-Pitfalls:
-  - Avoid pure wallpaper scenery with no gameplay function.
-  - Avoid overusing fog, bloom, and darkness until important gameplay shapes disappear.
-  - 避免只像风景壁纸，看不出游戏功能。
-  - 避免雾、泛光和暗部过重，导致关键玩法形状消失。
-
-### Game Prop & Equipment Sheet / 游戏道具装备设定表
-
-- ID: `game-prop-equipment-sheet`
-- Category: Game Props & Equipment
-- Styles: Stylized, Realistic, Sci-Fi, Dark Fantasy
-- Scenes: Production, RPG, Survival
-- Tags: Prop, Weapon, Production
-- Cover: `/images/case350.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-prop
-- Example cases: case 473, case 444
-
-Use when:
-- EN: Use for inventory items, weapon concepts, equipment sets, crafting resources, and prop callout sheets.
-- ZH: 用于背包物品、武器概念、装备套装、制造资源和道具细节拆解。
-
-Guidance:
-  - Lock item class, rarity, gameplay function, scale, materials, damage/wear state, and silhouette language.
-  - Ask for one hero item plus 3-6 orthographic callouts or a clean grid of variants.
-  - 锁定道具类别、稀有度、玩法功能、尺度、材质、损耗状态和剪影语言。
-  - 默认一件主道具加 3-6 个正交细节；变体需求则使用整齐网格。
-
-Pitfalls:
-  - Avoid unclear scale and impossible handles, blades, straps, or attachment points.
-  - Avoid unreadable tiny text on props; use labels outside the object when needed.
-  - 避免比例不清、手柄/刀刃/绑带/接口不可用。
-  - 避免在道具上塞小字；需要说明时用外部标注。
-
-### Game UI & HUD Screen / 游戏 UI 与 HUD 画面
-
-- ID: `game-ui-hud-screen`
-- Category: Game UI & HUD
-- Styles: UI, Anime, Sci-Fi, Stylized
-- Scenes: Mobile Game, Live Ops, RPG
-- Tags: UI, HUD, Mobile Game
-- Cover: `/images/case17.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-ui
-- Example cases: case 17
-
-Use when:
-- EN: Use for any game interface, especially when layout, readable labels, icon slots, and mobile screen constraints matter.
-- ZH: 用于任何游戏界面，尤其是布局、可读标签、图标槽位和移动端比例很重要时。
-
-Guidance:
-  - Specify platform, orientation, screen state, core panels, icon counts, text language, and touch-safe spacing.
-  - Use exact UI labels only for short headers; avoid asking the image model to typeset long paragraphs.
-  - 指定平台、横竖屏、界面状态、核心面板、图标数量、文字语言和触控安全间距。
-  - 只锁定短标题和按钮文案；不要让图片模型排长段正文。
-
-Pitfalls:
-  - Avoid mixing console, PC, and mobile interface conventions in one screen.
-  - Avoid letting UI cover the character face, enemy silhouette, or combat feedback.
-  - 避免同一张图混用主机、PC 和手游界面习惯。
-  - 避免 UI 遮住角色脸、敌人剪影或战斗反馈。
-
-### Game Icon Pack / 游戏图标套件
-
-- ID: `game-icon-pack`
-- Category: Game Icons
-- Styles: Icon, Stylized, Anime, Sci-Fi
-- Scenes: Production, Mobile Game, Live Ops
-- Tags: Icon, UI, Production
-- Cover: `/images/case444.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-icon
-- Example cases: case 444
-
-Use when:
-- EN: Use when the output needs small-size readability, consistent icon families, transparent backgrounds, or square tiles.
-- ZH: 用于需要小尺寸可读、图标族统一、透明背景或方形底板的任务。
-
-Guidance:
-  - Define icon count, canvas shape, background rule, rarity border, lighting direction, and dominant silhouette for each icon.
-  - For production icons, request centered objects, clean edges, strong contrast, and no embedded text.
-  - 定义图标数量、画布形状、背景规则、稀有度边框、光源方向和每个图标的主剪影。
-  - 生产用图标要求主体居中、边缘干净、强对比、不要内嵌文字。
-
-Pitfalls:
-  - Avoid decorative detail that disappears at 64 px.
-  - Avoid different camera angles and light directions within one icon pack.
-  - 避免 64 像素下看不清的装饰细节。
-  - 同一套图标不要混用不同机位和光源方向。
-
-### Game VFX Concept Sheet / 游戏技能特效设定表
-
-- ID: `game-vfx-concept-sheet`
-- Category: Game VFX Concept
-- Styles: Stylized, Anime, Sci-Fi, Dark Fantasy
-- Scenes: Production, RPG, Mobile Game
-- Tags: VFX, Concept Art, Production
-- Cover: `/images/case310.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-vfx
-- Example cases: case 473
-
-Use when:
-- EN: Use for skill effects, combat feedback, elemental spell visuals, ultimate abilities, and VFX phase boards.
-- ZH: 用于技能特效、战斗反馈、元素法术、大招和特效阶段板。
-
-Guidance:
-  - Define gameplay purpose, element, shape language, timing phases, impact point, color temperature, and readability over backgrounds.
-  - Use 4-6 phase frames: anticipation, cast, travel, impact, aftermath, loop if needed.
-  - 定义玩法目的、元素、形状语言、时间阶段、打击点、色温和在背景上的可读性。
-  - 使用 4-6 个阶段帧：预备、施放、飞行、命中、残留，需要循环时补 loop。
-
-Pitfalls:
-  - Avoid pure bright bloom with no readable shape.
-  - Avoid VFX that hides the attacker, target, or hit direction.
-  - 避免只有强泛光、没有可读形状。
-  - 避免特效遮住施法者、目标或打击方向。
-
-### Game Map & Tile System / 游戏地图与地块系统
-
-- ID: `game-map-tile-system`
-- Category: Game Maps & Tiles
-- Styles: Isometric, Stylized, Pixel Art, Low Poly
-- Scenes: Strategy, Survival, Production
-- Tags: Map, Isometric, Production
-- Cover: `/images/case489.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-map
-- Example cases: case 489
-
-Use when:
-- EN: Use for world maps, town maps, tactical boards, tilemap concepts, resource nodes, and route planning visuals.
-- ZH: 用于世界地图、城镇地图、战术棋盘、Tilemap 概念、资源点和路线规划视觉。
-
-Guidance:
-  - Define projection, grid size, biome rules, landmarks, route hierarchy, interactable markers, and legend style.
-  - For tile assets, request separated tiles with consistent perspective, edge compatibility, and no cast shadows crossing tile borders.
-  - 定义投影方式、网格尺寸、生态规则、地标、路线层级、交互标记和图例风格。
-  - 地块资产要分离展示、透视一致、边缘可拼接，不要让投影跨越地块边界。
-
-Pitfalls:
-  - Avoid decorative maps with unreadable routes or inconsistent scale.
-  - Avoid mixing top-down, isometric, and perspective camera angles in one tile set.
-  - 避免只有装饰性、路线不可读或比例混乱的地图。
-  - 同一套地块不要混用俯视、等距和透视视角。
-
-### Card & Gacha Splash Art / 卡牌与抽卡立绘
-
-- ID: `game-card-gacha-art`
-- Category: Card & Gacha Art
-- Styles: Anime, Stylized, Dark Fantasy, Sci-Fi
-- Scenes: Marketing, Live Ops, RPG
-- Tags: Card, Key Art, Anime
-- Cover: `/images/case6.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-card-art
-- Example cases: case 6, case 480
-
-Use when:
-- EN: Use for character splash art, collectible card frames, gacha banners, hero portraits, and rarity variants.
-- ZH: 用于角色立绘、收藏卡框、抽卡 Banner、英雄头像和稀有度变体。
-
-Guidance:
-  - Define rarity, pose, power fantasy, frame shape, title area, background energy, and crop safety.
-  - Keep card text short; use frame and icon slots rather than long paragraphs.
-  - 定义稀有度、姿态、爽感、卡框形状、标题区、背景能量和裁切安全区。
-  - 卡面文字要短；用卡框和图标槽表达信息，不要塞长段文字。
-
-Pitfalls:
-  - Avoid frame decorations that hide the character silhouette.
-  - Avoid copying known card game layouts, logos, or exact UI frames.
-  - 避免卡框装饰遮住角色剪影。
-  - 避免照搬知名卡牌游戏版式、Logo 或精确 UI 框。
-
-### Creature & Monster Sheet / 怪物与 Boss 设定表
-
-- ID: `game-creature-monster-sheet`
-- Category: Creature & Monster Design
-- Styles: Dark Fantasy, Sci-Fi, Stylized, Realistic
-- Scenes: Production, RPG, Survival
-- Tags: Monster, Concept Art, Production
+- ID: `character-production-sheet`
+- Category: Character Production Sheet
+- Styles: 2D, 3D, Stylized, Reference Sheet
+- Scenes: Concept to Production, Engine Ready, RPG, Mobile
+- Tags: production-sheet, reference-sheet, combat-readability, handoff, acceptance
 - Cover: `/images/case439.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-monster
-- Example cases: case 439, case 473
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-character-production
+- Example cases: case 439, case 166, case 341
 
 Use when:
-- EN: Use for enemies, bosses, mutation variants, creature families, attack silhouettes, and combat design sheets.
-- ZH: 用于敌人、Boss、变异体、生物族群、攻击剪影和战斗设计表。
+- EN: Use when the output must brief concept artists, modelers, animators, and combat designers at the same time.
+- ZH: 当角色图要同时服务概念、美术建模、动画和战斗设计时使用。
 
 Guidance:
-  - Define size class, threat role, silhouette, locomotion, weak points, attack tells, materials, and biome origin.
-  - Use 3-5 variants only when they share a clear family shape language.
-  - 定义体型等级、威胁职责、剪影、移动方式、弱点、攻击前摇、材质和生态来源。
-  - 只有共享明确族群形状语言时，才生成 3-5 个变体。
+  - Specify gameplay role, class, faction, rarity or skin tier, and camera distance.
+  - Ask for front, side, back, face close-up, weapon/prop callouts, and a readable silhouette strip.
+  - Include rig and animation hints such as weapon hand, idle posture, attack arc, cape or hair simulation, and facial expression range.
+  - End with acceptance checks for silhouette, palette ownership, scale, and downstream usability.
+  - 明确玩法定位、职业、阵营、稀有度或皮肤档位，以及游戏内镜头距离。
+  - 要求正面、侧面、背面、头像特写、武器/道具拆解和剪影条。
+  - 加入绑定与动画提示，例如武器手、待机姿势、攻击弧线、披风或头发动态、表情范围。
+  - 最后写清剪影、配色归属、比例和交付可用性的验收标准。
 
 Pitfalls:
-  - Avoid adding too many horns, limbs, and eyes without a combat reason.
-  - Avoid silhouettes that look impressive but cannot be recognized at gameplay camera distance.
-  - 避免没有战斗理由地堆角、肢体和眼睛。
-  - 避免设定图很酷，但在游戏镜头距离下认不出的剪影。
+  - Avoid beautiful single-pose splash art when production needs multiple orthographic views.
+  - Avoid tiny accessories that disappear at gameplay camera scale.
+  - Avoid unreadable faction color language or costume details that conflict with the role.
+  - 不要只生成漂亮单姿势立绘，生产需要多视图和可拆解信息。
+  - 避免在游戏镜头下看不见的小装饰。
+  - 避免阵营色和职业识别不清，或服装细节与玩法定位冲突。
 
-### Game Building & Settlement Set / 游戏建筑与据点套件
+### Sprite Animation Sheet / 2D 动作帧表
 
-- ID: `game-building-set`
-- Category: Buildings & Settlements
-- Styles: Isometric, Stylized, Low Poly, Realistic
-- Scenes: Strategy, Survival, Production
-- Tags: Environment, Isometric, Production
-- Cover: `/images/case338.png`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-building
-- Example cases: case 489, case 473
-
-Use when:
-- EN: Use for modular buildings, city sets, base upgrades, resource structures, shop facades, and destructible environment props.
-- ZH: 用于模块化建筑、城镇套件、基地升级、资源建筑、商店外观和可破坏环境物。
-
-Guidance:
-  - Define function, faction, upgrade tier, footprint, roof language, material palette, and gameplay readability.
-  - For strategy games, show front/side or isometric views with consistent footprint and clear entrance markers.
-  - 定义功能、阵营、升级等级、占地、屋顶语言、材质配色和玩法可读性。
-  - 策略游戏建筑使用前侧视或等距视角，保持占地一致并标出入口。
-
-Pitfalls:
-  - Avoid buildings that look beautiful but do not communicate function.
-  - Avoid inconsistent scale between doors, windows, props, and characters.
-  - 避免建筑好看但看不出功能。
-  - 避免门窗、道具和角色之间比例不一致。
-
-### Game Key Art & Store Assets / 游戏主视觉与商店素材
-
-- ID: `game-key-art-store-assets`
-- Category: Game Key Art & Store Assets
-- Styles: Key Art, Realistic, Anime, Stylized
-- Scenes: Marketing, Live Ops, Mobile Game
-- Tags: Key Art, Marketing, Campaign
-- Cover: `/images/case360.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-key-art
-- Example cases: case 473, case 6
-
-Use when:
-- EN: Use when the output is for player acquisition, store pages, launch campaigns, live events, or game announcements.
-- ZH: 用于拉新、商店页、上线 Campaign、活动运营或游戏宣发。
-
-Guidance:
-  - Define asset format, title-safe area, hero characters, gameplay promise, background world, logo placement, and crop variants.
-  - Ask for no final logo text unless exact title rendering is required; leave clean negative space for later design.
-  - 定义素材格式、标题安全区、主角、玩法承诺、世界背景、Logo 位置和裁切变体。
-  - 除非明确要生成标题文字，否则保留干净留白给后期设计。
-
-Pitfalls:
-  - Avoid poster compositions that cannot crop into capsule, banner, and square formats.
-  - Avoid misleading gameplay promises in marketing art.
-  - 避免无法裁成胶囊图、Banner 和方图的海报构图。
-  - 避免宣发图表达与真实玩法不一致。
-
-### Sprite & Animation Sheet / 精灵图与动作帧表
-
-- ID: `game-sprite-animation-sheet`
-- Category: Sprites & Animation Sheets
-- Styles: Pixel Art, Stylized, Anime, Sprite
-- Scenes: Production, Mobile Game, RPG
-- Tags: Sprite, Pixel Art, Production
+- ID: `sprite-animation-sheet`
+- Category: Sprite Animation Sheet
+- Styles: 2D, Sprite, Pixel Art, Atlas
+- Scenes: Engine Ready, Combat, Unity, Cocos
+- Tags: sprite-sheet, atlas, engine-ready, transparent-asset, acceptance
 - Cover: `/images/case27.jpg`
-- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-game-sprite
-- Example cases: case 27, case 54
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-sprite-animation
+- Example cases: case 27, case 330, case 334
 
 Use when:
-- EN: Use for sprite sheets, animation references, side-view characters, top-down units, idle/run/attack loops, and pixel art assets.
-- ZH: 用于精灵图、动作参考、横版角色、俯视单位、待机/奔跑/攻击循环和像素资产。
+- EN: Use when the user needs animation frames, not a single illustration.
+- ZH: 当用户要的是动作帧而不是单张插画时使用。
 
 Guidance:
-  - Define camera angle, frame count, grid dimensions, animation sequence, silhouette consistency, and transparent background.
-  - For pixel art, specify tile size, pixel density, outline rule, palette limit, and no anti-aliased painterly edges.
-  - 定义镜头角度、帧数、网格尺寸、动作顺序、剪影一致性和透明背景。
-  - 像素风要指定 tile 尺寸、像素密度、描边规则、色板限制，并避免绘画式抗锯齿边缘。
+  - Define action states, exact frame count per state, grid order, pivot point, ground line, and loop behavior.
+  - Request consistent character scale, lighting, outline weight, and camera angle across every frame.
+  - Use transparent or flat-color background and leave padding between frames for slicing.
+  - Call out import notes such as row labels, frame numbers, no motion blur, no overlapping frames.
+  - 明确动作状态、每个状态帧数、网格顺序、轴心点、脚底线和循环方式。
+  - 要求所有帧保持一致的角色比例、光照、描边粗细和镜头角度。
+  - 使用透明或纯色背景，并在帧之间留出切图间距。
+  - 写明导入备注，例如行标签、帧编号、不要运动模糊、不要帧重叠。
 
 Pitfalls:
-  - Avoid changing the character costume or proportions between frames.
-  - Avoid uneven frame boxes that make animation extraction painful.
-  - 避免不同帧换服装或比例。
-  - 避免帧框大小不一，导致后续切图痛苦。
+  - Avoid cinematic smears if the frames need clean slicing.
+  - Avoid perspective changes between frames.
+  - Avoid inconsistent weapon length, feet position, or character height.
+  - 如果要拆帧，不要生成电影式拖影。
+  - 避免帧与帧之间镜头角度变化。
+  - 避免武器长度、脚底位置或角色高度不一致。
+
+### UI Panel Slicing Sheet / UI 面板切图表
+
+- ID: `ui-panel-slicing-sheet`
+- Category: UI Panel Slicing Sheet
+- Styles: UI, 2D, Atlas, Reference Sheet
+- Scenes: Engine Ready, Mobile, Localization, Unity, Cocos
+- Tags: ui-slicing, production-sheet, engine-ready, handoff, acceptance
+- Cover: `/images/case17.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-ui-panel-slicing
+- Example cases: case 17, case 346, case 354
+
+Use when:
+- EN: Use for HUD, inventory, shop, quest, upgrade, gacha, settings, and result screens.
+- ZH: 用于 HUD、背包、商店、任务、升级、抽卡、设置和结算界面。
+
+Guidance:
+  - Start with target resolution, device orientation, safe area, and primary user action.
+  - Break the output into background layer, panel frame, buttons, slots, icons, badges, scroll regions, and state variants.
+  - Specify empty, normal, selected, disabled, alert, and pressed states when relevant.
+  - Use placeholder text blocks or numbered labels if localization or real copy will be added later.
+  - 先写目标分辨率、横竖屏、安全区和主操作目标。
+  - 把输出拆成背景层、面板框、按钮、槽位、图标、徽章、滚动区域和状态变体。
+  - 需要时明确空态、普通、选中、禁用、警告和按下状态。
+  - 如果后续要做本地化或真实文案，使用占位文本块或编号标签。
+
+Pitfalls:
+  - Avoid baked-in unreadable text if the game must localize UI later.
+  - Avoid decorative clutter around tap targets and slot grids.
+  - Avoid one-off UI ornaments that cannot become repeatable widgets.
+  - 需要本地化时不要把不可编辑文字烘死在图里。
+  - 避免点击区和格子周围被装饰干扰。
+  - 避免只能看不能复用的一次性装饰。
+
+### Game Icon Atlas / 游戏图标图集
+
+- ID: `game-icon-atlas`
+- Category: Game Icon Atlas
+- Styles: Icon, Atlas, 2D, Transparent Asset
+- Scenes: Engine Ready, Mobile, RPG, Live Ops
+- Tags: atlas, transparent-asset, engine-ready, acceptance
+- Cover: `/images/case444.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-icon-atlas
+- Example cases: case 444, case 344, case 359
+
+Use when:
+- EN: Use when the user needs a set of related icons with one visual grammar.
+- ZH: 当用户需要一组视觉语法一致的图标时使用。
+
+Guidance:
+  - Define icon count, grid dimensions, final pixel size, background shape, rarity frames, and naming order.
+  - Keep the silhouette centered, readable at small size, and separated from the frame.
+  - Group related icon families by row or column such as weapon, armor, resource, potion, skill, currency.
+  - Ask for transparent background variant or plain preview sheet depending on downstream use.
+  - 明确图标数量、网格尺寸、最终像素尺寸、底框形状、稀有度框和命名顺序。
+  - 主体剪影居中，小尺寸可读，并与边框保持分离。
+  - 按行或列组织武器、防具、资源、药水、技能、货币等图标族。
+  - 按下游用途要求透明背景版本或普通预览表。
+
+Pitfalls:
+  - Avoid icons whose meaning depends on tiny text.
+  - Avoid mixed camera angles across the same atlas.
+  - Avoid over-rendered details that collapse at 32 or 64 pixels.
+  - 不要让图标含义依赖微小文字。
+  - 同一图集不要混用多个镜头角度。
+  - 避免 32 或 64 像素下糊成一团的过度细节。
+
+### Tilemap Atlas / Tilemap 瓦片图集
+
+- ID: `tilemap-atlas`
+- Category: Tilemap Atlas
+- Styles: Tilemap, Atlas, Isometric, 2D
+- Scenes: Engine Ready, Level Design, Strategy, Survival
+- Tags: tilemap, atlas, engine-ready, layout, acceptance
+- Cover: `/images/case489.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-tilemap-atlas
+- Example cases: case 489, case 373, case 375
+
+Use when:
+- EN: Use when level designers need modular art that can repeat, connect, and communicate collision or traversal.
+- ZH: 当关卡需要可重复、可拼接、能表达碰撞或通行规则的模块美术时使用。
+
+Guidance:
+  - Specify tile size, camera type, grid layout, terrain family, edge transitions, corners, decals, and variant density.
+  - Ask for visual markers that separate walkable, blocked, water, hazard, resource, and decoration tiles.
+  - Include seamless edge compatibility and a small sample assembled map for readability testing.
+  - Keep lighting direction and scale consistent across all tiles.
+  - 明确瓦片尺寸、镜头类型、网格布局、地形族、边缘过渡、角块、贴花和变体密度。
+  - 要求可行走、阻挡、水体、危险、资源和装饰瓦片有清晰视觉区分。
+  - 加入无缝边缘兼容要求，并附一个小型拼装示例用于读图测试。
+  - 所有瓦片保持统一光向和比例。
+
+Pitfalls:
+  - Avoid painterly scenes that cannot tile.
+  - Avoid shadows that reveal tile boundaries unintentionally.
+  - Avoid mixing top-down and isometric projection in one atlas.
+  - 不要生成不能拼接的完整场景插画。
+  - 避免阴影把瓦片边界暴露出来。
+  - 不要在同一图集中混用俯视和等距投影。
+
+### Environment Layout Sheet / 场景关卡布局表
+
+- ID: `environment-layout-sheet`
+- Category: Environment Layout Sheet
+- Styles: 2D, 3D, Isometric, Reference Sheet
+- Scenes: Concept to Production, Level Design, Survival, PC
+- Tags: layout, production-sheet, handoff, acceptance
+- Cover: `/images/case473.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-environment-layout
+- Example cases: case 473, case 370, case 378
+
+Use when:
+- EN: Use when the user is designing a level, hub, dungeon, combat arena, base, or overworld region.
+- ZH: 用于关卡、主城、地牢、战斗场、基地或大地图区域设计。
+
+Guidance:
+  - State camera angle, player route, entry and exit, landmarks, encounter beats, interactables, and scale reference.
+  - Ask for an annotated layout version plus a mood/color version when the downstream team needs both.
+  - Separate foreground blockers, navigable space, background set dressing, and UI-safe camera frame.
+  - Include performance-minded asset grouping such as repeatable props, large silhouettes, and modular structures.
+  - 写清镜头角度、玩家路线、入口出口、地标、遭遇节奏、交互物和比例参照。
+  - 下游需要时，同时要求带标注布局版和氛围配色版。
+  - 区分前景遮挡、可通行区域、背景陈设和 UI 安全镜头框。
+  - 加入性能友好的资产组织，例如可复用道具、大剪影和模块建筑。
+
+Pitfalls:
+  - Avoid purely atmospheric landscapes with no playable information.
+  - Avoid impossible paths, ambiguous scale, or hidden interaction points.
+  - Avoid excessive detail that cannot be split into reusable environment assets.
+  - 不要只生成氛围风景而没有可玩信息。
+  - 避免路径不可用、比例含糊或交互点藏得太深。
+  - 避免细节过多，无法拆成可复用场景资产。
+
+### Prop & Equipment Turnaround / 道具装备三视图
+
+- ID: `prop-equipment-turnaround`
+- Category: Prop & Equipment Turnaround
+- Styles: 3D, 2D, Orthographic, Reference Sheet
+- Scenes: Concept to Production, Engine Ready, RPG, Survival
+- Tags: production-sheet, reference-sheet, transparent-asset, handoff, acceptance
+- Cover: `/images/case350.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-prop-equipment-turnaround
+- Example cases: case 350, case 353, case 361
+
+Use when:
+- EN: Use when an item must be modeled, equipped, animated, picked up, or turned into an icon.
+- ZH: 当物品要被建模、装备、动画、拾取或转成图标时使用。
+
+Guidance:
+  - Request front, side, back, top or detail views, plus scale beside a hand or character silhouette.
+  - Describe materials, wear, faction markings, rarity tier, gameplay function, and attach or grip points.
+  - Ask for a clean isolated render and a small in-context thumbnail if both production and UI need it.
+  - Add notes for animation hazards such as dangling parts, moving pieces, sharp silhouettes, or VFX sockets.
+  - 要求正面、侧面、背面、顶部或细节视图，并用手或角色剪影做比例参照。
+  - 描述材质、磨损、阵营标识、稀有度、玩法功能和挂点/握持点。
+  - 如果生产和 UI 都需要，要求干净独立渲染和一张小尺寸情境缩略图。
+  - 补充动画风险，例如垂挂件、可动部件、尖锐剪影或特效挂点。
+
+Pitfalls:
+  - Avoid single dramatic perspective that hides construction details.
+  - Avoid decorative pieces that block hand grip or animation sockets.
+  - Avoid rarity colors that conflict with the game inventory system.
+  - 不要只给一个戏剧透视，导致结构细节被遮住。
+  - 避免装饰件挡住握持点或动画挂点。
+  - 避免稀有度颜色和游戏背包系统冲突。
+
+### VFX Sequence Sheet / 技能特效序列表
+
+- ID: `vfx-sequence-sheet`
+- Category: VFX Sequence Sheet
+- Styles: 2D, Atlas, Transparent Asset, Reference Sheet
+- Scenes: Combat, Engine Ready, Unity, Cocos
+- Tags: vfx-sequence, atlas, combat-readability, transparent-asset, acceptance
+- Cover: `/images/case310.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-vfx-sequence
+- Example cases: case 310, case 362, case 365
+
+Use when:
+- EN: Use when the effect must communicate gameplay timing or hit direction, not just mood.
+- ZH: 当特效要表达玩法时机或命中方向，而不只是氛围时使用。
+
+Guidance:
+  - Define skill role, damage type, faction color, cast time, active frames, impact moment, and cleanup duration.
+  - Ask for a left-to-right phase sheet with clear labels: anticipation, charge, travel, impact, linger, dissipate.
+  - Specify alpha-friendly background, no dense smoke over gameplay targets, and readable centerline of action.
+  - Include alternate preview on dark and light backgrounds if the effect will appear across many maps.
+  - 明确技能作用、伤害类型、阵营色、起手时间、有效帧、命中瞬间和消散时长。
+  - 要求从左到右的阶段表：预兆、蓄力、飞行、命中、停留、消散。
+  - 指定适合透明通道的背景，不要用浓烟遮住目标，并保持动作中心线可读。
+  - 如果会出现在多种地图上，加入深浅背景预览。
+
+Pitfalls:
+  - Avoid effects that cover enemies, UI, or hit feedback for too long.
+  - Avoid random particle noise with no readable phase structure.
+  - Avoid colors that are already reserved for another damage type or faction.
+  - 避免特效长时间遮挡敌人、UI 或命中反馈。
+  - 避免只有随机粒子噪声，没有清晰阶段结构。
+  - 避免使用已经分配给其他伤害类型或阵营的颜色。
+
+### Monster Combat Readability Sheet / 怪物战斗可读性表
+
+- ID: `monster-combat-readability`
+- Category: Monster Combat Readability Sheet
+- Styles: 2D, 3D, Stylized, Reference Sheet
+- Scenes: Combat, Concept to Production, RPG, Survival
+- Tags: combat-readability, production-sheet, reference-sheet, handoff, acceptance
+- Cover: `/images/case416.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-monster-combat-readability
+- Example cases: case 416, case 376, case 377
+
+Use when:
+- EN: Use when monster visuals must support combat readability and encounter design.
+- ZH: 当怪物视觉必须服务战斗识别和遭遇设计时使用。
+
+Guidance:
+  - Specify enemy tier, size class, movement pattern, attack kit, damage type, and camera distance.
+  - Ask for idle silhouette, attack wind-up, enraged phase, weak-point callouts, and hit-reaction cues.
+  - Show danger zones or attack arcs as visual overlays only when useful for design handoff.
+  - Separate scary detail from gameplay markers so players can read the threat quickly.
+  - 明确怪物等级、体型级别、移动方式、攻击组、伤害类型和镜头距离。
+  - 要求待机剪影、攻击前摇、狂暴阶段、弱点标注和受击反馈提示。
+  - 必要时以视觉覆盖层展示危险区域或攻击弧线，用于设计交付。
+  - 把恐怖细节和玩法标识分开，让玩家能快速读懂威胁。
+
+Pitfalls:
+  - Avoid impressive silhouettes that do not reveal attack direction.
+  - Avoid weak points hidden inside noisy texture detail.
+  - Avoid boss forms that look unrelated across phases unless the design calls for it.
+  - 不要只追求震撼剪影，却看不出攻击方向。
+  - 避免弱点被复杂纹理淹没。
+  - 除非设计需要，不要让 Boss 阶段之间看起来毫无关联。
+
+### Building Upgrade Set / 建筑升级套装
+
+- ID: `building-upgrade-set`
+- Category: Building Upgrade Set
+- Styles: Isometric, 3D, 2D, Reference Sheet
+- Scenes: Strategy, Engine Ready, Level Design, Survival
+- Tags: upgrade-set, production-sheet, engine-ready, layout, acceptance
+- Cover: `/images/case338.png`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-building-upgrade-set
+- Example cases: case 338, case 359, case 360
+
+Use when:
+- EN: Use when the game needs clear building tiers, footprints, factions, and functional readability.
+- ZH: 当游戏需要清晰建筑等级、占地、阵营和功能识别时使用。
+
+Guidance:
+  - Define building function, footprint size, camera angle, tier count, faction, biome, and unlock progression.
+  - Ask for tier-by-tier silhouettes where upgrades increase complexity without changing the footprint unexpectedly.
+  - Include entrance, interactable area, roof height, construction state, damaged state, and icon thumbnail if needed.
+  - Keep lighting, projection, shadow direction, and scale consistent across all tiers.
+  - 明确建筑功能、占地尺寸、镜头角度、等级数量、阵营、生态和解锁节奏。
+  - 要求逐级递进的剪影，升级增加复杂度但不随意改变占地。
+  - 需要时包含入口、交互区、屋顶高度、建造中状态、损坏状态和图标缩略图。
+  - 所有等级保持统一光照、投影、阴影方向和比例。
+
+Pitfalls:
+  - Avoid upgrade tiers that become unreadable at the strategy camera distance.
+  - Avoid changing footprint or entrance direction without saying so.
+  - Avoid adding decoration that hides the building function.
+  - 避免升级后在策略镜头距离下不可读。
+  - 不要无说明地改变占地或入口方向。
+  - 避免装饰遮住建筑功能。
+
+### Store Asset Pack / 商店与投放素材包
+
+- ID: `store-asset-pack`
+- Category: Store Asset Pack
+- Styles: Realistic, Stylized, UI, Reference Sheet
+- Scenes: Marketing, Live Ops, Mobile, PC
+- Tags: store-assets, layout, style-guide, acceptance
+- Cover: `/images/case360.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-store-asset-pack
+- Example cases: case 360, case 1, case 2
+
+Use when:
+- EN: Use when the output must become a set of production marketing images across formats.
+- ZH: 当输出需要变成多规格营销图片素材包时使用。
+
+Guidance:
+  - List required formats such as 16:9 key art, 9:16 vertical ad, 1:1 social square, Steam capsule, and store screenshot.
+  - Reserve safe zones for logo, rating badge, CTA, platform overlays, and crop variation.
+  - Show actual game promise through characters, UI moment, core mechanic, enemy, reward, or base progress.
+  - Ask for a clean art-only version and a composition guide version with safe-area overlays.
+  - 列出所需规格，例如 16:9 主视觉、9:16 竖版广告、1:1 社媒图、Steam capsule、商店截图。
+  - 为 logo、评级标、CTA、平台覆盖层和裁切变化预留安全区。
+  - 用角色、UI 片段、核心机制、敌人、奖励或基地进度表达真实游戏卖点。
+  - 要求一张纯画面版和一张带安全区覆盖层的构图说明版。
+
+Pitfalls:
+  - Avoid misleading gameplay that the product cannot deliver.
+  - Avoid tiny UI or text baked into the art when variants need localization.
+  - Avoid placing key faces or rewards outside crop-safe areas.
+  - 不要生成产品无法兑现的误导玩法。
+  - 需要多语言变体时，不要把小 UI 或文字烘进画面。
+  - 避免把关键脸部或奖励放在安全裁切区外。
+
+### Art Style Guide / 项目美术风格规范
+
+- ID: `art-style-guide`
+- Category: Art Style Guide
+- Styles: Reference Sheet, 2D, 3D, Stylized
+- Scenes: Concept to Production, Engine Ready, Marketing, Localization
+- Tags: style-guide, production-sheet, handoff, acceptance
+- Cover: `/images/case6.jpg`
+- Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-art-style-guide
+- Example cases: case 6, case 330, case 359
+
+Use when:
+- EN: Use when the team needs a repeatable visual standard before generating many assets.
+- ZH: 当团队在批量生成资产前，需要先沉淀可复用视觉标准时使用。
+
+Guidance:
+  - Define genre, audience, camera, platform, target mood, shape language, line weight, material rules, lighting, and palette.
+  - Ask for do and do-not examples across character, environment, UI, icon, prop, and marketing samples.
+  - Include scale, contrast, saturation, texture density, readability at gameplay distance, and localization rules.
+  - End with a compact checklist the team can reuse before approving any generated asset.
+  - 明确品类、受众、镜头、平台、目标情绪、形状语言、线条粗细、材质规则、光照和色板。
+  - 要求覆盖角色、场景、UI、图标、道具和投放样张的正例与反例。
+  - 包含比例、对比度、饱和度、纹理密度、游戏镜头可读性和本地化规则。
+  - 最后输出一份团队可复用的资产验收清单。
+
+Pitfalls:
+  - Avoid vague mood-board language without enforceable rules.
+  - Avoid a palette that works for marketing but fails in UI or combat readability.
+  - Avoid style rules that only fit one hero image and cannot scale to hundreds of assets.
+  - 避免只有情绪板词汇，没有可执行规则。
+  - 避免配色只适合宣传图，却破坏 UI 或战斗可读性。
+  - 避免风格规则只服务一张主视觉，无法扩展到大量资产。
 
 ## Categories
 
-- Game Character Design: 游戏角色设计 | Playable heroes, NPCs, skins, expression sheets, turnarounds, and production-ready character references.
-- Game Environment Concept: 游戏场景概念 | Biome concepts, level mood paintings, hub areas, dungeons, cities, and combat arenas.
-- Game Props & Equipment: 游戏道具装备 | Weapons, armor, consumables, loot, relics, crafting items, and inventory-ready prop designs.
-- Game UI & HUD: 游戏 UI 与 HUD | HUDs, menus, inventory screens, character panels, skill trees, battle overlays, and mobile game interfaces.
-- Game Icons: 游戏图标 | Skill icons, item icons, app icons, achievement badges, status effects, and resource currencies.
-- Game VFX Concept: 游戏技能特效 | Magic spells, elemental attacks, impact frames, hit effects, aura loops, and VFX concept sheets.
-- Game Maps & Tiles: 游戏地图与地块 | World maps, tactical maps, isometric tiles, resource nodes, route boards, and readable minimap concepts.
-- Card & Gacha Art: 卡牌与抽卡立绘 | Hero cards, gacha splash art, collectible illustrations, frame variants, and rarity-driven visuals.
-- Creature & Monster Design: 怪物与 Boss 设计 | Enemies, bosses, creatures, mutation variants, readable silhouettes, weak points, and attack cues.
-- Buildings & Settlements: 建筑与据点 | Base buildings, town sets, shops, resource facilities, destructible props, and modular settlement kits.
-- Game Key Art & Store Assets: 游戏主视觉与商店素材 | Steam capsules, app store screenshots, launch posters, event banners, seasonal campaigns, and social ads.
-- Sprites & Animation Sheets: 精灵图与动作帧 | 2D sprites, pixel characters, idle/run/attack sheets, hit reactions, and clean frame grids.
+- Character Production Sheet: 角色生产设定表 | Character prompts that hand off gameplay role, views, silhouette, rig notes, and acceptance checks.
+- Sprite Animation Sheet: 2D 动作帧表 | Frame grids for idle, move, attack, hit, death, and other import-friendly 2D animation states.
+- UI Panel Slicing Sheet: UI 面板切图表 | HUD, dialog, inventory, shop, and upgrade panels designed for states, slots, safe areas, and localization.
+- Game Icon Atlas: 游戏图标图集 | Consistent ability, item, rarity, currency, badge, and menu icons with atlas layout rules.
+- Tilemap Atlas: Tilemap 瓦片图集 | Tile sets with edge compatibility, variants, decals, collision hints, and camera-scale readability.
+- Environment Layout Sheet: 场景关卡布局表 | Level and environment sheets that show routes, landmarks, spawn zones, camera framing, and interactables.
+- Prop & Equipment Turnaround: 道具装备三视图 | Weapons, armor, loot, consumables, and interactable props with scale, views, attach points, and icon extraction notes.
+- VFX Sequence Sheet: 技能特效序列表 | Readable hit, cast, projectile, impact, buff, and ambient effect sheets with phase timing and cleanup rules.
+- Monster Combat Readability Sheet: 怪物战斗可读性表 | Enemies and bosses designed around silhouette, weak points, telegraphs, attack ranges, and camera-distance readability.
+- Building Upgrade Set: 建筑升级套装 | Base, settlement, shop, factory, and tower upgrade tiers with footprint, function, and faction consistency.
+- Store Asset Pack: 商店与投放素材包 | App store, Steam capsule, social ad, event banner, and key-art prompt packs with crop-safe variants.
+- Art Style Guide: 项目美术风格规范 | Reusable visual direction sheets for palette, shape language, camera rules, materials, lighting, and do/don't examples.
 
 ## Styles
 
-- Stylized: 风格化 | Keywords: stylized, hand-painted, exaggerated, chunky, clean silhouette, 风格化, 手绘, 夸张, 清晰剪影
-- Anime: 二次元 | Keywords: anime, manga, gacha, cel shading, 二次元, 日系, 赛璐璐, 抽卡
-- Realistic: 写实 | Keywords: realistic, AAA, PBR, Unreal Engine, photoreal, 写实, 真实材质, 电影感
-- Pixel Art: 像素风 | Keywords: pixel art, sprite, 8-bit, 16-bit, tile, 像素, 精灵, 帧动画
-- Low Poly: 低多边形 | Keywords: low poly, flat shaded, mobile optimized, 低多边形, 低模, 轻量化
-- Isometric: 等距视角 | Keywords: isometric, orthographic, 3/4 view, tilemap, 等距, 正交, 三分之四视角
-- UI: 界面 | Keywords: UI, HUD, menu, inventory, skill tree, battle overlay, 界面, 背包, 技能树, 战斗 UI
-- Icon: 图标 | Keywords: icon, badge, ability icon, item icon, 图标, 徽章, 技能图标, 物品图标
-- Dark Fantasy: 暗黑奇幻 | Keywords: dark fantasy, gothic, grim, dungeon, 暗黑, 哥特, 地下城, 诡秘
-- Sci-Fi: 科幻 | Keywords: sci-fi, cyberpunk, mecha, hologram, 科幻, 赛博, 机甲, 全息
+- 2D: 2D | Keywords: 2d, side view, top-down, orthographic, flat shaded, hand painted, 二维, 俯视, 横版
+- 3D: 3D | Keywords: 3d, model, turnaround, render, pbr, sculpt, 三维, 模型, 三视图
+- UI: UI | Keywords: ui, hud, interface, panel, button, modal, 界面, 面板, 按钮
+- Icon: 图标 | Keywords: icon, badge, item icon, ability icon, currency, 图标, 徽章
+- Sprite: 精灵图 | Keywords: sprite, frame, animation sheet, frame sheet, spritesheet, 精灵, 帧表, 动作帧
+- Tilemap: 瓦片 | Keywords: tile, tilemap, tileset, grid, seamless, 瓦片, 地块, 拼接
+- Isometric: 等距 | Keywords: isometric, iso, three-quarter top-down, 等距, 斜45
+- Orthographic: 正交 | Keywords: orthographic, front view, side view, top view, no perspective, 正交, 正视, 侧视
+- Pixel Art: 像素 | Keywords: pixel, 8-bit, 16-bit, low resolution, 像素
+- Stylized: 风格化 | Keywords: stylized, hand-painted, cartoon, toon, 风格化, 手绘, 卡通
+- Realistic: 写实 | Keywords: realistic, cinematic, photoreal, pbr, 写实, 电影感
+- Transparent Asset: 透明资产 | Keywords: transparent background, alpha, cutout, isolated, 透明, 白底, 单独物件
+- Atlas: 图集 | Keywords: atlas, grid, contact sheet, sheet, 图集, 九宫格, 网格
+- Reference Sheet: 设定表 | Keywords: reference sheet, production sheet, model sheet, turnaround, 设定表, 生产表
 
 ## Scenes
 
-- Concept Art: 概念设计 | Keywords: concept art, mood painting, ideation, visual development, 概念设计, 氛围图, 视觉开发
-- Production: 生产设定表 | Keywords: reference sheet, turnaround, production sheet, orthographic, 设定表, 三视图, 生产资料
-- Mobile Game: 手游 | Keywords: mobile game, portrait, 9:16, touch UI, 手游, 竖屏, 触控
-- RPG: 角色扮演 | Keywords: RPG, hero, party, quest, loot, 角色扮演, 英雄, 任务, 装备
-- Strategy: 策略 | Keywords: strategy, base, world map, resource, 策略, 基地, 世界地图, 资源
-- Survival: 生存 | Keywords: survival, crafting, shelter, post-apocalyptic, 生存, 制造, 避难所, 末日
-- Marketing: 宣发 | Keywords: key art, store asset, capsule, poster, banner, 主视觉, 商店图, 海报, 活动
-- Live Ops: 活动运营 | Keywords: event, season, battle pass, limited skin, 活动, 赛季, 通行证, 限定皮肤
-- Casual: 休闲 | Keywords: casual, cozy, cute, puzzle, merge, 休闲, 治愈, 可爱, 合成
+- Concept to Production: 概念到生产 | Keywords: concept, production, handoff, brief, reference, 概念, 生产, 交付, 设定
+- Engine Ready: 引擎可用 | Keywords: engine, unity, cocos, unreal, import, runtime, 引擎, 导入, 运行时
+- Unity: Unity | Keywords: unity, ugui, prefab, sprite renderer
+- Cocos: Cocos | Keywords: cocos, creator, spriteframe, prefab
+- Mobile: 移动端 | Keywords: mobile, portrait, landscape mobile, touch, phone, 移动端, 手机
+- PC: PC | Keywords: pc, desktop, steam, keyboard, mouse
+- Combat: 战斗 | Keywords: combat, attack, hit, telegraph, skill, battle, 战斗, 攻击, 受击, 技能
+- Level Design: 关卡设计 | Keywords: level, route, spawn, encounter, blockout, 关卡, 路线, 出生点
+- Live Ops: 运营活动 | Keywords: event, live ops, season, banner, 活动, 赛季, 运营
+- Marketing: 投放营销 | Keywords: marketing, store, capsule, ad, key art, banner, 商店, 投放, 广告, 主视觉
+- Localization: 本地化 | Keywords: localization, safe text, no text, multi-language, 本地化, 多语言, 无文字
+- RPG: RPG | Keywords: rpg, class, loot, quest, hero, 角色扮演
+- Strategy: 策略 | Keywords: strategy, base, tower, building, settlement, 策略, 基地, 防御塔
+- Survival: 生存 | Keywords: survival, crafting, resource, wasteland, zombie, 生存, 资源, 末日
 
