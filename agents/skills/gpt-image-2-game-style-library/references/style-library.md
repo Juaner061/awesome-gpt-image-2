@@ -19,9 +19,8 @@ Generated from `data/style-library.json`. Use this file as the detailed index fo
 - Styles: 2D, 3D, Stylized, Reference Sheet
 - Scenes: Concept to Production, Engine Ready, RPG, Mobile
 - Tags: production-sheet, reference-sheet, combat-readability, handoff, acceptance
-- Cover: `/images/case439.jpg`
+- Cover: `/images/template-covers/character-production.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-character-production
-- Example cases: case 439, case 166, case 341
 
 Use when:
 - EN: Use when the output must brief concept artists, modelers, animators, and combat designers at the same time.
@@ -52,9 +51,8 @@ Pitfalls:
 - Styles: 2D, Sprite, Pixel Art, Atlas
 - Scenes: Engine Ready, Combat, Unity, Cocos
 - Tags: sprite-sheet, atlas, engine-ready, transparent-asset, acceptance
-- Cover: `/images/case27.jpg`
+- Cover: `/images/template-covers/sprite-animation.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-sprite-animation
-- Example cases: case 27, case 330, case 334
 
 Use when:
 - EN: Use when the user needs animation frames, not a single illustration.
@@ -85,9 +83,8 @@ Pitfalls:
 - Styles: UI, 2D, Atlas, Reference Sheet
 - Scenes: Engine Ready, Mobile, Localization, Unity, Cocos
 - Tags: ui-slicing, production-sheet, engine-ready, handoff, acceptance
-- Cover: `/images/case17.jpg`
+- Cover: `/images/template-covers/ui-panel-slicing.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-ui-panel-slicing
-- Example cases: case 17, case 346, case 354
 
 Use when:
 - EN: Use for HUD, inventory, shop, quest, upgrade, gacha, settings, and result screens.
@@ -118,9 +115,8 @@ Pitfalls:
 - Styles: Icon, Atlas, 2D, Transparent Asset
 - Scenes: Engine Ready, Mobile, RPG, Live Ops
 - Tags: atlas, transparent-asset, engine-ready, acceptance
-- Cover: `/images/case444.jpg`
+- Cover: `/images/template-covers/icon-atlas.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-icon-atlas
-- Example cases: case 444, case 344, case 359
 
 Use when:
 - EN: Use when the user needs a set of related icons with one visual grammar.
@@ -151,9 +147,8 @@ Pitfalls:
 - Styles: Tilemap, Atlas, Isometric, 2D
 - Scenes: Engine Ready, Level Design, Strategy, Survival
 - Tags: tilemap, atlas, engine-ready, layout, acceptance
-- Cover: `/images/case489.jpg`
+- Cover: `/images/template-covers/tilemap-atlas.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-tilemap-atlas
-- Example cases: case 489, case 373, case 375
 
 Use when:
 - EN: Use when level designers need modular art that can repeat, connect, and communicate collision or traversal.
@@ -184,9 +179,8 @@ Pitfalls:
 - Styles: 2D, 3D, Isometric, Reference Sheet
 - Scenes: Concept to Production, Level Design, Survival, PC
 - Tags: layout, production-sheet, handoff, acceptance
-- Cover: `/images/case473.jpg`
+- Cover: `/images/template-covers/environment-layout.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-environment-layout
-- Example cases: case 473, case 370, case 378
 
 Use when:
 - EN: Use when the user is designing a level, hub, dungeon, combat arena, base, or overworld region.
@@ -217,9 +211,8 @@ Pitfalls:
 - Styles: 3D, 2D, Orthographic, Reference Sheet
 - Scenes: Concept to Production, Engine Ready, RPG, Survival
 - Tags: production-sheet, reference-sheet, transparent-asset, handoff, acceptance
-- Cover: `/images/case350.jpg`
+- Cover: `/images/template-covers/prop-equipment.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-prop-equipment-turnaround
-- Example cases: case 350, case 353, case 361
 
 Use when:
 - EN: Use when an item must be modeled, equipped, animated, picked up, or turned into an icon.
@@ -250,9 +243,8 @@ Pitfalls:
 - Styles: 2D, Atlas, Transparent Asset, Reference Sheet
 - Scenes: Combat, Engine Ready, Unity, Cocos
 - Tags: vfx-sequence, atlas, combat-readability, transparent-asset, acceptance
-- Cover: `/images/case310.jpg`
+- Cover: `/images/template-covers/vfx-sequence.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-vfx-sequence
-- Example cases: case 310, case 362, case 365
 
 Use when:
 - EN: Use when the effect must communicate gameplay timing or hit direction, not just mood.
@@ -283,9 +275,8 @@ Pitfalls:
 - Styles: 2D, 3D, Stylized, Reference Sheet
 - Scenes: Combat, Concept to Production, RPG, Survival
 - Tags: combat-readability, production-sheet, reference-sheet, handoff, acceptance
-- Cover: `/images/case416.jpg`
+- Cover: `/images/template-covers/monster-readability.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-monster-combat-readability
-- Example cases: case 416, case 376, case 377
 
 Use when:
 - EN: Use when monster visuals must support combat readability and encounter design.
@@ -316,9 +307,8 @@ Pitfalls:
 - Styles: Isometric, 3D, 2D, Reference Sheet
 - Scenes: Strategy, Engine Ready, Level Design, Survival
 - Tags: upgrade-set, production-sheet, engine-ready, layout, acceptance
-- Cover: `/images/case338.png`
+- Cover: `/images/template-covers/building-upgrade.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-building-upgrade-set
-- Example cases: case 338, case 359, case 360
 
 Use when:
 - EN: Use when the game needs clear building tiers, footprints, factions, and functional readability.
@@ -349,9 +339,8 @@ Pitfalls:
 - Styles: Realistic, Stylized, UI, Reference Sheet
 - Scenes: Marketing, Live Ops, Mobile, PC
 - Tags: store-assets, layout, style-guide, acceptance
-- Cover: `/images/case360.jpg`
+- Cover: `/images/template-covers/store-asset-pack.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-store-asset-pack
-- Example cases: case 360, case 1, case 2
 
 Use when:
 - EN: Use when the output must become a set of production marketing images across formats.
@@ -382,9 +371,8 @@ Pitfalls:
 - Styles: Reference Sheet, 2D, 3D, Stylized
 - Scenes: Concept to Production, Engine Ready, Marketing, Localization
 - Tags: style-guide, production-sheet, handoff, acceptance
-- Cover: `/images/case6.jpg`
+- Cover: `/images/template-covers/art-style-guide.svg`
 - Template source: https://github.com/Juaner061/awesome-gpt-image-2/blob/main/docs/templates.md#tpl-art-style-guide
-- Example cases: case 6, case 330, case 359
 
 Use when:
 - EN: Use when the team needs a repeatable visual standard before generating many assets.

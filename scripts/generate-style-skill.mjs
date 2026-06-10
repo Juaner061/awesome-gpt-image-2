@@ -120,7 +120,6 @@ function renderReference(library) {
     lines.push(`- Tags: ${list(template.tags)}`);
     lines.push(`- Cover: \`${template.cover}\``);
     lines.push(`- Template source: ${linkForTemplate(library, template)}`);
-    lines.push(`- Example cases: ${list((template.exampleCases || []).map((id) => `case ${id}`))}`);
     lines.push('');
     lines.push('Use when:');
     lines.push(`- EN: ${label(template.useWhen, 'en')}`);

@@ -43,7 +43,7 @@ set "URL=http://%HOST%:%PORT%"
 
 echo Starting %APP_NAME%...
 echo %URL%
-start "" "%URL%/?fresh=game-production"
+start "" "%URL%/?fresh=templates-only-%RANDOM%"
 echo.
 echo Keep this window open while using the site.
 echo Press Ctrl+C in this window to stop the dev server.
@@ -60,12 +60,12 @@ exit /b 0
 set "START_PORT=%PORT%"
 :CheckPort
 set "PORT_STATUS="
-for /f "delims=" %%S in ('powershell -NoProfile -ExecutionPolicy Bypass -Command "$port=%PORT%; $url='http://%HOST%:'+$port+'/style-library.json'; try { $body=(Invoke-WebRequest -UseBasicParsing -Uri $url -TimeoutSec 2).Content; if ($body -match 'Character Production Sheet' -and $body -match 'UI Panel Slicing Sheet') { 'CURRENT' } else { 'BUSY' } } catch { if (Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue) { 'BUSY' } else { 'FREE' } }"') do set "PORT_STATUS=%%S"
+for /f "delims=" %%S in ('powershell -NoProfile -ExecutionPolicy Bypass -Command "$port=%PORT%; $base='http://%HOST%:'+$port; try { $style=(Invoke-WebRequest -UseBasicParsing -Uri ($base+'/style-library.json') -TimeoutSec 2).Content; $cases=(Invoke-WebRequest -UseBasicParsing -Uri ($base+'/cases.json') -TimeoutSec 2).Content | ConvertFrom-Json; if ($style -match 'Character Production Sheet' -and $style -match 'UI Panel Slicing Sheet' -and $cases.totalCases -eq 0 -and $cases.cases.Count -eq 0) { 'CURRENT' } else { 'BUSY' } } catch { if (Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue) { 'BUSY' } else { 'FREE' } }"') do set "PORT_STATUS=%%S"
 
 if /i "%PORT_STATUS%"=="CURRENT" (
   echo %APP_NAME% is already running:
   echo http://%HOST%:%PORT%
-  start "" "http://%HOST%:%PORT%/?fresh=game-production"
+  start "" "http://%HOST%:%PORT%/?fresh=templates-only-%RANDOM%"
   set "ALREADY_RUNNING=1"
   exit /b 0
 )

@@ -80,7 +80,7 @@
         "en": "Character prompts that hand off gameplay role, views, silhouette, rig notes, and acceptance checks.",
         "zh": "把角色定位、视图、剪影、绑定提示和验收点一起交付给美术、动画和战斗设计。"
       },
-      "cover": "/images/case439.jpg"
+      "cover": "/images/template-covers/character-production.svg"
     },
     {
       "value": "Sprite Animation Sheet",
@@ -94,7 +94,7 @@
         "en": "Frame grids for idle, move, attack, hit, death, and other import-friendly 2D animation states.",
         "zh": "面向导入和拆帧的 idle、移动、攻击、受击、死亡等动作序列。"
       },
-      "cover": "/images/case27.jpg"
+      "cover": "/images/template-covers/sprite-animation.svg"
     },
     {
       "value": "UI Panel Slicing Sheet",
@@ -108,7 +108,7 @@
         "en": "HUD, dialog, inventory, shop, and upgrade panels designed for states, slots, safe areas, and localization.",
         "zh": "用于 HUD、弹窗、背包、商店和升级界面的状态、槽位、安全区和本地化切图。"
       },
-      "cover": "/images/case17.jpg"
+      "cover": "/images/template-covers/ui-panel-slicing.svg"
     },
     {
       "value": "Game Icon Atlas",
@@ -122,7 +122,7 @@
         "en": "Consistent ability, item, rarity, currency, badge, and menu icons with atlas layout rules.",
         "zh": "按统一图集规格生成技能、物品、稀有度、货币、徽章和菜单图标。"
       },
-      "cover": "/images/case444.jpg"
+      "cover": "/images/template-covers/icon-atlas.svg"
     },
     {
       "value": "Tilemap Atlas",
@@ -136,7 +136,7 @@
         "en": "Tile sets with edge compatibility, variants, decals, collision hints, and camera-scale readability.",
         "zh": "带边缘衔接、变体、贴花、碰撞提示和镜头尺度可读性的瓦片集。"
       },
-      "cover": "/images/case489.jpg"
+      "cover": "/images/template-covers/tilemap-atlas.svg"
     },
     {
       "value": "Environment Layout Sheet",
@@ -150,7 +150,7 @@
         "en": "Level and environment sheets that show routes, landmarks, spawn zones, camera framing, and interactables.",
         "zh": "把路线、地标、出生区、镜头范围和交互物一起交代清楚的场景关卡图。"
       },
-      "cover": "/images/case473.jpg"
+      "cover": "/images/template-covers/environment-layout.svg"
     },
     {
       "value": "Prop & Equipment Turnaround",
@@ -164,7 +164,7 @@
         "en": "Weapons, armor, loot, consumables, and interactable props with scale, views, attach points, and icon extraction notes.",
         "zh": "武器、防具、掉落物、消耗品和交互道具的比例、视图、挂点和图标提取说明。"
       },
-      "cover": "/images/case350.jpg"
+      "cover": "/images/template-covers/prop-equipment.svg"
     },
     {
       "value": "VFX Sequence Sheet",
@@ -178,7 +178,7 @@
         "en": "Readable hit, cast, projectile, impact, buff, and ambient effect sheets with phase timing and cleanup rules.",
         "zh": "按起手、飞行、命中、持续和消散分相位组织的战斗特效序列。"
       },
-      "cover": "/images/case310.jpg"
+      "cover": "/images/template-covers/vfx-sequence.svg"
     },
     {
       "value": "Monster Combat Readability Sheet",
@@ -192,7 +192,7 @@
         "en": "Enemies and bosses designed around silhouette, weak points, telegraphs, attack ranges, and camera-distance readability.",
         "zh": "围绕剪影、弱点、攻击预兆、范围和镜头距离可读性设计怪物或 Boss。"
       },
-      "cover": "/images/case416.jpg"
+      "cover": "/images/template-covers/monster-readability.svg"
     },
     {
       "value": "Building Upgrade Set",
@@ -206,7 +206,7 @@
         "en": "Base, settlement, shop, factory, and tower upgrade tiers with footprint, function, and faction consistency.",
         "zh": "基地、据点、商店、工坊和防御塔的等级递进、占地、功能和阵营一致性。"
       },
-      "cover": "/images/case338.png"
+      "cover": "/images/template-covers/building-upgrade.svg"
     },
     {
       "value": "Store Asset Pack",
@@ -220,7 +220,7 @@
         "en": "App store, Steam capsule, social ad, event banner, and key-art prompt packs with crop-safe variants.",
         "zh": "面向商店页、Steam capsule、社媒广告、活动 banner 和主视觉的多规格安全裁切素材。"
       },
-      "cover": "/images/case360.jpg"
+      "cover": "/images/template-covers/store-asset-pack.svg"
     },
     {
       "value": "Art Style Guide",
@@ -234,7 +234,7 @@
         "en": "Reusable visual direction sheets for palette, shape language, camera rules, materials, lighting, and do/don't examples.",
         "zh": "沉淀项目的色板、形状语言、镜头规则、材质、光照和正反例。"
       },
-      "cover": "/images/case6.jpg"
+      "cover": "/images/template-covers/art-style-guide.svg"
     }
   ],
   "styles": [
@@ -709,7 +709,7 @@
         "en": "A handoff prompt for playable heroes, NPCs, companions, skins, and class variants.",
         "zh": "用于主角、NPC、伙伴、皮肤和职业变体的角色交付 Prompt。"
       },
-      "cover": "/images/case439.jpg",
+      "cover": "/images/template-covers/character-production.svg",
       "styles": [
         "2D",
         "3D",
@@ -758,12 +758,7 @@
           "避免在游戏镜头下看不见的小装饰。",
           "避免阵营色和职业识别不清，或服装细节与玩法定位冲突。"
         ]
-      },
-      "exampleCases": [
-        439,
-        166,
-        341
-      ]
+      }
     },
     {
       "id": "sprite-animation-sheet",
@@ -777,7 +772,7 @@
         "en": "A frame-grid prompt for import-friendly 2D character, monster, prop, and projectile animation.",
         "zh": "用于 2D 角色、怪物、道具、弹体动画的可拆帧网格 Prompt。"
       },
-      "cover": "/images/case27.jpg",
+      "cover": "/images/template-covers/sprite-animation.svg",
       "styles": [
         "2D",
         "Sprite",
@@ -826,12 +821,7 @@
           "避免帧与帧之间镜头角度变化。",
           "避免武器长度、脚底位置或角色高度不一致。"
         ]
-      },
-      "exampleCases": [
-        27,
-        330,
-        334
-      ]
+      }
     },
     {
       "id": "ui-panel-slicing-sheet",
@@ -845,7 +835,7 @@
         "en": "A prompt for UI screens and panels that can be sliced into reusable widgets and states.",
         "zh": "用于能拆成可复用组件和状态的游戏 UI 屏幕或面板。"
       },
-      "cover": "/images/case17.jpg",
+      "cover": "/images/template-covers/ui-panel-slicing.svg",
       "styles": [
         "UI",
         "2D",
@@ -895,12 +885,7 @@
           "避免点击区和格子周围被装饰干扰。",
           "避免只能看不能复用的一次性装饰。"
         ]
-      },
-      "exampleCases": [
-        17,
-        346,
-        354
-      ]
+      }
     },
     {
       "id": "game-icon-atlas",
@@ -914,7 +899,7 @@
         "en": "A consistent icon atlas prompt for abilities, items, currencies, badges, resources, and menus.",
         "zh": "用于技能、物品、货币、徽章、资源和菜单入口的一致图标图集。"
       },
-      "cover": "/images/case444.jpg",
+      "cover": "/images/template-covers/icon-atlas.svg",
       "styles": [
         "Icon",
         "Atlas",
@@ -962,12 +947,7 @@
           "同一图集不要混用多个镜头角度。",
           "避免 32 或 64 像素下糊成一团的过度细节。"
         ]
-      },
-      "exampleCases": [
-        444,
-        344,
-        359
-      ]
+      }
     },
     {
       "id": "tilemap-atlas",
@@ -981,7 +961,7 @@
         "en": "A prompt for terrain tiles, modular floor pieces, roads, walls, overlays, and biome variants.",
         "zh": "用于地形瓦片、模块地面、道路、墙体、叠加层和生态变体。"
       },
-      "cover": "/images/case489.jpg",
+      "cover": "/images/template-covers/tilemap-atlas.svg",
       "styles": [
         "Tilemap",
         "Atlas",
@@ -1030,12 +1010,7 @@
           "避免阴影把瓦片边界暴露出来。",
           "不要在同一图集中混用俯视和等距投影。"
         ]
-      },
-      "exampleCases": [
-        489,
-        373,
-        375
-      ]
+      }
     },
     {
       "id": "environment-layout-sheet",
@@ -1049,7 +1024,7 @@
         "en": "A prompt for game spaces that show play route, landmarks, interaction points, spawn zones, and mood.",
         "zh": "用于同时呈现游玩路线、地标、交互点、出生区域和氛围的游戏场景。"
       },
-      "cover": "/images/case473.jpg",
+      "cover": "/images/template-covers/environment-layout.svg",
       "styles": [
         "2D",
         "3D",
@@ -1097,12 +1072,7 @@
           "避免路径不可用、比例含糊或交互点藏得太深。",
           "避免细节过多，无法拆成可复用场景资产。"
         ]
-      },
-      "exampleCases": [
-        473,
-        370,
-        378
-      ]
+      }
     },
     {
       "id": "prop-equipment-turnaround",
@@ -1116,7 +1086,7 @@
         "en": "A prompt for weapons, armor, interactables, loot, consumables, vehicles, and crafting materials.",
         "zh": "用于武器、防具、交互物、掉落物、消耗品、载具和制造材料。"
       },
-      "cover": "/images/case350.jpg",
+      "cover": "/images/template-covers/prop-equipment.svg",
       "styles": [
         "3D",
         "2D",
@@ -1165,12 +1135,7 @@
           "避免装饰件挡住握持点或动画挂点。",
           "避免稀有度颜色和游戏背包系统冲突。"
         ]
-      },
-      "exampleCases": [
-        350,
-        353,
-        361
-      ]
+      }
     },
     {
       "id": "vfx-sequence-sheet",
@@ -1184,7 +1149,7 @@
         "en": "A prompt for readable gameplay VFX phases, including cast, projectile, impact, buff, aura, trail, and cleanup.",
         "zh": "用于起手、弹体、命中、增益、光环、轨迹和消散等可读战斗特效阶段。"
       },
-      "cover": "/images/case310.jpg",
+      "cover": "/images/template-covers/vfx-sequence.svg",
       "styles": [
         "2D",
         "Atlas",
@@ -1233,12 +1198,7 @@
           "避免只有随机粒子噪声，没有清晰阶段结构。",
           "避免使用已经分配给其他伤害类型或阵营的颜色。"
         ]
-      },
-      "exampleCases": [
-        310,
-        362,
-        365
-      ]
+      }
     },
     {
       "id": "monster-combat-readability",
@@ -1252,7 +1212,7 @@
         "en": "A prompt for enemies and bosses with readable silhouettes, attack telegraphs, weak points, and phase variants.",
         "zh": "用于需要清晰剪影、攻击预兆、弱点和阶段变化的敌人与 Boss。"
       },
-      "cover": "/images/case416.jpg",
+      "cover": "/images/template-covers/monster-readability.svg",
       "styles": [
         "2D",
         "3D",
@@ -1301,12 +1261,7 @@
           "避免弱点被复杂纹理淹没。",
           "除非设计需要，不要让 Boss 阶段之间看起来毫无关联。"
         ]
-      },
-      "exampleCases": [
-        416,
-        376,
-        377
-      ]
+      }
     },
     {
       "id": "building-upgrade-set",
@@ -1320,7 +1275,7 @@
         "en": "A prompt for buildings, bases, shops, factories, defenses, and settlement assets across upgrade tiers.",
         "zh": "用于建筑、基地、商店、工坊、防御设施和据点资产的多等级升级套装。"
       },
-      "cover": "/images/case338.png",
+      "cover": "/images/template-covers/building-upgrade.svg",
       "styles": [
         "Isometric",
         "3D",
@@ -1369,12 +1324,7 @@
           "不要无说明地改变占地或入口方向。",
           "避免装饰遮住建筑功能。"
         ]
-      },
-      "exampleCases": [
-        338,
-        359,
-        360
-      ]
+      }
     },
     {
       "id": "store-asset-pack",
@@ -1388,7 +1338,7 @@
         "en": "A prompt for app-store screenshots, Steam capsules, event banners, social ads, and key art variants.",
         "zh": "用于应用商店截图、Steam capsule、活动 banner、社媒广告和主视觉变体。"
       },
-      "cover": "/images/case360.jpg",
+      "cover": "/images/template-covers/store-asset-pack.svg",
       "styles": [
         "Realistic",
         "Stylized",
@@ -1436,12 +1386,7 @@
           "需要多语言变体时，不要把小 UI 或文字烘进画面。",
           "避免把关键脸部或奖励放在安全裁切区外。"
         ]
-      },
-      "exampleCases": [
-        360,
-        1,
-        2
-      ]
+      }
     },
     {
       "id": "art-style-guide",
@@ -1455,7 +1400,7 @@
         "en": "A prompt for reusable project art direction across characters, UI, props, environments, icons, and marketing.",
         "zh": "用于统一角色、UI、道具、场景、图标和投放素材的项目美术规范。"
       },
-      "cover": "/images/case6.jpg",
+      "cover": "/images/template-covers/art-style-guide.svg",
       "styles": [
         "Reference Sheet",
         "2D",
@@ -1503,12 +1448,7 @@
           "避免配色只适合宣传图，却破坏 UI 或战斗可读性。",
           "避免风格规则只服务一张主视觉，无法扩展到大量资产。"
         ]
-      },
-      "exampleCases": [
-        6,
-        330,
-        359
-      ]
+      }
     }
   ]
 }

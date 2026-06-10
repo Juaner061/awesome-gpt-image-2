@@ -45,9 +45,8 @@ const watchaLogoUrl =
 
 const copy = {
   en: {
-    loading: 'Loading GPT-Image2 cases...',
+    loading: 'Loading GPT-Image2 templates...',
     brand: 'GPT-Image2 Game Production Lab',
-    navCases: 'Cases',
     navSkill: 'Skill',
     navTemplates: 'Templates',
     navCommunity: 'Community',
@@ -57,15 +56,15 @@ const copy = {
     title: 'From game ideas to production-ready asset prompts.',
     subtitle:
       'A visual workspace for game production: browse references, copy prompts, test image generation, and use handoff-ready templates for character sheets, sprite frames, UI slicing, icon atlases, tilemaps, VFX sequences, buildings, monsters, store assets, and style guides.',
-    explore: 'Explore cases',
+    explore: 'Explore templates',
     githubProject: 'GitHub project',
     sponsorProject: 'Sponsor project',
     sponsorProjectLabel: 'Sponsor this project on GitHub Sponsors',
-    cases: 'cases',
     categories: 'categories',
     templates: 'templates',
-    sectionEyebrow: 'Copy, filter, remix',
-    sectionTitle: 'Game production references and prompts one click away.',
+    productionTags: 'production tags',
+    sectionEyebrow: 'Template-first rebuild',
+    sectionTitle: 'Original cases removed. Build from production templates.',
     templateEyebrow: '12 game-development deliverable templates',
     templateTitle: 'Start from a production deliverable, then remix the reference library.',
     templateSubtitle:
@@ -86,12 +85,12 @@ const copy = {
     skillExampleAlt: 'Game production prompt example generated with the GPT-Image2 game production library skill',
     skillExampleCaption: 'Example output from the game production library skill.',
     skillStats: ['Claude Code ready', 'Codex ready', '12 templates'],
-    search: 'Search cases, sources, prompts...',
+    search: 'Search templates, deliverables, tags...',
     category: 'Category',
     style: 'Style',
     scene: 'Scene',
     all: 'All',
-    matching: 'matching cases',
+    matching: 'matching templates',
     openGithub: 'Open GitHub project',
     copied: 'Copied',
     copyPrompt: 'Copy Prompt',
@@ -101,7 +100,7 @@ const copy = {
     unfavorite: 'Remove Favorite',
     myFavorites: 'My Favorites',
     noFavorites: 'No favorites yet.',
-    signInToFavorite: 'Sign in to save favorite cases.',
+    signInToFavorite: 'Sign in to save favorite templates.',
     favoriteSaved: 'Favorite saved.',
     favoriteRemoved: 'Favorite removed.',
     favoriteFailed: 'Favorite update failed. Please try again.',
@@ -156,8 +155,8 @@ const copy = {
     totalGenerations: 'Generated tests',
     totalGenerationCredits: 'Credits spent',
     generationUsage: 'Generation spending',
-    openCase: 'View case',
-    sourceCase: 'Source case',
+    openCase: 'View template',
+    sourceCase: 'Source template',
     noGenerationTransactions: 'No generation spending yet.',
     adminPanel: 'Admin',
     membershipCenter: 'Membership & Credits',
@@ -251,15 +250,14 @@ const copy = {
     useWhen: 'Use When',
     guidance: 'Guidance',
     pitfalls: 'Pitfalls',
-    examples: 'Example Cases',
+    examples: 'Reference Templates',
     source: 'Source',
     openOnGithub: 'Open on GitHub',
-    limit: (count) => `Showing the first ${count} results for speed. Use search or filters to narrow the gallery.`
+    limit: (count) => `Showing the first ${count} templates. Use search or filters to narrow the library.`
   },
   zh: {
-    loading: '正在加载 GPT-Image2 案例...',
+    loading: '正在加载 GPT-Image2 模板...',
     brand: 'GPT-Image2 游戏研发提示词库',
-    navCases: '案例',
     navSkill: '技能',
     navTemplates: '模板',
     navCommunity: '交流群',
@@ -269,15 +267,15 @@ const copy = {
     title: '从游戏想法，到研发可交付资产 Prompt。',
     subtitle:
       '一个面向游戏研发生产的可视化工作台：浏览参考、复制 Prompt、在线测试生图，并使用角色设定、动作帧、UI 切图、图标图集、Tilemap、特效序列、建筑、怪物、商店素材和风格规范模板。',
-    explore: '浏览案例',
+    explore: '浏览模板',
     githubProject: 'GitHub 项目',
     sponsorProject: '赞助项目',
     sponsorProjectLabel: '在 GitHub Sponsors 赞助这个项目',
-    cases: '个案例',
     categories: '个分类',
     templates: '套模板',
-    sectionEyebrow: '复制、筛选、复用',
-    sectionTitle: '游戏研发参考和 Prompt，一键可取。',
+    productionTags: '个生产标签',
+    sectionEyebrow: '重新搭建模板库',
+    sectionTitle: '原始案例已移除，从研发模板重新开始。',
     templateEyebrow: '12 套游戏研发交付模板',
     templateTitle: '先选研发交付物，再从参考库里继续 remix。',
     templateSubtitle:
@@ -298,12 +296,12 @@ const copy = {
     skillExampleAlt: '使用 GPT-Image2 游戏研发提示词库 skill 生成的生产提示词示例',
     skillExampleCaption: '示例：用 gpt-image-2-game-style-library 生成研发交付 Prompt。',
     skillStats: ['Claude Code 可用', 'Codex 可用', '12 套模板'],
-    search: '搜索案例、来源、Prompt...',
+    search: '搜索模板、交付物、标签...',
     category: '分类',
     style: '风格',
     scene: '场景',
     all: '全部',
-    matching: '个匹配案例',
+    matching: '个匹配模板',
     openGithub: '打开 GitHub 项目',
     copied: '已复制',
     copyPrompt: '复制 Prompt',
@@ -312,8 +310,8 @@ const copy = {
     favorited: '已收藏',
     unfavorite: '取消收藏',
     myFavorites: '我的收藏',
-    noFavorites: '暂无收藏案例。',
-    signInToFavorite: '登录后即可收藏案例。',
+    noFavorites: '暂无收藏模板。',
+    signInToFavorite: '登录后即可收藏模板。',
     favoriteSaved: '已加入收藏。',
     favoriteRemoved: '已取消收藏。',
     favoriteFailed: '收藏更新失败，请稍后再试。',
@@ -324,7 +322,7 @@ const copy = {
     generating: '生成中...',
     editablePrompt: '可编辑 Prompt',
     generatedResult: '生成结果',
-    originalImage: '原图',
+    originalImage: '参考图',
     savedInBrowser: '已保存到本浏览器',
     resetPrompt: '重置 Prompt',
     oneFreeGeneration: '免费生成 1 张测试图',
@@ -368,8 +366,8 @@ const copy = {
     totalGenerations: '生成测试数',
     totalGenerationCredits: '已消耗积分',
     generationUsage: '生图消耗记录',
-    openCase: '查看案例',
-    sourceCase: '关联案例',
+    openCase: '查看模板',
+    sourceCase: '关联模板',
     noGenerationTransactions: '暂无生图消耗记录。',
     adminPanel: '管理后台',
     membershipCenter: '会员与积分',
@@ -386,7 +384,7 @@ const copy = {
     monthlyCredits: (count) => `每月 ${count} 积分`,
     packCredits: (count) => `${count} 积分`,
     billingTitle: '会员与积分',
-    billingSubtitle: '会员每月自动获得积分，也可以随时购买积分包，用来测试更多 GPT-Image2 案例。',
+    billingSubtitle: '会员每月自动获得积分，也可以随时购买积分包，用来测试更多 GPT-Image2 模板。',
     balanceTitle: '当前余额',
     transactionHistory: '积分流水',
     noTransactions: '暂无积分流水。',
@@ -463,7 +461,7 @@ const copy = {
     useWhen: '适用场景',
     guidance: '使用建议',
     pitfalls: '防坑指南',
-    examples: '关联案例',
+    examples: '参考模板',
     source: '来源',
     openOnGithub: '在 GitHub 打开',
     limit: (count) => `为了保证浏览速度，当前展示前 ${count} 条结果。可以用搜索或筛选缩小范围。`
@@ -927,7 +925,7 @@ function formatTemplatePrompt(item, language, styleLibrary) {
 
   return [
     `Template: ${title}`,
-    `Use case: ${useWhen || description}`,
+    `Use when: ${useWhen || description}`,
     `Visual direction: ${uniqueTags.join(' / ')}`,
     '',
     'Create a copy-ready GPT Image 2 prompt with this structure:',
@@ -947,8 +945,9 @@ function formatTemplatePrompt(item, language, styleLibrary) {
   ].join('\n');
 }
 
-function Hero({ latestCases, language, repoUrl, totalCases, categoryCount, onOpenCase }) {
+function Hero({ templates, language, repoUrl, categoryCount, productionTagCount, onOpenTemplate }) {
   const t = copy[language];
+  const heroTemplates = (templates || []).slice(0, 5);
 
   return (
     <section className="hero">
@@ -963,7 +962,7 @@ function Hero({ latestCases, language, repoUrl, totalCases, categoryCount, onOpe
         <h1>{t.title}</h1>
         <p>{t.subtitle}</p>
         <div className="heroActions">
-          <a className="primaryAction" href="#gallery">
+          <a className="primaryAction" href="#templates">
             {t.explore}
             <ArrowUpRight size={18} />
           </a>
@@ -983,24 +982,27 @@ function Hero({ latestCases, language, repoUrl, totalCases, categoryCount, onOpe
           </a>
         </div>
         <div className="metrics">
-          <span><strong>{totalCases}</strong> {t.cases}</span>
+          <span><strong>{templates?.length || 0}</strong> {t.templates}</span>
           <span><strong>{categoryCount}</strong> {t.categories}</span>
-          <span><strong>20+</strong> {t.templates}</span>
+          <span><strong>{productionTagCount}</strong> {t.productionTags}</span>
         </div>
       </div>
-      <div className="heroDeck" aria-label="Latest GPT-Image2 cases">
-        {latestCases.slice(0, 5).map((caseItem, index) => (
-          <button
-            className={`heroCard heroCard${index + 1}`}
-            type="button"
-            aria-label={`${language === 'zh' ? '打开案例' : 'Open case'} ${caseItem.id}: ${caseItem.title}`}
-            onClick={() => onOpenCase(caseItem)}
-            key={caseItem.id}
-          >
-            <img src={caseItem.image} alt={caseItem.imageAlt} />
-            <span>{language === 'zh' ? '案例' : 'Case'} {caseItem.id}</span>
-          </button>
-        ))}
+      <div className="heroDeck" aria-label="GPT-Image2 game production templates">
+        {heroTemplates.map((template, index) => {
+          const title = textFor(template.title, language);
+          return (
+            <button
+              className={`heroCard heroCard${index + 1}`}
+              type="button"
+              aria-label={`${language === 'zh' ? '打开模板' : 'Open template'} ${index + 1}: ${title}`}
+              onClick={() => onOpenTemplate(template)}
+              key={template.id}
+            >
+              <img src={template.cover} alt={title} />
+              <span>{language === 'zh' ? '模板' : 'Template'} {String(index + 1).padStart(2, '0')}</span>
+            </button>
+          );
+        })}
       </div>
     </section>
   );
@@ -2616,7 +2618,7 @@ function PromptCard({
     <article className="caseCard">
       <button className="caseImage imageButton" type="button" onClick={() => onOpen(caseItem)}>
         <img src={caseItem.image} alt={caseItem.imageAlt} loading="lazy" />
-        <span className="caseBadge">{language === 'zh' ? '案例' : 'Case'} {caseItem.id}</span>
+        <span className="caseBadge">{language === 'zh' ? '模板' : 'Template'} {caseItem.id}</span>
         <span className="imageHint">
           <Eye size={15} />
           {t.viewDetails}
@@ -2745,7 +2747,7 @@ function PreviewDialog({
   const meta = isTemplate
     ? [t.templateKind, localizeLabel(item.category, language, styleLibrary)]
     : [
-        `${language === 'zh' ? '案例' : 'Case'} ${item.id}`,
+        `${language === 'zh' ? '模板' : 'Template'} ${item.id}`,
         localizeLabel(item.category, language, styleLibrary)
       ];
   const tags = isTemplate
@@ -2946,7 +2948,7 @@ function PreviewDialog({
               ) : null}
             </div>
           ) : null}
-          {isTemplate && (guidance.length || pitfalls.length || item.exampleCases?.length) ? (
+          {isTemplate && (guidance.length || pitfalls.length) ? (
             <div className="previewColumns">
               {guidance.length ? (
                 <div className="previewSection compactSection">
@@ -2958,7 +2960,7 @@ function PreviewDialog({
                   </ul>
                 </div>
               ) : null}
-              {pitfalls.length ? (
+          {pitfalls.length ? (
                 <div className="previewSection compactSection">
                   <h3>{t.pitfalls}</h3>
                   <ul>
@@ -2966,23 +2968,6 @@ function PreviewDialog({
                       <li key={line}>{line}</li>
                     ))}
                   </ul>
-                </div>
-              ) : null}
-              {item.exampleCases?.length ? (
-                <div className="previewSection compactSection">
-                  <h3>{t.examples}</h3>
-                  <div className="exampleCaseRow">
-                    {item.exampleCases.map((caseId) => (
-                      <a
-                        href={`${styleLibrary.repository || fallbackRepoUrl}/blob/main/docs/gallery.md#case-${caseId}`}
-                        target="_blank"
-                        rel="noreferrer"
-                        key={caseId}
-                      >
-                        #{caseId}
-                      </a>
-                    ))}
-                  </div>
                 </div>
               ) : null}
             </div>
@@ -3350,7 +3335,6 @@ function App() {
         </a>
         <div className="topbarControls">
           <nav>
-            <a href="#gallery">{t.navCases}</a>
             <a href="#templates">{t.navTemplates}</a>
             <a href="#agent-skill">{t.navSkill}</a>
             <CommunityNavItem language={language} />
@@ -3388,115 +3372,13 @@ function App() {
       {favoriteMessage ? <div className="toastNotice">{favoriteMessage}</div> : null}
 
       <Hero
-        latestCases={heroCases}
+        templates={styleLibrary.templates || []}
         language={language}
         repoUrl={repoUrl}
-        totalCases={siteData.totalCases}
         categoryCount={siteData.categories.length}
-        onOpenCase={(item) => setPreview({ type: 'case', item })}
+        productionTagCount={(styleLibrary.styles?.length || 0) + (styleLibrary.scenes?.length || 0)}
+        onOpenTemplate={(item) => setPreview({ type: 'template', item })}
       />
-
-      <section className="hotStrip">
-        {hotStripCases.map((caseItem) => (
-          <button
-            type="button"
-            aria-label={`${language === 'zh' ? '打开案例' : 'Open case'} ${caseItem.id}: ${caseItem.title}`}
-            onClick={() => setPreview({ type: 'case', item: caseItem })}
-            key={caseItem.id}
-          >
-            <img src={caseItem.image} alt={caseItem.imageAlt} />
-            <span>#{caseItem.id}</span>
-          </button>
-        ))}
-      </section>
-
-      <section className="gallerySection" id="gallery">
-        <div className="sectionHead">
-          <div>
-            <span className="eyebrow">{t.sectionEyebrow}</span>
-            <h2>{t.sectionTitle}</h2>
-          </div>
-          <div className="searchBox">
-            <Search size={18} />
-            <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder={t.search}
-            />
-          </div>
-        </div>
-
-        <div className="filterPanel">
-          <div>
-            <strong>{t.category}</strong>
-            <div className="filterRow">
-              <FilterPill active={category === 'All'} onClick={() => setCategory('All')}>{t.all}</FilterPill>
-              {orderedCategories.map((item) => (
-                <FilterPill key={item} active={category === item} onClick={() => setCategory(item)}>
-                  {localizeLabel(item, language, styleLibrary)}
-                </FilterPill>
-              ))}
-            </div>
-          </div>
-          <div>
-            <strong>{t.style}</strong>
-            <div className="filterRow">
-              <FilterPill active={style === 'All'} onClick={() => setStyle('All')}>{t.all}</FilterPill>
-              {orderedStyles.map((item) => (
-                <FilterPill key={item} active={style === item} onClick={() => setStyle(item)}>
-                  {localizeLabel(item, language, styleLibrary)}
-                </FilterPill>
-              ))}
-            </div>
-          </div>
-          <div>
-            <strong>{t.scene}</strong>
-            <div className="filterRow">
-              <FilterPill active={scene === 'All'} onClick={() => setScene('All')}>{t.all}</FilterPill>
-              {orderedScenes.map((item) => (
-                <FilterPill key={item} active={scene === item} onClick={() => setScene(item)}>
-                  {localizeLabel(item, language, styleLibrary)}
-                </FilterPill>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="resultBar">
-          <span>{language === 'zh' ? `${filteredCases.length} ${t.matching}` : `${filteredCases.length} ${t.matching}`}</span>
-          <a href={repoUrl} target="_blank" rel="noreferrer">
-            {t.openGithub}
-            <ArrowUpRight size={16} />
-          </a>
-        </div>
-
-        <div className="caseGrid">
-          {visibleCases.map((caseItem) => (
-            <PromptCard
-              caseItem={caseItem}
-              copied={copiedId === `case-${caseItem.id}`}
-              favorited={favoriteCaseIds.has(caseItem.id)}
-              favoriteBusy={favoriteBusyId === caseItem.id}
-              language={language}
-              onCopy={copyPrompt}
-              onOpen={(item) => setPreview({ type: 'case', item })}
-              onGenerate={(item) => {
-                setPreview({ type: 'case', item });
-                if (!session?.access_token) openAuth();
-              }}
-              onToggleFavorite={handleToggleFavorite}
-              styleLibrary={styleLibrary}
-              key={caseItem.id}
-            />
-          ))}
-        </div>
-
-        {filteredCases.length > visibleCases.length && (
-          <p className="limitNote">
-            {t.limit(visibleCases.length)}
-          </p>
-        )}
-      </section>
 
       <TemplateSection
         language={language}
